@@ -10,5 +10,12 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: true
     }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `@import "@/assets/scss/global.scss";`
+      }
+    }
   }
-}
+};
