@@ -1,3 +1,18 @@
-body{
- font-family: 'teradeli-book',sans-serif;
-}
+
+
+    @font-face {
+      font-family: 'teradeli-book',sans-serif!important;
+      src: url('../fonts/Teradeli-Book.woff');
+    }
+    @font-face {
+      font-family: 'teradeli-light',sans-serif!important;
+      src: url('../fonts/Teradeli-Light.woff');
+    }
+    @font-face {
+      font-family: 'teradeli-medium',sans-serif!important;
+      src: url('../fonts/Teradeli-Medium.woff');
+    }
+
+    body{
+     font-family: 'teradeli-book',sans-serif!important;
+    }

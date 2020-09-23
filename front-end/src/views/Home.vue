@@ -1,13 +1,15 @@
 <template>
-  <div class="home">
-    i am hasib
+  <div>
+      <ProductSection></ProductSection>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
-export default {
-  name: 'Home',
-}
+    import ProductSection from '../components/product-section';
+
+    export default {
+         name: 'Home',
+        components:{ProductSection},
+     }
 </script>

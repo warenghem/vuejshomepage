@@ -17,8 +17,10 @@
                 <a href="" class="text-capitalize">
                     REFORESTATION
                 </a>
-                <a href="" class="link text-capitalize">STUDIO</a>
-                <a href="" class="link text-capitalize"> </a>
+                <a href="#" class="link text-capitalize">STUDIO</a>
+                <a href="#" class="link text-capitalize" >
+                    <img src="../assets/images/flag.jpg" width="24px" />
+                </a>
             </div>
         </div>
     </section>
@@ -32,6 +34,9 @@
 
 <style scoped lang="scss">
     .appBar {
+        position: relative;
+        border-bottom: 1px solid #fff;
+        z-index: 1;
         .topBar {
             background: #0A3137;
             color: #fff;
@@ -42,8 +47,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background: beige;
+            min-height: 45px;
+             
             .items {
                 display: flex;
                 flex: 1;
@@ -53,6 +58,24 @@
                     font-size: 14px;
                     text-decoration: none;
                     color: white;
+                    padding: 12px;
+                    position: relative;
+
+                    &:after{
+                        content:'';
+                        position: absolute;
+                        height: 1px;
+                        width: 1px;
+                        transition:width 0.6s ease;
+                        left: 14px;
+                        bottom: 0;
+                    }
+                   &:hover{
+                       &:after{
+                           background: #000;
+                           width: 70%;
+                       }
+                   }
                 }
                 &.brand{
                     img{
@@ -61,8 +84,21 @@
                         }
                     }
                 }
+                &:last-child{
+                    a{
+                        &:last-child{
+                            &:hover{
+                                &:after{
+                                    width:0!important;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &:hover{
+                background: #fff;
                 .items{
                     &.brand{
                         img{
@@ -76,7 +112,7 @@
                     }
 
                     a{
-                        color: #000!important;
+                        color:#000!important;
                     }
                 }
 
