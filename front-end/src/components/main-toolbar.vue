@@ -26,7 +26,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-app-bar>
+        <v-app-bar class="menu-bar" flat color="transparent">
 
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="hidden-sm-and-up">
             </v-app-bar-nav-icon>
@@ -108,29 +108,34 @@
                     Mission
                 </v-btn>
                 <v-btn text>
-                    Mission
+                    <v-menu offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn
+                                    text
+                                    v-bind="attrs"
+                                    v-on="on"
+                            >
+                                <img src="../assets/images/flag.jpg" width="24" alt=""/>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item
+
+                            >
+                                <v-list-item-title><img src="../assets/images/flag.jpg" width="24" alt=""/>
+                                </v-list-item-title>
+                            </v-list-item>
+                            <v-list-item
+
+                            >
+                                <v-list-item-title><img src="../assets/images/flag.jpg" width="24" alt=""/>
+                                </v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
                 </v-btn>
             </v-toolbar-items>
         </v-app-bar>
-        <!--        >-->
-
-        <!--        <div class="menuBar">-->
-        <!--            <div class="items">-->
-        <!--                <a href="" class="link text-capitalize">MISSION</a>-->
-        <!--                <a href="" class="link text-capitalize">PRODUITS</a>-->
-        <!--                <a href="" class="link text-capitalize">CALENDRIER</a>-->
-        <!--            </div>-->
-
-        <!--            <div class="items">-->
-        <!--                <a href="" class="text-capitalize">-->
-        <!--                    REFORESTATION-->
-        <!--                </a>-->
-        <!--                <a href="#" class="link text-capitalize">STUDIO</a>-->
-        <!--                <a href="#" class="link text-capitalize" >-->
-        <!--                    <img src="../assets/images/flag.jpg" width="24" alt=""/>-->
-        <!--                </a>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </section>
 </template>
 
@@ -158,87 +163,5 @@
             font-size: 12px;
         }
 
-        .menuBar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 45px;
-
-            .items {
-                display: flex;
-                flex: 1;
-                justify-content: space-around;
-                padding: 0 15px;
-
-                a {
-                    font-size: 14px;
-                    text-decoration: none;
-                    color: white;
-                    padding: 12px;
-                    position: relative;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        height: 1px;
-                        width: 1px;
-                        transition: width 0.6s ease;
-                        left: 14px;
-                        bottom: 0;
-                    }
-
-                    &:hover {
-                        &:after {
-                            background: #000;
-                            width: 70%;
-                        }
-                    }
-                }
-
-                &.brand {
-                    img {
-                        &:last-child {
-                            display: none;
-                        }
-                    }
-                }
-
-                &:last-child {
-                    a {
-                        &:last-child {
-                            &:hover {
-                                &:after {
-                                    width: 0 !important;
-                                    background: transparent;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            &:hover {
-                background: #fff;
-
-                .items {
-                    &.brand {
-                        img {
-                            &:first-child {
-                                display: none;
-                            }
-
-                            &:last-child {
-                                display: block !important;
-                            }
-                        }
-                    }
-
-                    a {
-                        color: #000 !important;
-                    }
-                }
-
-            }
-        }
     }
 </style>
