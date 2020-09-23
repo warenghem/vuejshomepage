@@ -1,16 +1,20 @@
 <template>
-  <div class="home">
-    i am hasib
-  <we-plant-tree-map/>
+  <div>
+      <ProductSection></ProductSection>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
+    import ProductSection from '../components/product-section';
 
 import WePlantTreeMap from "../components/we-plant-tree-map";
 export default {
   name: 'Home',
   components: {WePlantTreeMap},
 }
+    export default {
+         name: 'Home',
+        components:{ProductSection},
+     }
 </script>
