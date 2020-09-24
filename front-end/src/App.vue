@@ -3,6 +3,7 @@
         <MainToolbar></MainToolbar>
         <sticky-toolbar v-if="stickyToolbar"/>
         <router-view/>
+        <app-footer></app-footer>
     </v-app>
 </template>
 
@@ -10,10 +11,11 @@
 
     import MainToolbar from './components/main-toolbar';
     import StickyToolbar from "./components/sticky-toolbar";
+    import AppFooter from "./components/app-footer";
 
     export default {
         name: 'App',
-        components: {StickyToolbar, MainToolbar},
+        components: {AppFooter, StickyToolbar, MainToolbar},
 
         data() {
             return {
