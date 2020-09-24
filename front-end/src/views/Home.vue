@@ -1,18 +1,18 @@
 <template>
     <div>
-        <ProductSection></ProductSection>
+        <VideoSection></VideoSection>
+        <StudioSection></StudioSection>
         <we-plant-tree-map></we-plant-tree-map>
-        <studio-section></studio-section>
     </div>
 </template>
 
 <script>
-    import ProductSection from '../components/product-section';
+    import VideoSection from '../components/video-section';
+    import StudioSection from '../components/studio-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
-    import StudioSection from "../components/studio-section";
 
     export default {
         name: 'Home',
-        components: {StudioSection, WePlantTreeMap,ProductSection},
+        components: {WePlantTreeMap,VideoSection,StudioSection},
     }
 </script>

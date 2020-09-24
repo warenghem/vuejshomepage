@@ -1,135 +1,148 @@
 <template>
-    <section class="team-section">
-        <h2 class="page-title py-md-5 py-4">The studio</h2>
-        <v-row no-gutters>
-            <v-col lg="4" sm="6">
-                <div class="item-inner">
-                    <div class="profile-holder mb-3">
-                        <img src="https://www.warenghem.com/wp-content/uploads/2020/07/IMG_20200531_195221-1-min-e1594902123502.png"
-                             alt="Wait for it">
-                    </div>
-                    <div class="content-holder text-left">
-                        <h4 class="name">Kevin Brosseau</h4>
-                        <div class="role"> Founder &amp; Artistic Director
-                        </div>
-                        <div class="item-details">
-                            Convinced by a world where nature would be omnipresent around us, I decided to use
-                            my knowledge acquired in the business world for causes that are close to our
-                            hearts. Let's create together
-                            ecologically perfect and intuitive French objects.
-                        </div>
-                    </div>
+    <section class="studio">
+        <div class="studioContainer" id="studioContainer">
+            <div class="items" id="col1">
+                <div class="content"   @mouseleave="reset"  @mouseover="slideOne">
+                  <h1 class="heading text--gray">
+                      <span>La noblesse du vin.</span>
+                      Complètement végétal.
+                      Performantes, naturelles, solides, nos matières sont issues de la terre et des vendanges.
+                  </h1>
                 </div>
+            </div>
 
-            </v-col>
-            <v-col lg="4" sm="6">
-                <div class="item-inner">
-                    <div class="profile-holder mb-3">
-                        <img src="https://www.warenghem.com/wp-content/uploads/2020/07/IMG_20200531_195221-1-min-e1594902123502.png"
-                             alt="Wait for it">
-                    </div>
-                    <div class="content-holder text-left">
-                        <h4 class="name">Kevin Brosseau</h4>
-                        <div class="role"> Founder &amp; Artistic Director
-                        </div>
-                        <div class="item-details">
-                            Convinced by a world where nature would be omnipresent around us, I decided to use
-                            my knowledge acquired in the business world for causes that are close to our
-                            hearts. Let's create together
-                            ecologically perfect and intuitive French objects.
-                        </div>
-                    </div>
+            <div class="items" id="col2" >
+                <div class="content"   @mouseleave="reset"  @mouseover="slideTwo" >
+                    hello 2
                 </div>
+            </div>
 
-            </v-col>
-            <v-col lg="4" sm="6">
-                <div class="item-inner">
-                    <div class="profile-holder mb-3">
-                        <img src="https://www.warenghem.com/wp-content/uploads/2020/07/IMG_20200531_195221-1-min-e1594902123502.png"
-                             alt="Wait for it">
-                    </div>
-                    <div class="content-holder text-left">
-                        <h4 class="name">Kevin Brosseau</h4>
-                        <div class="role"> Founder &amp; Artistic Director
-                        </div>
-                        <div class="item-details">
-                            Convinced by a world where nature would be omnipresent around us, I decided to use
-                            my knowledge acquired in the business world for causes that are close to our
-                            hearts. Let's create together
-                            ecologically perfect and intuitive French objects.
-                        </div>
-                    </div>
+            <div class="items" id="col3" >
+                <div class="content"   @mouseleave="reset"  @mouseover="slideThree" >
+                    assaasdadsadsa
                 </div>
+            </div>
 
-            </v-col>
-            <v-col lg="4" sm="6">
-                <div class="item-inner">
-                    <div class="profile-holder mb-3">
-                        <img src="https://www.warenghem.com/wp-content/uploads/2020/07/IMG_20200531_195221-1-min-e1594902123502.png"
-                             alt="Wait for it">
-                    </div>
-                    <div class="content-holder text-left">
-                        <h4 class="name">Kevin Brosseau</h4>
-                        <div class="role"> Founder &amp; Artistic Director
-                        </div>
-                        <div class="item-details">
-                            Convinced by a world where nature would be omnipresent around us, I decided to use
-                            my knowledge acquired in the business world for causes that are close to our
-                            hearts. Let's create together
-                            ecologically perfect and intuitive French objects.
-                        </div>
-                    </div>
+            <div class="items" id="col4" >
+                <div class="content"  @mouseleave="reset"  @mouseover="slideFour" >
+rtrtret
                 </div>
+            </div>
 
-            </v-col>
-        </v-row>
+        </div>
     </section>
 </template>
 
 <script>
     export default {
-        name: "studio-section"
+        data(){
+            return{
+
+            }
+
+        },
+        methods:{
+            slideOne(){
+                document.getElementById("studioContainer").style.cssText="background:url(/img/banner-red.f6ee98b2.jpg); ";
+                document.getElementById("col1").style.cssText="background:none; )";
+                document.getElementById("col2").style.cssText="background:none; )";
+                document.getElementById("col3").style.cssText="background:none; )";
+                document.getElementById("col4").style.cssText="background:none; )";
+            },
+
+            slideTwo(){
+                document.getElementById("studioContainer").style.cssText="background:url(./img/roche-min.b3e3ff1c.jpg)";
+                document.getElementById("col1").style.cssText="background:none; )";
+                document.getElementById("col2").style.cssText="background:none; )";
+                document.getElementById("col3").style.cssText="background:none; )";
+                document.getElementById("col4").style.cssText="background:none; )";
+            },
+
+            slideThree(){
+                document.getElementById("studioContainer").style.cssText="background:url(./img/Studio-e1593525488356-min-1.563a9fe7.jpg)";
+                document.getElementById("col1").style.cssText="background:none; )";
+                document.getElementById("col2").style.cssText="background:none; )";
+                document.getElementById("col3").style.cssText="background:none; )";
+                document.getElementById("col4").style.cssText="background:none; )";
+            },
+
+            slideFour(){
+                document.getElementById("studioContainer").style.cssText="background:url(./img/Tech-02-min-1-scaled.60d17f7c.jpg)";
+                document.getElementById("col1").style.cssText="background:none;)";
+                document.getElementById("col2").style.cssText="background:none;)";
+                document.getElementById("col3").style.cssText="background:none;)";
+                document.getElementById("col4").style.cssText="background:none;)";
+            },
+
+
+            reset(){
+                document.getElementById("studioContainer").style.cssText="background:none";
+                document.getElementById("col1").style.cssText="background:url(/img/banner-red.f6ee98b2.jpg); opacity:1;)";
+                document.getElementById("col2").style.cssText="background:url(./img/roche-min.b3e3ff1c.jpg); opacity:1;)";
+                document.getElementById("col3").style.cssText="background:url(./img/Studio-e1593525488356-min-1.563a9fe7.jpg); opacity:1;)";
+                document.getElementById("col4").style.cssText="background:url(./img/Tech-02-min-1-scaled.60d17f7c.jpg); opacity:1;)";
+            }
+
+        }
     }
+
 </script>
 
 <style scoped lang="scss">
-    .team-section {
-        .item-inner {
-            padding: 30px;
-            height: 100%;
-
-            .profile-holder {
-                text-align: center;
-
-                img {
-                    border-radius: 50%;
-                    width: 200px;
+    .studio {
+        margin-top: -51px;
+        z-index: 1;
+        position: relative;
+        .studioContainer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            .items {
+                height: inherit;
+                position: relative;
+                flex: 1;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                .content {
+                    position: absolute;
+                    bottom: 0;
+                    padding: 15px;
+                    right: 0;
+                    left: 0;
+                    height:150px;
+                    transition: height 0.5s ease-in-out;
+                    overflow: hidden;
+                    &:hover{
+                        height:70%;
+                    }
                 }
-            }
 
-            .name {
-                margin-top: 0;
-                margin-bottom: 5px;
-                color: #000;
-                font-size: 16px;
-            }
+                &:nth-child(1) {
+                    background: url("../assets/images/banner-red.jpg");
+                }
+                &:nth-child(2) {
+                    background: url("../assets/images/roche-min.jpg");
+                }
+                &:nth-child(3) {
+                    background: url("../assets/images/Studio-e1593525488356-min-1.jpg");
+                }
+                &:nth-child(4) {
+                    background: url("../assets/images/Tech-02-min-1-scaled.jpg");
+                }
 
-            .role {
-                margin-bottom: 15px;
-                color: #888;
-                line-height: 15px;
             }
+        }
 
-            .item-details {
-                margin-bottom: 15px;
-                color: #86868b;
-                text-align: left;
-                font-size: 13px;
-                line-height: 1.47059;
-                font-weight: 300;
-                letter-spacing: -.022em;
-                font-family: 'teradeli-light',sans-serif;
-            }
+    }
+
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
         }
     }
 </style>
