@@ -52,7 +52,7 @@
                     <form action="" class="d-flex flex-column px-4">
                         <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                         <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                        <button class="btn-theme">
+                        <button class="btn-theme" id="jePlanetBtn">
                             Je plante un arbre gratuitement
                         </button>
                     </form>
