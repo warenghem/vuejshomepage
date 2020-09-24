@@ -68,7 +68,7 @@
         padding-top: 50px;
         position: relative;
         top: -51px;
-        min-height: 100vh;
+        height: 100vh;
         animation-name: changeBg;
         animation-duration: 15s;
         animation-timing-function: linear;
@@ -80,6 +80,10 @@
         background-position: 50% 0%;
         .userDefine{
             height: inherit;
+        }
+
+        @media(max-width: 768px) {
+            height: auto;
         }
 
         .bannerLeft {
