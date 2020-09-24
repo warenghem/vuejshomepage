@@ -25,7 +25,7 @@
         color: #fff;
         padding: 80px 0;
         position: relative;
-        top: -47px;
+        top: -51px;
         height: 100vh;
         animation-name: changeBg;
         animation-duration: 15s;
