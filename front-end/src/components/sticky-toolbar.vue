@@ -52,7 +52,7 @@
             </v-toolbar-title>
             <v-spacer style="flex-grow: 2!important;"></v-spacer>
             <v-toolbar-items class="hidden-xs-only py-1">
-                <v-btn rounded color="#0081a7" dark >Je plante un arbre gratuitement</v-btn>
+                <v-btn rounded color="#0081a7" dark>Je plante un arbre gratuitement</v-btn>
             </v-toolbar-items>
         </v-app-bar>
     </section>
@@ -85,7 +85,7 @@
         }
 
         .menu-bar {
-            border-bottom: none!important;
+            border-bottom: none !important;
             background: #1d1d1fb3 !important;
 
             .brand {
@@ -98,10 +98,14 @@
             }
 
             .item {
-                color:white;
+                color: white;
+                padding: 0 10px;
+
                 &:before {
                     display: none;
                 }
+
+
             }
         }
 
