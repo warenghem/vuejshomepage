@@ -1,7 +1,28 @@
 <template>
     <div>
-        hello
-        <div id="mapSection"></div>
+        <h2 class="page-title pt-md-5 pt-4">Nous plantons aussi des arbres. Et vous?</h2>
+        <h3 class="page-details pb-md-5 py-2 teradeli-light">Pour compenser les émissions de CO2 liées à la création de
+            nos objets, à vos visites sur notre site, et à la consommation d’électricité de nos technologies. Nos
+            projets sont exclusivement réservés à la régénération de la biodiversité. Nos arbres sont tracés et
+            certifiés.</h3>
+        <div class="d-flex justify-center py-4 py-md-0">
+            <div class="text-center py-4 px-7">
+                <div class="sub-title">4</div>
+                <div style="color: #888;">arbres plantés</div>
+            </div>
+            <div class="text-center py-4 px-7">
+                <div class="sub-title">0.92 tonnes</div>
+                <div style="color: #888;">de CO2 compensées</div>
+            </div>
+            <div class="text-center py-4 px-7">
+                <div class="sub-title">0.004</div>
+                <div style="color: #888;">hectares reforestés</div>
+            </div>
+
+        </div>
+        <div id="mapSection">
+
+        </div>
     </div>
 </template>
 
@@ -175,3 +196,15 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+
+    .page-details {
+        color: #888;
+        font-size: 13px;
+        padding-left: 20px;
+        max-width: 400px;
+        line-height: 1rem !important;
+    }
+
+
+</style>

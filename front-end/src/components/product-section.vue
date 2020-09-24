@@ -1,7 +1,7 @@
 <template>
     <div class="productSection">
         <v-row no-gutters class="userDefine">
-            <v-col cols="9" md="9" sm="12" >
+            <v-col cols="9" md="9" sm="12">
                 <div class="bannerLeft">
                     <h2 class="title text-center"> La maroquinerie végétale du futur. Dès à présent.</h2>
                     <h4 class="subtitle text-center">Rencontre entre les traditions maroquinières francaises et nos
@@ -30,8 +30,16 @@
             </v-col>
             <v-col cols="3" md="3" sm="12" class="bottomRight">
                 <p class="mt-3  title text-center">Avancement du projet</p>
-                <div class="progress text-center black--text d-flex align-center justify-center">
-                    need package for progress
+                <div class="d-flex align-center justify-center">
+                    <v-progress-circular
+                            :rotate="-90"
+                            :size="150"
+                            :width="15"
+                            :value="progressValue"
+                            color="#0081a7"
+                    >
+                        {{progressValue}}%
+                    </v-progress-circular>
                 </div>
                 <div class="progressHints">
                     Création <br> d’objets en 3D
@@ -44,7 +52,7 @@
                     <form action="" class="d-flex flex-column px-4">
                         <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                         <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                        <button class="btn-theme">
+                        <button class="btn-theme" id="jePlanetBtn">
                             Je plante un arbre gratuitement
                         </button>
                     </form>
@@ -57,7 +65,21 @@
 
 <script>
     export default {
-        name: "product-section"
+        name: "product-section",
+        data() {
+            return {
+                interval: {},
+                progressValue: 0,
+            }
+        },
+        beforeDestroy() {
+            clearInterval(this.interval)
+        },
+        mounted() {
+            setInterval(() => {
+                this.progressValue = 30
+            }, 3000)
+        },
     }
 </script>
 
@@ -78,7 +100,8 @@
         background-repeat: no-repeat;
         transition: background-image 0.4s ease-in-out;
         background-position: 50% 0%;
-        .userDefine{
+
+        .userDefine {
             height: inherit;
         }
 
@@ -88,6 +111,7 @@
 
         .bannerLeft {
             margin-top: 40px;
+
             .title {
                 padding-bottom: 20px;
                 font-size: 40px !important;
@@ -98,10 +122,11 @@
                 transition: all .3s cubic-bezier(.39, .575, .565, 1);
                 @media(max-width: 768px) {
                     width: 80%;
-                    text-align: center!important;
+                    text-align: center !important;
                     margin: 0 auto;
                 }
             }
+
             .subtitle {
                 letter-spacing: .004em;
                 font-family: 'teradeli-light', sans-serif !important;
@@ -112,62 +137,72 @@
                 font-size: 23px !important;
                 @media(max-width: 768px) {
                     width: 80%;
-                    text-align: center!important;
+                    text-align: center !important;
                     margin: 0 auto;
                 }
             }
         }
+
         .inner {
             color: grey;
+
             img {
                 width: 30px;
                 margin: 0 auto;
                 display: block;
                 opacity: 0.7;
             }
+
             span {
                 font-size: 18px;
                 opacity: 0.7;
                 color: #fff;
             }
         }
+
         .bottomleft {
             font-size: 19px;
             padding: 30px;
             position: absolute;
             bottom: 0;
+
             span {
                 color: #888;
             }
-            @media(max-width: 768px){
+
+            @media(max-width: 768px) {
                 display: none;
             }
         }
+
         .bottomRight {
             padding-top: 40px;
-            font-family: 'teradeli-book', sans-serif!important;
+            font-family: 'teradeli-book', sans-serif !important;
             border-left: 1px solid #fff;
+
             .bottomText {
                 margin-top: 65px;
                 font-size: 14px;
                 @media(max-width: 768px) {
                     width: 60%;
                     margin: 15px auto;
-                    text-align: center!important;
+                    text-align: center !important;
                 }
             }
-            .progress{
-                height:150px;
+
+            .progress {
+                height: 150px;
                 margin-top: 25px;
-                width:150px;
+                width: 150px;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
                 background: #FFF;
-                margin-left:  auto;
-                margin-right:  auto;
+                margin-left: auto;
+                margin-right: auto;
             }
-            .progressHints{
+
+            .progressHints {
                 text-align: center;
                 position: absolute;
                 right: 15px;
@@ -182,6 +217,7 @@
                     margin-top: 10px;
                 }
             }
+
             .title {
                 color: #fff;
                 line-height: 1.10722 !important;
@@ -190,8 +226,8 @@
         }
     }
 
-    .form{
-        @media(max-width: 768px){
+    .form {
+        @media(max-width: 768px) {
             background: black;
             padding: 40px 17%;
             width: 100%;
