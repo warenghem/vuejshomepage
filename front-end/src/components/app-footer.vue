@@ -18,32 +18,21 @@
             </div>
         </div>
         <div class="whole-footer border-top-2">
-            <vue-instagram
-                    :token="userAccessToken"
-                    :count="5" mediaType="image">
-                <template slot="feeds" slot-scope="props">
-                    <li class="fancy-list"> {{ props.feed.link }}</li>
-                </template>
-                <template slot="error" slot-scope="props">
-                    <div class="fancy-alert"> {{ props.error.error_message }}</div>
-                </template>
-            </vue-instagram>
+            <v-container>
+                <div id="instaFeed"></div>
+            </v-container>
         </div>
     </div>
 </template>
 
 <script>
-    import VueInstagram from 'vue-instagram'
 
     export default {
         name: "app-footer",
-        components: {
-            VueInstagram
-        },
+
         data(){
             return{
-                userAccessToken:'IGQVJVM1NQRlN1dWlpQWU1cEJySnBXUzdXNWVBQnZADTXBZANWhIYnZAGd3ZAlMldRdEJUUGpZAd3FvaVVsRFBBVV8zbmxETkU5TVB3bUh3TF9kTDN1c3B0RG5KTHh5Mzl6THNGQWRVWGpaNEl3QnhlWnA5UgZDZD',
-            }
+                 }
 
         }
     }
