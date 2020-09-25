@@ -4,6 +4,7 @@
         <sticky-toolbar v-if="stickyToolbar"/>
         <router-view/>
         <app-footer></app-footer>
+
     </v-app>
 </template>
 
@@ -19,7 +20,8 @@
 
         data() {
             return {
-                stickyToolbar: false
+                stickyToolbar: false,
+
             }
         },
         mounted(){
@@ -45,6 +47,9 @@
             window.removeEventListener('scroll', this.handleScroll);
         },
         methods: {
+
+
+
             handleScroll() {
                 if(document.getElementById('jePlanetBtn')){
                     if(window.pageYOffset-70>document.getElementById('jePlanetBtn').offsetTop ){

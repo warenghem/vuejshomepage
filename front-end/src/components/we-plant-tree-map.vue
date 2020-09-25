@@ -1,5 +1,7 @@
 <template>
     <div>
+        <button class="btn-theme" @click.prevent="openSlide">slide modal</button>
+
         <h2 class="page-title pt-md-5 pt-4">Nous plantons aussi des arbres. Et vous?</h2>
         <h3 class="page-details pb-md-5 py-2 teradeli-light">Pour compenser les émissions de CO2 liées à la création de
             nos objets, à vos visites sur notre site, et à la consommation d’électricité de nos technologies. Nos
@@ -20,9 +22,23 @@
             </div>
 
         </div>
-        <div id="mapSection">
+        <div id="mapSection"> </div>
 
-        </div>
+            <div class="slideArea" v-if="slide">
+                <div class="content"> </div>
+                <div class="content">
+                    <div class="card">
+                        <div class="header">
+                            <button class="btn-theme">Je plante un arbre gratuitement</button>
+                            <i class="" @click.prevent="closeSlide">X</i>
+                        </div>
+                        <div class="body">
+                            <h1>design will be letter more , after your work </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
 </template>
 
@@ -31,10 +47,13 @@
     import * as am4maps from "@amcharts/amcharts4/maps"
     import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow"
 
+
     export default {
         name: "we-plant-tree-map",
         data() {
-            return {}
+            return {
+                    slide:false,
+            }
         },
         mounted() {
             this.mapCreate();
@@ -192,9 +211,25 @@
                         return holder;
                     }
                 });
+            },
+
+            openSlide() {
+                this.slide = true;
+                let x = document.getElementsByTagName("BODY")[0];
+                x.style.cssText="max-height:100vh;overflow:hidden";
+            },
+
+
+            closeSlide(){
+                this.slide = false;
+                let x = document.getElementsByTagName("BODY")[0];
+                x.style.cssText="max-height:unset;overflow:unset";
             }
-        }
+        },
+
+
     }
+
 </script>
 <style lang="scss" scoped>
 
@@ -204,6 +239,47 @@
         padding-left: 20px;
         max-width: 400px;
         line-height: 1rem !important;
+    }
+
+    .slideArea{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        z-index: 120000;
+        background: #353535f2;
+        display: flex;
+        flex-direction: row;
+
+        .content{
+            &:nth-child(1){
+                flex: 1;
+            }
+            &:nth-child(2){
+                flex: 1;
+                background: #fff;
+            }
+
+            .card{
+                height: 100%;
+                .header{
+                    padding: 10px;
+                    background: grey;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .body{
+                    height: inherit;
+                    background: #3D8EBE;
+                    padding: 15px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+            }
+        }
     }
 
 

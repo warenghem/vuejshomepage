@@ -3,6 +3,7 @@
         <v-row no-gutters class="userDefine">
             <v-col cols="9" md="9" sm="12" >
                 <div class="bannerLeft">
+
                     <h2 class="title text-center"> La maroquinerie végétale du futur. Dès à présent.</h2>
                     <h4 class="subtitle text-center">Rencontre entre les traditions maroquinières francaises et nos
                         cuirs de

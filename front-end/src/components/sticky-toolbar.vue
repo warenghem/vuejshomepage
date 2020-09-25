@@ -1,5 +1,5 @@
 <template>
-    <section class="appBar">
+    <section class="appBar ">
         <v-navigation-drawer v-model="sidebar" app>
             <v-list>
                 <v-list-item>
@@ -73,7 +73,7 @@
     .appBar {
         position: fixed;
         border-bottom: 1px solid #fff;
-        z-index: 1;
+        z-index: 1000;
         top: 0;
         width: 100%;
 
