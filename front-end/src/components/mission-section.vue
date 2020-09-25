@@ -222,11 +222,12 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
                     right: 0;
                     left: 0;
                     height: 200px;
-                    transition: height 0.5s ease-in-out;
+                    transition: height 0.4s ease-in;
                     overflow: hidden;
 
                     &:hover {
                         height: 80%;
+                        cursor: url(../assets/images/cross_100185.svg),auto;
                     }
                     .heading {
                         color: #888;
