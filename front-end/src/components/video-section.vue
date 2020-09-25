@@ -30,8 +30,16 @@
             </v-col>
             <v-col cols="3" md="3" sm="12" class="bottomRight">
                 <p class="mt-3  title text-center">Avancement du projet</p>
-                <div class="progress text-center black--text d-flex align-center justify-center">
-                    need package for progress
+                <div class="d-flex align-center justify-center">
+                   <v-progress-circular
+                            :rotate="-90"
+                            :size="150"
+                            :width="15"
+                            :value="progressValue"
+                            color="#0081a7"
+                    >
+                        {{progressValue}}%
+                    </v-progress-circular>
                 </div>
                 <div class="progressHints">
                     Création <br> d’objets en 3D
@@ -57,7 +65,21 @@
 
 <script>
     export default {
-        name: "video-section"
+        name: "video-section",
+        data() {
+            return {
+                interval: {},
+                progressValue: 0,
+            }
+        },
+        beforeDestroy() {
+            clearInterval(this.interval)
+        },
+        mounted() {
+            setInterval(() => {
+                this.progressValue = 30
+            }, 3000)
+        },
     }
 </script>
 
