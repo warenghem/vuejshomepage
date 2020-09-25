@@ -1,6 +1,7 @@
 <template>
     <section class="mission">
         <div class="missionContainer" id="missionContainer">
+
             <div class="items" id="col1">
                 <div class="content" @mouseleave="reset" @mouseover="slideOne">
                     <v-row align="center" justify="center" class="mb-3">
@@ -151,7 +152,7 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
         },
         methods: {
             slideOne() {
-                document.getElementById("missionContainer").style.cssText = "background:url(/img/banner-red.2d904cbc.jpg); ";
+                document.getElementById("missionContainer").style.cssText = "background:url(./img/banner-red.2d904cbc.jpg); ";
                 document.getElementById("col1").style.cssText = "background:none; )";
                 document.getElementById("col2").style.cssText = "background:none; opacity:0.4; )";
                 document.getElementById("col3").style.cssText = "background:none; opacity:0.4; )";
@@ -185,10 +186,10 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
 
             reset() {
                 document.getElementById("missionContainer").style.cssText = "background:none";
-                document.getElementById("col1").style.cssText = "background:url(/img/banner-red.f6ee98b2.jpg); opacity:1;)";
-                document.getElementById("col2").style.cssText = "background:url(./img/roche-min.b3e3ff1c.jpg); opacity:1;)";
+                document.getElementById("col1").style.cssText = "background:url(./img/banner-red.2d904cbc.jpg); opacity:1;)";
+                document.getElementById("col2").style.cssText = "background:url(./img/roche-min.27a322a6.jpg); opacity:1;)";
                 document.getElementById("col3").style.cssText = "background:url(./img/Studio-e1593525488356-min-1.563a9fe7.jpg); opacity:1;)";
-                document.getElementById("col4").style.cssText = "background:url(./img/Tech-02-min-1-scaled.60d17f7c.jpg); opacity:1;)";
+                document.getElementById("col4").style.cssText = "background:url(./img/Tech-02-min-1-scaled.60cbf54f.jpg); opacity:1;)";
             }
 
         }
