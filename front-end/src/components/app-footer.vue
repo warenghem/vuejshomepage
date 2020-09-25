@@ -18,9 +18,11 @@
             </div>
         </div>
         <div class="whole-footer border-top-2">
-            <v-container>
+            <div class="insta-row border-left-2 border-right-2">
+                <h3 class="ins-subtitle">INSTAGRAM</h3>
+                <h2 class="ins-title">WARENGHEM LIVE</h2>
                 <div id="instaFeed"></div>
-            </v-container>
+            </div>
         </div>
     </div>
 </template>
@@ -30,14 +32,35 @@
     export default {
         name: "app-footer",
 
-        data(){
-            return{
-                 }
+        data() {
+            return {}
 
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .insta-row {
+        max-width: 1440px;
+        margin: 0 auto !important;
+        padding-left: 1em;
+        padding-right: 1em;
+        @media (min-width: 767.98px) {
+            padding-top: 2.5rem !important;
+        }
+    }
+
+    .ins-subtitle {
+        font-family: 'teradeli-light',sans-serif;
+        font-size: 22px;
+        font-weight: 200;
+    }
+
+    .ins-title {
+        font-family: 'teradeli-medium',sans-serif;
+        line-height: 1;
+        font-size: 2.125rem;
+        text-transform: capitalize;
+    }
 
 </style>

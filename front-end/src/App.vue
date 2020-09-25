@@ -24,7 +24,7 @@
         },
         mounted(){
           new InstagramFeed({
-            'username': 'hasib.arman',
+            'username': 'warenghem_paris',
             'container': document.getElementById("instaFeed"),
             'display_profile': false,
             'display_biography': false,
@@ -46,7 +46,7 @@
         },
         methods: {
             handleScroll() {
-                if(document.getElementById('jePlanetBtn').offsetTop){
+                if(document.getElementById('jePlanetBtn')){
                     if(window.pageYOffset-70>document.getElementById('jePlanetBtn').offsetTop ){
                     this.stickyToolbar=true;
                 }else {

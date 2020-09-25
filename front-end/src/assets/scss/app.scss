@@ -1,13 +1,16 @@
 body {
   font-family: 'teradeli-book', sans-serif;
+  color: #153038;
 }
 
 .v-application {
   font-family: 'teradeli-book', sans-serif;
 }
+
 .teradeli-light {
-    font-family: 'teradeli-light',sans-serif!important;
+  font-family: 'teradeli-light', sans-serif !important;
 }
+
 .form-theme {
   border: 1px solid #fff;
   padding: 12px;
@@ -170,11 +173,40 @@ body {
     }
   }
 }
+
 @media (min-width: 768px) {
-        #Eden_ProjetContainer {
-            transform: translateX(-265px);
-        }
-    }
-.border-top-2{
+  #Eden_ProjetContainer {
+    transform: translateX(-265px);
+  }
+}
+
+.border-top-2 {
   border-top: #eae8e4 solid 1px;
+}
+
+.border-left-2 {
+  border-left: #eae8e4 solid 1px;
+}
+
+.border-right-2 {
+  border-right: #eae8e4 solid 1px;
+}
+
+.instagram_gallery {
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  & > div {
+  /* CURRENT way. */
+  scroll-snap-align: start;
+}
+
+  .instagram-image {
+    img {
+      height: 234.328px;
+      width: auto !important;
+    }
+  }
 }

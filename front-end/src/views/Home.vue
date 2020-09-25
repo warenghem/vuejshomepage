@@ -2,8 +2,8 @@
     <div>
         <VideoSection></VideoSection>
         <MissionSection></MissionSection>
-        <StudioSection></StudioSection>
         <we-plant-tree-map></we-plant-tree-map>
+        <StudioSection></StudioSection>
     </div>
 </template>
 
