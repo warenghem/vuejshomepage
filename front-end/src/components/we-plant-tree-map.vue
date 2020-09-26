@@ -266,14 +266,13 @@
                 height: 100%;
                 .header{
                     padding: 10px;
-                    background: grey;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    box-shadow: inset 0 -1px 0 0 #eae8e4;
                 }
                 .body{
                     height: inherit;
-                    background: #3D8EBE;
                     padding: 15px;
                     overflow-x: hidden;
                     overflow-y: auto;
