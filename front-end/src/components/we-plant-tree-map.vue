@@ -22,22 +22,28 @@
             </div>
 
         </div>
-        <div id="mapSection"> </div>
-
-            <div class="slideArea" v-if="slide">
-                <div class="content"> </div>
-                <div class="content">
-                    <div class="card">
-                        <div class="header">
-                            <button class="btn-theme">Je plante un arbre gratuitement</button>
-                            <i class="" @click.prevent="closeSlide">X</i>
-                        </div>
-                        <div class="body">
-                            <h1>design will be letter more , after your work </h1>
-                        </div>
+        <div id="mapSection"></div>
+        <div v-if="slide" class="modal-overlay"></div>
+        <div class="slideArea" v-if="slide">
+            <div class="content">
+                <div class="card">
+                    <div class="header">
+                        <button class="btn-theme">Je plante un arbre gratuitement</button>
+                        <v-btn
+                                icon
+                                dark
+                                @click="closeSlide"
+                        >
+                            &times;
+                        </v-btn>
+                    </div>
+                    <div class="body">
+                        <h1>design will be letter more , after your work </h1>
                     </div>
                 </div>
             </div>
+        </div>
+
 
     </div>
 </template>
@@ -52,7 +58,7 @@
         name: "we-plant-tree-map",
         data() {
             return {
-                    slide:false,
+                slide: false,
             }
         },
         mounted() {
@@ -215,15 +221,15 @@
 
             openSlide() {
                 this.slide = true;
-                let x = document.getElementsByTagName("BODY")[0];
-                x.style.cssText="max-height:100vh;overflow:hidden";
+                const el = document.body;
+                el.classList.add('modal-open');
             },
 
 
-            closeSlide(){
+            closeSlide() {
                 this.slide = false;
-                let x = document.getElementsByTagName("BODY")[0];
-                x.style.cssText="max-height:unset;overflow:unset";
+                const el = document.body;
+                el.classList.remove('modal-open');
             }
         },
 
@@ -241,44 +247,42 @@
         line-height: 1rem !important;
     }
 
-    .slideArea{
-        position: fixed;
+    .slideArea {
+        height: 100%;
         top: 0;
         bottom: 0;
+        right: 0 !important;
+        position: fixed;
+        z-index: 100000 !important;
+        transition: right 0.4s;
+        background: #fff;
+        margin-top: 0 !important;
+        padding: 0;
+        overflow: auto;
+        @media only screen and (min-width: 1291px) {
+            width: 50vw !important;
+        }
+
+        @media only screen and (max-width: 1290px) {
+            width: 70vw !important;
+        }
+        @media only screen and (max-width: 48em) {
+            width: 100% !important;
+        }
+
+    }
+
+    .modal-overlay {
+        background-color: #000;
+        position: fixed;
         left: 0;
         right: 0;
-        height: 100%;
-        z-index: 120000;
-        background: #353535f2;
-        display: flex;
-        flex-direction: row;
-
-        .content{
-            &:nth-child(1){
-                flex: 1;
-            }
-            &:nth-child(2){
-                flex: 1;
-                background: #fff;
-            }
-
-            .card{
-                height: 100%;
-                .header{
-                    padding: 10px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    box-shadow: inset 0 -1px 0 0 #eae8e4;
-                }
-                .body{
-                    height: inherit;
-                    padding: 15px;
-                    overflow-x: hidden;
-                    overflow-y: auto;
-                }
-            }
-        }
+        top: 0;
+        bottom: 0;
+        opacity: 0.5;
+        transition: opacity 0.5s, visibility 0s linear 0.5s;
+        -webkit-transition: opacity 0.5s, visibility 0s linear 0.5s;
+        z-index: 100000;
     }
 
 

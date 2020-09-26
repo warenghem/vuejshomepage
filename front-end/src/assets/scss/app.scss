@@ -198,10 +198,11 @@ body {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+
   & > div {
-  /* CURRENT way. */
-  scroll-snap-align: start;
-}
+    /* CURRENT way. */
+    scroll-snap-align: start;
+  }
 
   .instagram-image {
     img {
@@ -209,4 +210,9 @@ body {
       width: auto !important;
     }
   }
+}
+
+.modal-open {
+  overflow: hidden!important;
+  //position: fixed;
 }
