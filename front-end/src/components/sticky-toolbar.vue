@@ -28,19 +28,24 @@
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="hidden-sm-and-up">
             </v-app-bar-nav-icon>
             <v-toolbar-items class="hidden-xs-only">
-                <v-btn text class="text-uppercase item">
+                <v-btn text class="text-uppercase item"  :class="{'current':$root.currentId==='missionSection'}"
+                       @click="$root.scrollToElement('missionSection')">
                     Mission
                 </v-btn>
-                <v-btn text class="text-uppercase item">
+                <v-btn text class="text-uppercase item" :class="{'current':$root.currentId==='productSection'}"
+                       @click="$root.scrollToElement('productSection')">
                     Products
                 </v-btn>
-                <v-btn text class="text-uppercase item">
+                <v-btn text class="text-uppercase item"
+                       @click="$root.scrollToElement('missionSection')">
                     Calender
                 </v-btn>
-                <v-btn text class="text-uppercase item">
+                <v-btn text class="text-uppercase item" :class="{'current':$root.currentId==='mapTreeSection'}"
+                       @click="$root.scrollToElement('mapTreeSection')">
                     Reforestation
                 </v-btn>
-                <v-btn text class="text-uppercase item">
+                <v-btn text class="text-uppercase item" :class="{'current':$root.currentId==='studioSection'}"
+                       @click="$root.scrollToElement('studioSection')">
                     Studio
                 </v-btn>
             </v-toolbar-items>
@@ -105,7 +110,9 @@
                     display: none;
                 }
 
-
+                &.current{
+                    color: red!important;
+                }
             }
         }
 
