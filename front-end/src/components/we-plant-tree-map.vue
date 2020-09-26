@@ -222,7 +222,7 @@
             openSlide() {
                 this.slide = true;
                 const el = document.body;
-                el.classList.add('modal-open');
+                el.classList.add("modal-open")
             },
 
 
