@@ -5,6 +5,7 @@
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
         <ProductSection id="productSection"></ProductSection>
+        <CalenderSection id="calenderSection"></CalenderSection>
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
         <app-footer></app-footer>
@@ -19,6 +20,7 @@
     import MissionSection from '../components/mission-section';
     import ProductSection from '../components/product-section';
     import StudioSection from '../components/studio-section';
+    import CalenderSection from '../components/calender-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
 
 
@@ -32,7 +34,8 @@
             MissionSection,
             AppFooter,
             StickyToolbar,
-            MainToolbar
+            MainToolbar,
+            CalenderSection
         },
         data() {
             return {

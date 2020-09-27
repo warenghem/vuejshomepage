@@ -220,7 +220,8 @@
                     position: relative;
                     height: 100%;
                     &:nth-child(1) {
-                        /*background: url(../assets/images/WA-mif-seamless-REVISION.png);*/
+                        background: url(../assets/images/WA-mif-seamless-REVISION.png);
+                        background-size: cover;
                     }
                     .content {
                         padding: 20px;
