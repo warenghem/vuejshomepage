@@ -41,7 +41,7 @@
                     >
                         {{progressValue}}%
                     </v-progress-circular>
-                    <div class="progressHints">
+                    <div class="progressHints d-none d-md-block">
                         Création <br> d’objets en 3D
                     </div>
                 </div>
@@ -209,14 +209,6 @@
                 right: 15px;
                 font-size: 13px;
                 bottom: 53%;
-                @media(max-width: 768px) {
-                    text-align: center;
-                    position: relative;
-                    font-size: 13px;
-                    width: 100%;
-                    right: 0;
-                    margin-top: 10px;
-                }
             }
 
             .title {

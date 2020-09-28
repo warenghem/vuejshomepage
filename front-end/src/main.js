@@ -28,6 +28,7 @@ new Vue({
     created() {
         window.scrollTop = 0;
     },
+
     methods: {
 
         scrollToElement(divId) {
