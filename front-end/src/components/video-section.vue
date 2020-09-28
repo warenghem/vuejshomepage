@@ -231,7 +231,9 @@
                     width: 100%;
                     right: 0;
                     margin-top: 10px;
+                    display: none;
                 }
+
             }
 
             .title {
