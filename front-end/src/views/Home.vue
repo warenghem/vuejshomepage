@@ -22,8 +22,6 @@
     import StudioSection from '../components/studio-section';
     import CalenderSection from '../components/calender-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
-
-
     export default {
         name: 'Home',
         components: {
@@ -45,6 +43,7 @@
         },
         created() {
             window.addEventListener('scroll', this.handleScroll);
+            this.$store.dispatch('getForestDetail')
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
@@ -58,13 +57,13 @@
                         this.stickyToolbar = false;
                     }
                 }
-                if (window.pageYOffset > document.getElementById('studioSection').offsetTop-51) {
+                if (window.pageYOffset > document.getElementById('studioSection').offsetTop - 51) {
                     this.$root.currentId = 'studioSection'
-                } else if (window.pageYOffset > document.getElementById('mapTreeSection').offsetTop-51) {
+                } else if (window.pageYOffset > document.getElementById('mapTreeSection').offsetTop - 51) {
                     this.$root.currentId = 'mapTreeSection'
-                } else if (window.pageYOffset > document.getElementById('productSection').offsetTop-51) {
+                } else if (window.pageYOffset > document.getElementById('productSection').offsetTop - 51) {
                     this.$root.currentId = 'productSection'
-                } else if (window.pageYOffset > document.getElementById('missionSection').offsetTop-51) {
+                } else if (window.pageYOffset > document.getElementById('missionSection').offsetTop - 51) {
                     this.$root.currentId = 'missionSection'
                 } else {
                     this.$root.currentId = ''

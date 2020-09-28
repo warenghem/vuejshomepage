@@ -8,15 +8,15 @@
             certifiés.</h3>
         <div class="d-flex justify-center py-4 py-md-0">
             <div class="text-center py-4 px-7">
-                <div class="sub-title">4</div>
+                <div class="sub-title">{{$store.state.tree_count}}</div>
                 <div style="color: #888;">arbres plantés</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">0.92 tonnes</div>
+                <div class="sub-title">{{$store.state.co2_compensated}} tonnes</div>
                 <div style="color: #888;">de CO2 compensées</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">0.004</div>
+                <div class="sub-title">{{$store.state.reforest}}</div>
                 <div style="color: #888;">hectares reforestés</div>
             </div>
 
