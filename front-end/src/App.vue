@@ -7,7 +7,11 @@
 <script>
 
 
+
+
     import * as InstagramFeed from 'instafeed'
+
+
 
     export default {
         name: 'App',
@@ -29,6 +33,8 @@
                 'lazy_load': true,
                 'on_error': console.error
             });
+
+
         },
 
     };
