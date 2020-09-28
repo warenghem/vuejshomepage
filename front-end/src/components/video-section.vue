@@ -1,7 +1,7 @@
 <template>
     <div class="videoSection">
         <v-row no-gutters class="userDefine">
-            <v-col cols="9" md="9" sm="12">
+            <v-col md="9" sm="12">
                 <div class="bannerLeft">
 
                     <h2 class="title text-center"> La maroquinerie végétale du futur. Dès à présent.</h2>
@@ -29,7 +29,7 @@
                     {{$store.state.reforest}} <span>hectares reforestés</span> <br>
                 </div>
             </v-col>
-            <v-col cols="3" md="3" sm="12" class="bottomRight d-flex flex-column align-center justify-center">
+            <v-col md="3" sm="12" class="bottomRight d-flex flex-column align-center justify-center">
                 <p class="mt-3  title text-center">Avancement du projet</p>
                 <div class="d-flex align-center justify-center w-100 position-relative">
                     <v-progress-circular
@@ -54,9 +54,9 @@
                     <form action="" class="d-flex flex-column px-4">
                         <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                         <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                        <v-btn rounded id="jePlanetBtn" color="#0081a7" height="50px" class="planteBtn">
+                        <button  id="jePlanetBtn" class="btn-theme">
                             Je plante un arbre gratuitement
-                        </v-btn>
+                        </button>
                     </form>
                 </div>
 

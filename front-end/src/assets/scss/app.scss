@@ -46,15 +46,23 @@
         }
       }
 
-      .planteBtn{
-        color: #fff!important;
+      .btn-theme {
+        color: #fff;
+        border: none;
+        outline: 0;
         font-size: 0.775rem;
         text-transform: uppercase;
+        text-decoration: none;
         letter-spacing: 1.8px;
         background-color: #0081a7 !important;
         word-break: break-word;
+        padding: 16px 15px;
+        text-align: center;
+        border-radius: 30px;
         font-weight: 600;
+        margin: 7px 0;
         transition: all 0.6s ease;
+
         &:hover {
           background-color: #153038 !important;
         }
