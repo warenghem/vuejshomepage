@@ -153,6 +153,9 @@
                     justify-content: center;
                     position: relative;
                     height: 100%;
+                    @media(max-width:768px){
+                        padding: 29px 15px;
+                    }
                     &:nth-child(1) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
                     }
@@ -219,6 +222,9 @@
                     justify-content: center;
                     position: relative;
                     height: 100%;
+                    @media(max-width:768px){
+                        padding: 29px 15px;
+                    }
                     &:nth-child(1) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
                         background-size: cover;
@@ -293,6 +299,9 @@
                     justify-content: center;
                     position: relative;
                     height: 100%;
+                    @media(max-width:768px){
+                        padding: 29px 15px;
+                    }
                     &:nth-child(1) {
                         background: url(../assets/images/Sac-rendu-10-07-2020.2-min.jpg);
                         background-position: center;
@@ -360,6 +369,9 @@
                     justify-content: center;
                     position: relative;
                     height: 100%;
+                    @media(max-width:768px){
+                        padding: 29px 15px;
+                    }
                     &:nth-child(1) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
                     }

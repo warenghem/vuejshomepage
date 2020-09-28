@@ -110,7 +110,7 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
                     </v-row>
                     <h1 class="heading text--gray">
                         <span>Technologies durables. Tracabilité totale.</span>
-                            Puissantes, neutres en CO2, nos technologies accompagnent la régénération de la nature.
+                        Puissantes, neutres en CO2, nos technologies accompagnent la régénération de la nature.
                     </h1>
                     <article>
                         <p>
@@ -145,14 +145,20 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
 </template>
 
 <script>
+
+
+
     export default {
         data() {
-            return {}
+            return {
 
+            }
         },
         methods: {
+
+
             slideOne() {
-                document.getElementById("missionContainer").style.cssText = "background:url(./img/banner-red.2d904cbc.jpg); ";
+                document.getElementById("missionContainer").style.cssText = "background:url(./img/banner-red.2d904cbc.jpg); background-repeat:no-repeat; background-size:cover;";
                 document.getElementById("col1").style.cssText = "background:none; )";
                 document.getElementById("col2").style.cssText = "background:none; opacity:0.4; )";
                 document.getElementById("col3").style.cssText = "background:none; opacity:0.4; )";
@@ -160,7 +166,7 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
             },
 
             slideTwo() {
-                document.getElementById("missionContainer").style.cssText = "background:url(./img/roche-min.27a322a6.jpg)";
+                document.getElementById("missionContainer").style.cssText = "background:url(./img/roche-min.27a322a6.jpg);background-repeat:no-repeat; background-size:cover;";
                 document.getElementById("col1").style.cssText = "background:none; opacity:0.4; )";
                 document.getElementById("col2").style.cssText = "background:none; )";
                 document.getElementById("col3").style.cssText = "background:none; opacity:0.4; )";
@@ -168,7 +174,7 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
             },
 
             slideThree() {
-                document.getElementById("missionContainer").style.cssText = "background:url(./img/Studio-e1593525488356-min-1.563a9fe7.jpg)";
+                document.getElementById("missionContainer").style.cssText = "background:url(./img/Studio-e1593525488356-min-1.563a9fe7.jpg);background-repeat:no-repeat; background-size:cover;";
                 document.getElementById("col1").style.cssText = "background:none; opacity:0.4; )";
                 document.getElementById("col2").style.cssText = "background:none; opacity:0.4; )";
                 document.getElementById("col3").style.cssText = "background:none; )";
@@ -176,7 +182,7 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
             },
 
             slideFour() {
-                document.getElementById("missionContainer").style.cssText = "background:url(./img/Tech-02-min-1-scaled.60cbf54f.jpg)";
+                document.getElementById("missionContainer").style.cssText = "background:url(./img/Tech-02-min-1-scaled.60cbf54f.jpg);background-repeat:no-repeat; background-size:cover;";
                 document.getElementById("col1").style.cssText = "background:none; opacity:0.4;)";
                 document.getElementById("col2").style.cssText = "background:none; opacity:0.4;)";
                 document.getElementById("col3").style.cssText = "background:none; opacity:0.4;)";
@@ -208,12 +214,20 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
             align-items: center;
             height: 100vh;
             position: relative;
+            @media(max-width: 768px) {
+                flex-direction: column;
+                height: auto;
+            }
             .items {
                 height: inherit;
                 position: relative;
                 flex: 1;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
+                @media(max-width: 768px) {
+                    width: 100%;
+                    min-height: 370px;
+                }
                 .content {
                     position: absolute;
                     font-family: 'teradeli-book', sans-serif;
@@ -224,10 +238,18 @@ Passionés par des objets qui durent. Le design est pensé intemporel, échappan
                     height: 200px;
                     transition: height 0.4s ease-in;
                     overflow: hidden;
+                    @media(max-width: 768px) {
+                        height: 150px;
+                    }
 
                     &:hover {
                         height: 80%;
-                        cursor: url(../assets/images/cross_100185.svg),auto;
+                        cursor: url(../assets/images/cross_100185.svg), auto;
+                    }
+                    @media(max-width: 768px){
+                        &:hover{
+                            height: 100%;
+                        }
                     }
                     .heading {
                         color: #888;

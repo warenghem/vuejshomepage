@@ -44,7 +44,7 @@
             <v-spacer></v-spacer>
             <v-toolbar-title>
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
-                    <img src="../assets/images/logo.svg" width="140px"/>
+                    <img src="../assets/images/logo.svg" width="100%"/>
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>

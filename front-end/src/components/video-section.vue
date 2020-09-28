@@ -1,9 +1,8 @@
 <template>
     <div class="videoSection">
         <v-row no-gutters class="userDefine">
-            <v-col md="9" sm="12">
+            <v-col md="9" sm="12" class="topCenter">
                 <div class="bannerLeft">
-
                     <h2 class="title text-center"> La maroquinerie végétale du futur. Dès à présent.</h2>
                     <h4 class="subtitle text-center">Rencontre entre les traditions maroquinières francaises et nos
                         cuirs de
@@ -105,6 +104,13 @@
 
         .userDefine {
             height: inherit;
+
+           @media(max-width: 425px){
+               .topCenter,.bottomRight  {
+                   max-width: 100%;
+                   flex: 0 0 100%;
+               }
+           }
         }
 
         @media(max-width: 768px) {
@@ -184,6 +190,9 @@
             .bottomText {
                 margin-top: 65px;
                 font-size: 14px;
+                @media(max-width:1024px){
+                    margin-top: 40px;
+                }
                 @media(max-width: 768px) {
                     width: 60%;
                     margin: 15px auto;
@@ -219,9 +228,9 @@
         }
     }
 
-    .form {
-        @media(max-width: 768px) {
-            background: black;
+    .form{
+        @media(max-width: 768px){
+            background: radial-gradient(circle at 50% 45%,#292929 0%,#0a0a0a 100%);
             padding: 40px 17%;
             width: 100%;
         }
