@@ -10,28 +10,28 @@
                 </div>
                 <div class="row col-md-10 mx-auto text-center inner">
                     <div class="col-md-4">
-                        <p><img src="../assets/images/ecological.svg"></p>
+                        <p><img src="../assets/images/ecological.svg" alt=""></p>
                         <span>Ecologique / Vegan</span>
                     </div>
                     <div class="col-md-4">
-                        <p><img src="../assets/images/france.svg"></p>
+                        <p><img src="../assets/images/france.svg" alt=""></p>
                         <span>Made in France</span>
                     </div>
                     <div class="col-md-4">
-                        <p><img src="../assets/images/tech.svg"></p>
+                        <p><img src="../assets/images/tech.svg" alt=""></p>
                         <span>Technologie durable</span>
                     </div>
                 </div>
                 <div class="bottomleft">
-                    4 <span>arbres plantés</span> <br>
-                    0.92 <span>tonnes CO2 compensées</span> <br>
-                    0.004 <span>hectares reforestés</span> <br>
+                    {{$store.state.tree_count}} <span>arbres plantés</span> <br>
+                    {{$store.state.co2_compensated}} <span>tonnes CO2 compensées</span> <br>
+                    {{$store.state.reforest}} <span>hectares reforestés</span> <br>
                 </div>
             </v-col>
-            <v-col cols="3" md="3" sm="12" class="bottomRight">
+            <v-col md="3" sm="12" class="bottomRight d-flex flex-column align-center justify-center">
                 <p class="mt-3  title text-center">Avancement du projet</p>
-                <div class="d-flex align-center justify-center">
-                   <v-progress-circular
+                <div class="d-flex align-center justify-center w-100 position-relative">
+                    <v-progress-circular
                             :rotate="-90"
                             :size="150"
                             :width="15"
@@ -40,10 +40,11 @@
                     >
                         {{progressValue}}%
                     </v-progress-circular>
+                    <div class="progressHints">
+                        Création <br> d’objets en 3D
+                    </div>
                 </div>
-                <div class="progressHints">
-                    Création <br> d’objets en 3D
-                </div>
+
                 <p class="text-white pb-3 px-4 text-justify bottomText">
                     Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse
                     mail pour planter un arbre et rester au courant de l’avancée du projet.
@@ -52,7 +53,7 @@
                     <form action="" class="d-flex flex-column px-4">
                         <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                         <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                        <button class="btn-theme"  id="jePlanetBtn">
+                        <button  id="jePlanetBtn" class="btn-theme">
                             Je plante un arbre gratuitement
                         </button>
                     </form>
@@ -100,7 +101,8 @@
         background-repeat: no-repeat;
         transition: background-image 0.4s ease-in-out;
         background-position: 50% 0%;
-        .userDefine{
+
+        .userDefine {
             height: inherit;
 
            @media(max-width: 425px){
@@ -117,6 +119,7 @@
 
         .bannerLeft {
             margin-top: 40px;
+
             .title {
                 padding-bottom: 20px;
                 font-size: 40px !important;
@@ -127,10 +130,11 @@
                 transition: all .3s cubic-bezier(.39, .575, .565, 1);
                 @media(max-width: 768px) {
                     width: 80%;
-                    text-align: center!important;
+                    text-align: center !important;
                     margin: 0 auto;
                 }
             }
+
             .subtitle {
                 letter-spacing: .004em;
                 font-family: 'teradeli-light', sans-serif !important;
@@ -141,41 +145,48 @@
                 font-size: 23px !important;
                 @media(max-width: 768px) {
                     width: 80%;
-                    text-align: center!important;
+                    text-align: center !important;
                     margin: 0 auto;
                 }
             }
         }
+
         .inner {
             color: grey;
+
             img {
                 width: 30px;
                 margin: 0 auto;
                 display: block;
                 opacity: 0.7;
             }
+
             span {
                 font-size: 18px;
                 opacity: 0.7;
                 color: #fff;
             }
         }
+
         .bottomleft {
             font-size: 19px;
             padding: 30px;
             position: absolute;
             bottom: 0;
+
             span {
                 color: #888;
             }
-            @media(max-width: 768px){
+
+            @media(max-width: 768px) {
                 display: none;
             }
         }
+
         .bottomRight {
-            padding-top: 40px;
-            font-family: 'teradeli-book', sans-serif!important;
+            font-family: 'teradeli-book', sans-serif !important;
             border-left: 1px solid #fff;
+
             .bottomText {
                 margin-top: 65px;
                 font-size: 14px;
@@ -185,25 +196,28 @@
                 @media(max-width: 768px) {
                     width: 60%;
                     margin: 15px auto;
-                    text-align: center!important;
+                    text-align: center !important;
                 }
             }
-            .progress{
-                height:150px;
+
+            .progress {
+                height: 150px;
                 margin-top: 25px;
-                width:150px;
+                width: 150px;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
                 background: #FFF;
-                margin-left:  auto;
-                margin-right:  auto;
+                margin-left: auto;
+                margin-right: auto;
             }
-            .progressHints{
+
+            .progressHints {
                 text-align: center;
                 position: absolute;
                 right: 15px;
                 font-size: 13px;
+                bottom: 53%;
                 margin-top: -40px;
 
                 @media(max-width:1024px){
@@ -219,6 +233,7 @@
                     margin-top: 10px;
                 }
             }
+
             .title {
                 color: #fff;
                 line-height: 1.10722 !important;
