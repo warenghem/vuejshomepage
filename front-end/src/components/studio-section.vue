@@ -13,6 +13,7 @@
                         <div class="role"> Founder &amp; Artistic Director
                         </div>
                         <div class="item-details">
+                            {{$t('message.hello')}}
                             Convinced by a world where nature would be omnipresent around us, I decided to use
                             my knowledge acquired in the business world for causes that are close to our
                             hearts. Let's create together
@@ -87,30 +88,53 @@
 </template>
 
 <script>
+    export default {
+        i18n: {
+            messages: {
+                en: {
+                    message: {
+                        hello: 'hello world',
+                        greeting: 'good morning'
+                    }
+                },
+                fr: {
+                    message: {
+                        hello: 'こんにちは、世界',
+                        greeting: 'おはようございます'
+                    }
+                }
+            }
+        }
+    }
 </script>
 <style scoped lang="scss">
     .team-section {
         .item-inner {
             padding: 30px;
             height: 100%;
+
             .profile-holder {
                 text-align: center;
+
                 img {
                     border-radius: 50%;
                     width: 200px;
                 }
             }
+
             .name {
                 margin-top: 0;
                 margin-bottom: 5px;
                 color: #000;
                 font-size: 16px;
             }
+
             .role {
                 margin-bottom: 15px;
                 color: #888;
                 line-height: 15px;
             }
+
             .item-details {
                 margin-bottom: 15px;
                 color: #86868b;
@@ -119,7 +143,7 @@
                 line-height: 1.47059;
                 font-weight: 300;
                 letter-spacing: -.022em;
-                font-family: 'teradeli-light',sans-serif;
+                font-family: 'teradeli-light', sans-serif;
             }
         }
     }

@@ -1,11 +1,10 @@
 <template>
     <section class="mission">
         <div class="missionContainer" id="missionContainer">
-
             <div class="items" id="col1">
                 <div class="content" @mouseleave="reset" @mouseover="slideOne">
                     <v-row align="center" justify="center" class="mb-3">
-                        <img src="../assets/images/magazine-plus.svg" class="plus text-center">
+                        <img src="../assets/images/magazine-plus.svg" class="plus text-center" alt="">
                     </v-row>
                     <h1 class="heading text--gray">
                         <span>La noblesse du vin.</span>

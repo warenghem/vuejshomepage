@@ -3,28 +3,29 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import router from './router'
 import store from './store'
-import i18n from './i18n'
 import './assets/scss/app.scss'
 import './assets/scss/home.scss'
 import Axios from "axios";
+import i18n from './i18n'
 
 Vue.prototype.$http = Axios;
 Axios.defaults.baseURL = 'https://tree-nation.com/api/';
 
 Vue.config.productionTip = false;
 
-new Vue({
+export const app =new Vue({
     el: '#app',
     vuetify,
     router,
     store,
-    i18n,
     render: h => h(App),
+
     data() {
         return {
-            currentId: ''
+            currentId: '',
         }
     },
+
     created() {
         window.scrollTop = 0;
     },
@@ -41,11 +42,6 @@ new Vue({
             })
         },
     },
+    i18n,
 
-    mounted(){
-
-
-    }
-
-
-}).$mount('#app')
+}).$mount('#app');

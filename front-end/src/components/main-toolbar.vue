@@ -63,20 +63,31 @@
                                     v-bind="attrs"
                                     v-on="on"
                             >
-                                <img src="../assets/images/flag.jpg" width="24" alt=""/>
+                                <img src="../assets/images/flag.jpg" width="24" alt="" v-if="$i18n.locale==='fr'"/>
+                                <img src="../assets/images/united-kingdom.svg" width="24" alt="" v-else/>
                             </v-btn>
                         </template>
                         <v-list>
                             <v-list-item
 
                             >
-                                <v-list-item-title><img src="../assets/images/flag.jpg" width="24" alt=""/>
+                                <v-list-item-title>
+                                    <img src="../assets/images/united-kingdom.svg"
+                                         width="24"
+                                         alt=""
+                                         @click="$store.dispatch('setLang', 'en')"
+                                    />
                                 </v-list-item-title>
                             </v-list-item>
                             <v-list-item
 
                             >
-                                <v-list-item-title><img src="../assets/images/flag.jpg" width="24" alt=""/>
+                                <v-list-item-title>
+                                    <img src="../assets/images/flag.jpg"
+                                         width="24"
+                                         alt=""
+                                          @click="$store.dispatch('setLang', 'fr')"
+                                    />
                                 </v-list-item-title>
                             </v-list-item>
                         </v-list>
@@ -126,29 +137,33 @@
             .brand {
 
                 filter: brightness(0) invert(1);
-                img{
+
+                img {
                     padding-top: 5px;
                 }
             }
-            .item{
-                &:before{
+
+            .item {
+                &:before {
                     display: none;
                 }
-                &:after{
-                        content:'';
-                        position: absolute;
-                        height: 1px;
-                        width: 1px;
-                        transition:width 0.6s ease;
-                        left: 14px;
-                        bottom: 0;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 1px;
+                    transition: width 0.6s ease;
+                    left: 14px;
+                    bottom: 0;
+                }
+
+                &:hover {
+                    &:after {
+                        background: #000;
+                        width: 70%;
                     }
-                   &:hover{
-                       &:after{
-                           background: #000;
-                           width: 70%;
-                       }
-                   }
+                }
             }
         }
 

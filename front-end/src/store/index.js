@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from "axios";
+import {app} from '../main'
 
 Vue.use(Vuex);
 
@@ -16,6 +17,9 @@ export default new Vuex.Store({
             state.co2_compensated = payload.co2_compensated;
             state.reforest = (parseInt(state.tree_count, 10) / 999).toFixed(3).toLocaleString();
         },
+        SET_LANG(state, payload) {
+            app.$i18n.locale = payload
+        }
     },
     actions: {
         getForestDetail({commit}) {
@@ -28,8 +32,10 @@ export default new Vuex.Store({
                 .catch(() => {
                     commit("SET_FOREST_DETAILS", {tree_count: 0, co2_compensated: 0});
                 })
-
         },
+        setLang({commit}, payload) {
+            commit('SET_LANG', payload)
+        }
     },
     modules: {}
 })
