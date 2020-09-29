@@ -69,24 +69,25 @@
                         </template>
                         <v-list>
                             <v-list-item
-
                             >
-                                <v-list-item-title>
+                                <v-list-item-title  class="cursor-pointer">
                                     <img src="../assets/images/united-kingdom.svg"
                                          width="24"
                                          alt=""
                                          @click="$store.dispatch('setLang', 'en')"
+
                                     />
                                 </v-list-item-title>
                             </v-list-item>
                             <v-list-item
 
                             >
-                                <v-list-item-title>
+                                <v-list-item-title class="cursor-pointer">
                                     <img src="../assets/images/flag.jpg"
                                          width="24"
                                          alt=""
                                           @click="$store.dispatch('setLang', 'fr')"
+
                                     />
                                 </v-list-item-title>
                             </v-list-item>
