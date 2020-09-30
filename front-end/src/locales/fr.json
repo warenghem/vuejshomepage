@@ -1,3 +1,11 @@
 {
-  "message": "mera hasib"
+  "message": "mera hasib",
+  "toolbar": {
+    "mission": "mission",
+    "product": "produits",
+    "calendar": "calendrier",
+    "studio": "studio",
+    "reforest": "reforestation"
+  },
+  "btnTitle": "Je plante un arbre gratuitement"
 }

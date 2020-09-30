@@ -5,23 +5,43 @@
         </div>
         <v-navigation-drawer v-model="sidebar" app>
             <v-list>
-                <v-list-item>
-                    <v-list-item-content>MISSION</v-list-item-content>
+                <v-list-item
+                        :class="{'current':$root.currentId==='missionSection'}"
+                        @click="$root.scrollToElement('missionSection')"
+                >
+                    <v-list-item-content>
+                        {{$t('toolbar.mission')}}
+                    </v-list-item-content>
                 </v-list-item>
-                <v-list-item>
-                    <v-list-item-content>PRODUITS</v-list-item-content>
+                <v-list-item
+                        :class="{'current':$root.currentId==='productSection'}"
+                        @click="$root.scrollToElement('productSection')"
+                >
+                    <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item>
-                    <v-list-item-content>CALENDRIER</v-list-item-content>
+                <v-list-item
+                        :class="{'current':$root.currentId==='calendarSection'}"
+                        @click="$root.scrollToElement('calendarSection')"
+                >
+                    <v-list-item-content>{{$t('toolbar.calendar')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item>
-                    <v-list-item-content>MISSION</v-list-item-content>
+                <v-list-item
+                        :class="{'current':$root.currentId==='mapTreeSection'}"
+                        @click="$root.scrollToElement('mapTreeSection')"
+                >
+                    <v-list-item-content>{{$t('toolbar.reforest')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item>
-                    <v-list-item-content>MISSION</v-list-item-content>
+                <v-list-item
+                        :class="{'current':$root.currentId==='studioSection'}"
+                        @click="$root.scrollToElement('studioSection')"
+                >
+                    <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item>
-                    <v-list-item-content>MISSION</v-list-item-content>
+                <v-list-item
+                >
+                    <v-list-item-content>
+                        <button class="nav-btn">{{$t('btnTitle')}}</button>
+                    </v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -31,29 +51,44 @@
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="hidden-sm-and-up">
             </v-app-bar-nav-icon>
             <v-toolbar-items class="hidden-xs-only">
-                <v-btn text class="text-uppercase item">
-                    Mission
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId==='missionSection'}"
+                       @click="$root.scrollToElement('missionSection')"
+                >
+                    {{$t('toolbar.mission')}}
                 </v-btn>
-                <v-btn text class="text-uppercase item">
-                    Products
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId==='productSection'}"
+                       @click="$root.scrollToElement('productSection')"
+                >
+                    {{$t('toolbar.product')}}
                 </v-btn>
-                <v-btn text class="text-uppercase item">
-                    Calender
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId==='calendarSection'}"
+                       @click="$root.scrollToElement('calendarSection')"
+                >
+                    {{$t('toolbar.calendar')}}
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
             <v-toolbar-title>
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
-                    <img src="../assets/images/logo.svg" width="100%"/>
+                    <img src="../assets/images/logo.svg" width="100%" alt="logo"/>
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-xs-only">
-                <v-btn text class="text-uppercase item">
-                    Reforestation
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId==='mapTreeSection'}"
+                       @click="$root.scrollToElement('mapTreeSection')"
+                >
+                    {{$t('toolbar.reforest')}}
                 </v-btn>
-                <v-btn text class="text-uppercase item">
-                    Studio
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId==='studioSection'}"
+                       @click="$root.scrollToElement('studioSection')"
+                >
+                    {{$t('toolbar.studio')}}
                 </v-btn>
                 <v-btn text>
                     <v-menu offset-y>
@@ -70,7 +105,7 @@
                         <v-list>
                             <v-list-item
                             >
-                                <v-list-item-title  class="cursor-pointer">
+                                <v-list-item-title class="cursor-pointer">
                                     <img src="../assets/images/united-kingdom.svg"
                                          width="24"
                                          alt=""
@@ -86,7 +121,7 @@
                                     <img src="../assets/images/flag.jpg"
                                          width="24"
                                          alt=""
-                                          @click="$store.dispatch('setLang', 'fr')"
+                                         @click="$store.dispatch('setLang', 'fr')"
 
                                     />
                                 </v-list-item-title>

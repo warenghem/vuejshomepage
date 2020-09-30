@@ -7,37 +7,37 @@
                         @click="$root.scrollToElement('missionSection')"
                 >
                     <v-list-item-content>
-                        MISSION
+                        {{$t('toolbar.mission')}}
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item
                         :class="{'current':$root.currentId==='productSection'}"
                         @click="$root.scrollToElement('productSection')"
                 >
-                    <v-list-item-content>PRODUITS</v-list-item-content>
+                    <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
-                        :class="{'current':$root.currentId==='calenderSection'}"
-                        @click="$root.scrollToElement('calenderSection')"
+                        :class="{'current':$root.currentId==='calendarSection'}"
+                        @click="$root.scrollToElement('calendarSection')"
                 >
-                    <v-list-item-content>CALENDRIER</v-list-item-content>
+                    <v-list-item-content>{{$t('toolbar.calendar')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
                         :class="{'current':$root.currentId==='mapTreeSection'}"
                         @click="$root.scrollToElement('mapTreeSection')"
                 >
-                    <v-list-item-content>Reforestation</v-list-item-content>
+                    <v-list-item-content>{{$t('toolbar.reforest')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
                         :class="{'current':$root.currentId==='studioSection'}"
                         @click="$root.scrollToElement('studioSection')"
                 >
-                    <v-list-item-content>Studio</v-list-item-content>
+                    <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
                 >
                     <v-list-item-content>
-                        <button class="nav-btn">Je plante un arbre gratuitement</button>
+                        <button class="nav-btn">{{$t('btnTitle')}}</button>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -53,30 +53,30 @@
                        :class="{'current':$root.currentId==='missionSection'}"
                        @click="$root.scrollToElement('missionSection')"
                 >
-                    Mission
+                    {{$t('toolbar.mission')}}
                 </v-btn>
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='productSection'}"
                        @click="$root.scrollToElement('productSection')"
                 >
-                    Products
+                    {{$t('toolbar.product')}}
                 </v-btn>
                 <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='calenderSection'}"
-                       @click="$root.scrollToElement('calenderSection')">
-                    Calender
+                       :class="{'current':$root.currentId==='calendarSection'}"
+                       @click="$root.scrollToElement('calendarSection')">
+                    {{$t('toolbar.calendar')}}
                 </v-btn>
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='mapTreeSection'}"
                        @click="$root.scrollToElement('mapTreeSection')"
                 >
-                    Reforestation
+                    {{$t('toolbar.reforest')}}
                 </v-btn>
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='studioSection'}"
                        @click="$root.scrollToElement('studioSection')"
                 >
-                    Studio
+                    {{$t('toolbar.studio')}}
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
@@ -88,7 +88,7 @@
             <v-spacer style="flex-grow: 2!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
             <v-toolbar-items class="py-1 d-none d-md-block">
-                <button class="nav-btn">Je plante un arbre gratuitement</button>
+                <button class="nav-btn">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
     </section>
@@ -121,15 +121,18 @@
 
         .menu-bar {
             border-bottom: none !important;
-             backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
             background: #1d1d1fb3 !important;
-            &.whiteBack{
-                border-bottom: #eae8e4 solid 1px!important;
 
-                background-color: rgba(255,255,255,.74)!important;
-                .item{
+            &.whiteBack {
+                border-bottom: #eae8e4 solid 1px !important;
+
+                background-color: rgba(255, 255, 255, .74) !important;
+
+                .item {
                     color: black;
                 }
+
                 .brand {
                     filter: brightness(1) invert(0);
                 }

@@ -5,7 +5,7 @@
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
         <ProductSection id="productSection"></ProductSection>
-        <CalenderSection id="calenderSection"></CalenderSection>
+        <CalenderSection id="calendarSection"></CalenderSection>
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
         <app-footer></app-footer>
@@ -110,8 +110,8 @@
 
                 } else if (window.pageYOffset > document.getElementById('mapTreeSection').offsetTop - 51) {
                     this.$root.currentId = 'mapTreeSection'
-                } else if (window.pageYOffset > document.getElementById('calenderSection').offsetTop - 51) {
-                    this.$root.currentId = 'calenderSection'
+                } else if (window.pageYOffset > document.getElementById('calendarSection').offsetTop - 51) {
+                    this.$root.currentId = 'calendarSection'
                 } else if (window.pageYOffset > document.getElementById('productSection').offsetTop - 51) {
                     this.$root.currentId = 'productSection'
                 } else if (window.pageYOffset > document.getElementById('missionSection').offsetTop - 51) {
@@ -123,7 +123,6 @@
             },
             getItemRow() {
                 const slider = document.querySelector('.instagram_gallery').getElementsByTagName('a');
-                console.log(slider);
                 switch (this.$vuetify.breakpoint.name) {
 
                     case 'xs':

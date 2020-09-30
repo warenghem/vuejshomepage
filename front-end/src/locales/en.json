@@ -1,3 +1,11 @@
 {
-  "message": "i am hasib"
+  "message": "i am hasib",
+  "toolbar": {
+    "mission": "mission",
+    "product": "products",
+    "calendar": "calendar",
+    "studio": "studio",
+    "reforest": "reforestation"
+  },
+  "btnTitle": "I plant a tree for free"
 }

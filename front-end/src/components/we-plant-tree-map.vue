@@ -153,7 +153,6 @@
                     term1: 'planted trees',
                     term2: 'of CO2 compensated',
                     term3: 'reforested hectares',
-                    btnTitle: 'I plant a tree for free',
                     madagascar: {
                         section1: {
                             title: 'Forest',
@@ -223,7 +222,6 @@
                     term1: 'arbres plantés',
                     term2: 'de CO2 compensées',
                     term3: 'hectares reforestés',
-                    btnTitle: 'Je plante un arbre gratuitement',
                     madagascar: {
                         section1: {
                             title: 'Fôret',
@@ -271,7 +269,8 @@
                         section2: {
                             title: 'Projet',
                             subtitle: 'Des arbres pour les tigres, Inde',
-                            paraTitle1: "<p>LeLe projet vise 50 000 arbres en bordure du parc national de Similipal " +
+                            paraTitle1: 'Le livre de la jungle 2.',
+                            paraText1: "<p>LeLe projet vise 50 000 arbres en bordure du parc national de Similipal " +
                                 "pour enrichir la fôret vierge locale, en particulier pour les tigres du Bengale.</p>",
                             paraTitle2: 'How about we drop by to help them?',
                             paraText2: "<p>La région du projet est habitée par une variété de communautés tribales " +
