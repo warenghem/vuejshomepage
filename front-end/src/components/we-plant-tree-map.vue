@@ -1,23 +1,20 @@
 <template>
     <div>
 
-        <h2 class="page-title pt-md-5 pt-4">Nous plantons aussi des arbres. Et vous?</h2>
-        <h3 class="page-details pb-md-5 py-2 teradeli-light">Pour compenser les émissions de CO2 liées à la création de
-            nos objets, à vos visites sur notre site, et à la consommation d’électricité de nos technologies. Nos
-            projets sont exclusivement réservés à la régénération de la biodiversité. Nos arbres sont tracés et
-            certifiés.</h3>
+        <h2 class="page-title pt-md-5 pt-4"> {{$t('title')}}</h2>
+        <h3 class="page-details pb-md-5 py-2 teradeli-light"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-4 py-md-0">
             <div class="text-center py-4 px-7">
                 <div class="sub-title">{{$store.state.tree_count}}</div>
-                <div style="color: #888;">arbres plantés</div>
+                <div style="color: #888;"> {{$t('term1')}}</div>
             </div>
             <div class="text-center py-4 px-7">
                 <div class="sub-title">{{$store.state.co2_compensated}} tonnes</div>
-                <div style="color: #888;">de CO2 compensées</div>
+                <div style="color: #888;">{{$t('term2')}}</div>
             </div>
             <div class="text-center py-4 px-7">
                 <div class="sub-title">{{$store.state.reforest}}</div>
-                <div style="color: #888;">hectares reforestés</div>
+                <div style="color: #888;">{{$t('term3')}}</div>
             </div>
 
         </div>
@@ -25,84 +22,70 @@
         <div class="slideArea">
             <div class="content">
                 <div class="card">
-                    <div class="card-header d-flex justify-space-between px-3 align-center">
-                        <button class="btn-theme">Je plante un arbre gratuitement</button>
+                    <div class="card-header d-flex justify-space-between px-3 align-center border-bottom-2 py-2">
+                        <v-btn rounded color="#0081a7" class="white--text">{{$t('btnTitle')}}</v-btn>
                         <v-btn
                                 text
                                 color="black"
                                 @click="closeSlide"
+                                style="font-size: 32px"
                         >
                             &times;
                         </v-btn>
                     </div>
-                    <div class="px-7 py-3 border-top-2 map-modal mgforest">
-                        <v-row>
+                    <div class="px-7 pb-3  map-modal mgforest pt-7">
+                        <v-row class="mt-7 pt-2">
                             <v-col lg="6">
-                                <div class="para-title">Fôret</div>
-                                <div class="para-subtitle">Mangrove noire</div>
+                                <div class="para-title">{{$t('madagascar.section1.title')}}</div>
+                                <div class="para-subtitle">{{$t('madagascar.section1.subtitle')}}</div>
                                 <div class="para-img">
                                     <v-img src="../assets/images/specie-mango.jpg"></v-img>
                                 </div>
                                 <v-row>
                                     <v-col class="text-center ">
-                                        <div class="para-subtitle">20 Kg</div>
-                                        <div class="para-text">Compensation CO2</div>
+                                        <div class="para-subtitle">
+                                            20 Kg
+                                        </div>
+                                        <div class="para-text">{{$t('madagascar.section1.term1')}}</div>
                                     </v-col>
                                     <v-col class="text-center">
                                         <div class="para-subtitle">25 ans</div>
-                                        <div class="para-text">Durée de vie</div>
+                                        <div class="para-text">{{$t('madagascar.section1.term2')}}</div>
                                     </v-col>
                                     <v-col class="text-center ">
                                         <div class="para-subtitle">2 – 10 m</div>
-                                        <div class="para-text">Taille</div>
+                                        <div class="para-text">{{$t('madagascar.section1.term3')}}</div>
                                     </v-col>
                                 </v-row>
-                                <div class="para-subtitle-small">Faune et Flore locale.</div>
-                                <div class="para-text">
-                                    <p>Madagascar dispose de plus de 200 000 espèces de plantes et d’animaux qui
-                                        n’existent nulle part ailleurs dans le monde. 90% des forêts ont été détruites,
-                                        déplaçant des espèces animales entières et les Malgaches.</p>
-
+                                <div class="para-subtitle-small">{{$t('madagascar.section1.paraTitle')}}</div>
+                                <div class="para-text" v-html="$t('madagascar.section1.paraText')">
                                 </div>
                             </v-col>
                             <v-col lg="6">
-                                <div class="para-title">Projet</div>
-                                <div class="para-subtitle">Projet Paradis, Madagascar</div>
+                                <div class="para-title">{{$t('madagascar.section2.title')}}</div>
+                                <div class="para-subtitle">{{$t('madagascar.section2.subtitle')}}</div>
                                 <div class="para-img">
-                                    <v-img src="../assets/images/river.png"></v-img>
+                                    <v-img src="../assets/images/river.png" alt="tiger"></v-img>
                                 </div>
-                                <div class="para-subtitle-small">Incroyable projet. Réussite totale.</div>
-                                <div class="para-text">
-                                    <p>Eden Reforestation Projects a lancé ce programme en 2007 suite à la perte
-                                        critique
-                                        de fôrets.</p>
-
-                                    <p>16 millions de mangroves ont été plantés. Des forêts saines commencent à émerger
-                                        et
-                                        tous les effets négatifs de la déforestation commencent à disparaître.</p>
+                                <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle1')}}</div>
+                                <div class="para-text" v-html="$t('madagascar.section2.paraText1')">
                                 </div>
-                                <div class="para-subtitle-small">Une communauté locale active. A ne pas oublier.</div>
-                                <div class="para-text">
-                                    <p>Les Vilamatsa avaient hâte de faire partie de cette initiative de reboisement en
-                                        raison du succès d’une plantation à proximité.</p>
-
-                                    <p>Cela leur donne un revenu décent afin qu’ils puissent à nouveau subvenir aux
-                                        besoins
-                                        de leur famille.</p>
+                                <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle2')}}</div>
+                                <div class="para-text" v-html="$t('madagascar.section2.paraText2')">
                                 </div>
                             </v-col>
                             <v-col>
-                                <div class="para-title">Lien Google Map.</div>
+                                <div class="para-title">{{$t('madagascar.section3.title')}}</div>
                                 <v-img class="py-3" src="../assets/images/map1.png"></v-img>
                             </v-col>
                         </v-row>
 
                     </div>
-                    <div class="px-7 py-3 border-top-2 map-modal indianforest">
-                        <v-row>
+                    <div class="px-7 pb-3  map-modal indianforest pt-7">
+                        <v-row class="mt-7 pt-2">
                             <v-col lg="6">
-                                <div class="para-title">Fôret</div>
-                                <div class="para-subtitle">Manguiers</div>
+                                <div class="para-title">{{$t('india.section1.title')}}</div>
+                                <div class="para-subtitle">{{$t('india.section1.subtitle')}}</div>
                                 <div class="para-img">
                                     <v-img src="../assets/images/mango.jpg"></v-img>
                                 </div>
@@ -111,51 +94,36 @@
                                         <div class="para-subtitle">
                                             800 Kg
                                         </div>
-                                        <div class="para-text">Compensation CO2</div>
+                                        <div class="para-text">{{$t('india.section1.term1')}}</div>
                                     </v-col>
                                     <v-col class="text-center">
                                         <div class="para-subtitle">100 ans</div>
-                                        <div class="para-text">Durée de vie</div>
+                                        <div class="para-text">{{$t('india.section1.term2')}}</div>
                                     </v-col>
                                     <v-col class="text-center ">
                                         <div class="para-subtitle">35 – 45 m</div>
-                                        <div class="para-text">Taille</div>
+                                        <div class="para-text">{{$t('india.section1.term3')}}</div>
                                     </v-col>
                                 </v-row>
-                                <div class="para-subtitle-small">Faune et Flore locale.</div>
-                                <div class="para-text">
-                                    <p>Le parc national de Similipal est le 7e plus grand parc national d’Inde (2 750
-                                        km2), et fait partie du Réseau mondial des réserves de biosphère de l’UNESCO
-                                        depuis 2009. Il abrite le tigre du Bengale, l’éléphant d’Asie, le gaur et le
-                                        chausingha. Ainsi que les plus belles chutes d’eau comme Joranda et Barehipani
-                                        Falls.
-                                    </p>
-
+                                <div class="para-subtitle-small">{{$t('india.section1.paraTitle')}}</div>
+                                <div class="para-text" v-html="$t('india.section1.paraText')">
                                 </div>
                             </v-col>
                             <v-col lg="6">
-                                <div class="para-title">Projet</div>
-                                <div class="para-subtitle">Des arbres pour les tigres, Inde</div>
+                                <div class="para-title">{{$t('india.section2.title')}}</div>
+                                <div class="para-subtitle">{{$t('india.section2.subtitle')}}</div>
                                 <div class="para-img">
                                     <v-img src="../assets/images/tiger.jpg" alt="tiger"></v-img>
                                 </div>
-                                <div class="para-subtitle-small">Le livre de la jungle 2.</div>
-                                <div class="para-text">
-                                    <p>Le projet vise 50 000 arbres en bordure du parc national de Similipal pour
-                                        enrichir la fôret vierge locale, en particulier pour les tigres du Bengale.</p>
-
+                                <div class="para-subtitle-small">{{$t('india.section2.paraTitle1')}}</div>
+                                <div class="para-text" v-html="$t('india.section2.paraText1')">
                                 </div>
-                                <div class="para-subtitle-small">Et si nous passions les aider ?</div>
-                                <div class="para-text">
-                                    <p>La région du projet est habitée par une variété de communautés tribales (Bhumija,
-                                        Gondas, Kolha… Environ 4 093 jours de travail seront créés pour eux.</p>
-
-                                    <p>L’aéroport le plus proche est celui de Biju Patnaik, situé de 200 km du site. La
-                                        ville la plus proche est Jamshedpur à 105 km.</p>
+                                <div class="para-subtitle-small">{{$t('india.section2.paraTitle2')}}</div>
+                                <div class="para-text" v-html="$t('india.section2.paraText2')">
                                 </div>
                             </v-col>
                             <v-col>
-                                <div class="para-title">Lien Google Map.</div>
+                                <div class="para-title">{{$t('india.section3.title')}}</div>
                                 <v-img class="py-3" src="../assets/images/map2.png"></v-img>
                             </v-col>
                         </v-row>
@@ -175,6 +143,149 @@
 
     export default {
         name: "we-plant-tree-map",
+        i18n: {
+            messages: {
+                en: {
+                    title: 'We also plant trees. And you?',
+                    subtitle: 'To offset the CO2 emissions linked to the creation of our objects, your visits to our ' +
+                        'site, and the electricity consumption of our technologies. Our projects are exclusively ' +
+                        'reserved for the regeneration of biodiversity. Our trees are traced and certified.',
+                    term1: 'planted trees',
+                    term2: 'of CO2 compensated',
+                    term3: 'reforested hectares',
+                    btnTitle: 'I plant a tree for free',
+                    madagascar: {
+                        section1: {
+                            title: 'Forest',
+                            subtitle: 'Black mangrove',
+                            paraTitle: 'Local flora and fauna.',
+                            paraText: '<p>Madagascar has over 200,000 species of plants and animals that do not exist' +
+                                ' anywhere else in the world. 90% of the forests have been destroyed, ' +
+                                'displacing entire animal species and Malagasy people.</p>',
+                            term1: 'CO2 compensation',
+                            term2: 'Lifetime',
+                            term3: 'Cut',
+                        },
+                        section2: {
+                            title: 'Project',
+                            subtitle: 'Paradis project, Madagascar',
+                            paraTitle1: 'Incredible project. Total success.',
+                            paraText1: "<p>Eden Reforestation Projects launched this program in 2007 following the" +
+                                " critical loss of forests.</p><p>16 million mangroves have been planted. Healthy " +
+                                "forests are starting to emerge and all the negative effects of deforestation are " +
+                                "starting to disappear.</p>",
+                            paraTitle2: 'An active local community. To remember.',
+                            paraText2: "<p>The Vilamatsa were eager to be part of this reforestation initiative due " +
+                                "to the success of a nearby plantation.</p><p>It gives them a decent income so that " +
+                                "they can support their families again.</p>"
+                        },
+                        section3: {
+                            title: 'Google Map link.'
+                        }
+                    },
+                    india: {
+                        section1: {
+                            title: 'Forest',
+                            subtitle: 'Mango trees',
+                            paraTitle: 'Local flora and fauna.',
+                            paraText: '<p>Similipal National Park is the 7th largest national park in India (2,750 km2), ' +
+                                'and has been part of the UNESCO World Network of Biosphere Reserves since 2009. ' +
+                                'It is home to the Bengal tiger, elephant Asia, the gaur and the chausingha. ' +
+                                'As well as the most beautiful waterfalls like Joranda and Barehipani Falls.</p>',
+                            term1: 'CO2 compensation',
+                            term2: 'Lifetime',
+                            term3: 'Cut',
+                        },
+                        section2: {
+                            title: 'Project',
+                            subtitle: 'Trees for tigers, India',
+                            paraTitle1: 'The Jungle Book 2.',
+                            paraText1: "<p>The project is targeting 50,000 trees on the edge of the Similipal National " +
+                                "Park to enrich the local virgin forest, especially for Bengal tigers.</p>",
+                            paraTitle2: 'How about we drop by to help them?',
+                            paraText2: "<p>The project area is inhabited by a variety of tribal communities (Bhumija, " +
+                                "Gondas, Kolha… About 4,093 working days will be created for them.</p>" +
+                                "<p>The nearest airport is Biju Patnaik, located 200 km from the site. " +
+                                "The nearest town is Jamshedpur 105 km away.</p>"
+                        },
+                        section3: {
+                            title: 'Google Map link.'
+                        }
+                    }
+
+                },
+                fr: {
+                    title: 'Nous plantons aussi des arbres. Et vous?',
+                    subtitle: 'Pour compenser les émissions de CO2 liées à la création de nos objets, à vos visites' +
+                        ' sur notre site, et à la consommation d’électricité de nos technologies. Nos projets sont' +
+                        ' exclusivement réservés à la régénération de la biodiversité. Nos arbres sont tracés' +
+                        ' et certifiés.',
+                    term1: 'arbres plantés',
+                    term2: 'de CO2 compensées',
+                    term3: 'hectares reforestés',
+                    btnTitle: 'Je plante un arbre gratuitement',
+                    madagascar: {
+                        section1: {
+                            title: 'Fôret',
+                            subtitle: 'Mangrove noire',
+                            paraTitle: 'Faune et Flore locale.',
+                            paraText: '<p>Madagascar dispose de plus de 200 000 espèces de plantes et d’animaux qui ' +
+                                'n’existent nulle part ailleurs dans le monde. 90% des forêts ont été détruites, ' +
+                                'déplaçant des espèces animales entières et les Malgaches.</p>',
+                            term1: 'Compensation CO2',
+                            term2: 'Durée de vie',
+                            term3: 'Taille',
+                        },
+                        section2: {
+                            title: 'Projet',
+                            subtitle: 'Projet Paradis, Madagascar',
+                            paraTitle1: 'Incroyable projet. Réussite totale.',
+                            paraText1: "<p>Eden Reforestation Projects a lancé ce programme en 2007 suite à la perte" +
+                                " critique de fôrets.</p><p>16 millions de mangroves ont été plantés. Des forêts " +
+                                "saines commencent à émerger et tous les effets négatifs de la déforestation " +
+                                "commencent à disparaître.</p>",
+                            paraTitle2: 'Une communauté locale active. A ne pas oublier.',
+                            paraText2: "<p>Les Vilamatsa avaient hâte de faire partie de cette initiative " +
+                                "de reboisement en raison du succès d’une plantation à proximité.</p>" +
+                                "<p>Cela leur donne un revenu décent afin qu’ils puissent à nouveau " +
+                                "subvenir aux besoins de leur famille.</p>"
+                        },
+                        section3: {
+                            title: 'Lien Google Map.'
+                        }
+                    },
+                    india: {
+                        section1: {
+                            title: 'Fôret',
+                            subtitle: 'Mango trees',
+                            paraTitle: 'Local flora and fauna.',
+                            paraText: '<p>Le parc national de Similipal est le 7e plus grand parc national d’Inde ' +
+                                '(2 750 km2), et fait partie du Réseau mondial des réserves de biosphère ' +
+                                'de l’UNESCO depuis 2009. Il abrite le tigre du Bengale, l’éléphant d’Asie, ' +
+                                'le gaur et le chausingha. Ainsi que les plus belles chutes d’eau comme Joranda ' +
+                                'et Barehipani Falls.</p>',
+                            term1: 'Compensation CO2',
+                            term2: 'Durée de vie',
+                            term3: 'Taille',
+                        },
+                        section2: {
+                            title: 'Projet',
+                            subtitle: 'Des arbres pour les tigres, Inde',
+                            paraTitle1: "<p>LeLe projet vise 50 000 arbres en bordure du parc national de Similipal " +
+                                "pour enrichir la fôret vierge locale, en particulier pour les tigres du Bengale.</p>",
+                            paraTitle2: 'How about we drop by to help them?',
+                            paraText2: "<p>La région du projet est habitée par une variété de communautés tribales " +
+                                "(Bhumija, Gondas, Kolha… Environ 4 093 jours de travail seront créés pour eux.</p>" +
+                                "<p>L’aéroport le plus proche est celui de Biju Patnaik, situé de 200 km du site." +
+                                " La ville la plus proche est Jamshedpur à 105 km.</p>"
+                        },
+                        section3: {
+                            title: 'Lien Google Map.'
+                        }
+                    }
+                }
+            }
+        },
         mounted() {
             this.mapCreate();
         },
@@ -320,14 +431,14 @@
                             document.querySelector(elt.modal).style.display = 'block';
                             const el = document.body;
                             el.classList.add("modal-open");
-                            document.documentElement.style.overflowY='hidden'
+                            document.documentElement.style.overflowY = 'hidden'
                         };
                         dot.onclick = function () {
                             document.querySelector('.slideArea').style.visibility = 'visible';
                             document.querySelector(elt.modal).style.display = 'block';
                             const el = document.body;
                             el.classList.add("modal-open");
-                            document.documentElement.style.overflowY='hidden'
+                            document.documentElement.style.overflowY = 'hidden'
                         };
                         // append the marker to the map container
                         chart.svgContainer.htmlElement.appendChild(holder);
@@ -344,7 +455,7 @@
                 document.querySelector('.mgforest').style.display = 'none';
                 const el = document.body;
                 el.classList.remove('modal-open');
-                document.documentElement.style.overflowY='auto'
+                document.documentElement.style.overflowY = 'auto'
             }
         },
 
@@ -388,21 +499,21 @@
             overflow-y: scroll;
             @media only screen and (min-width: 1291px) {
                 width: 50vw !important;
-                .card-header{
-                     width: 49vw !important;
+                .card-header {
+                    width: 49vw !important;
                 }
             }
 
             @media only screen and (max-width: 1290px) {
                 width: 70vw !important;
-                .card-header{
-                     width: 69vw !important;
+                .card-header {
+                    width: 69vw !important;
                 }
             }
             @media only screen and (max-width: 48em) {
                 width: 100% !important;
-                .card-header{
-                     width: 99vw !important;
+                .card-header {
+                    width: 99vw !important;
                 }
             }
         }

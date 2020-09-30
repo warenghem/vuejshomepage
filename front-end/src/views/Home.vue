@@ -22,6 +22,8 @@
     import StudioSection from '../components/studio-section';
     import CalenderSection from '../components/calender-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
+    import * as InstagramFeed from 'instafeed'
+
     export default {
         name: 'Home',
         components: {
@@ -48,6 +50,53 @@
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
         },
+        mounted() {
+
+            new InstagramFeed({
+                'username': 'warenghem_paris',
+                'container': document.getElementById("instaFeed"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'callback': null,
+                'styling': true,
+                'items': 7,
+                'items_per_row': this.getItemRow(),
+                'margin': 0,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+            setTimeout(() => {
+                const slider = document.querySelector('.instagram_gallery');
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                slider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    slider.classList.add('active');
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+                slider.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mouseup', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 3; //scroll-fast
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+            }, 3000);
+
+
+        },
         methods: {
             handleScroll() {
                 if (document.getElementById('jePlanetBtn')) {
@@ -69,10 +118,23 @@
                     this.$root.currentId = ''
                 }
 
+            },
+            getItemRow() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 2;
+                    case 'sm':
+                        return 2;
+                    case 'md':
+                        return 3;
+                    case 'lg':
+                        return 4;
+                    case 'xl':
+                        return 6
+                }
             }
         },
     }
-
 
 
 </script>

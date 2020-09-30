@@ -190,11 +190,19 @@ body {
     transform: translateX(-265px);
   }
 }
+@media (max-width: 767px) {
+  #Trees_for_TigerContainer {
+    transform: translateX(-230px);
+    margin-top: -150px;
+  }
+}
 
 .border-top-2 {
   border-top: #eae8e4 solid 1px;
 }
-
+.border-bottom-2 {
+  border-bottom: #eae8e4 solid 1px;
+}
 .border-left-2 {
   border-left: #eae8e4 solid 1px;
 }
