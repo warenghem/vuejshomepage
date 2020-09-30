@@ -68,6 +68,27 @@ body {
     background-color: #153038 !important;
   }
 }
+.nav-btn {
+  color: #fff;
+  border: none;
+  outline: 0;
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.8px;
+  background-color: #0081a7 !important;
+  word-break: break-word;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: 600;
+  margin: 1px 0;
+  transition: all 0.6s ease;
+
+  &:hover {
+    background-color: #153038 !important;
+  }
+}
 
 #mapSection {
   width: 100%;
@@ -212,26 +233,17 @@ body {
 }
 
 .instagram_gallery {
-  display: flex;
-  -webkit-overflow-scrolling: touch;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-
+  max-width: 100%;
+  display: flex;
   &::-webkit-scrollbar {
     display: none;
   }
-
-  & > div {
-    /* CURRENT way. */
-    scroll-snap-align: start;
-  }
-
-  .instagram-image {
+  a {
     cursor: grabbing;
+
     img {
-      height: 234.328px;
-      width: auto !important;
+      width: 100% !important;
     }
   }
 }

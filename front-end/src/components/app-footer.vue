@@ -44,7 +44,7 @@
         margin: 0 auto !important;
         padding-left: 1em;
         padding-right: 1em;
-        @media (min-width: 767.98px) {
+        @media (min-width: 767px) {
             padding-top: 2.5rem !important;
         }
     }

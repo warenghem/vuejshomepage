@@ -59,9 +59,7 @@
                 'display_biography': false,
                 'display_gallery': true,
                 'callback': null,
-                'styling': true,
-                'items': 7,
-                'items_per_row': this.getItemRow(),
+                'styling': false,
                 'margin': 0,
                 'lazy_load': true,
                 'on_error': console.error
@@ -93,6 +91,7 @@
                     const walk = (x - startX) * 3; //scroll-fast
                     slider.scrollLeft = scrollLeft - walk;
                 });
+                 this.getItemRow();
             }, 3000);
 
 
@@ -108,8 +107,11 @@
                 }
                 if (window.pageYOffset > document.getElementById('studioSection').offsetTop - 51) {
                     this.$root.currentId = 'studioSection'
+
                 } else if (window.pageYOffset > document.getElementById('mapTreeSection').offsetTop - 51) {
                     this.$root.currentId = 'mapTreeSection'
+                } else if (window.pageYOffset > document.getElementById('calenderSection').offsetTop - 51) {
+                    this.$root.currentId = 'calenderSection'
                 } else if (window.pageYOffset > document.getElementById('productSection').offsetTop - 51) {
                     this.$root.currentId = 'productSection'
                 } else if (window.pageYOffset > document.getElementById('missionSection').offsetTop - 51) {
@@ -120,17 +122,36 @@
 
             },
             getItemRow() {
+                const slider = document.querySelector('.instagram_gallery').getElementsByTagName('a');
+                console.log(slider);
                 switch (this.$vuetify.breakpoint.name) {
+
                     case 'xs':
-                        return 2;
+                        slider.forEach(element => {
+                            element.style.minWidth = '50%';
+                        });
+                        break;
                     case 'sm':
-                        return 2;
+                        slider.forEach(element => {
+                            element.style.minWidth = '50%';
+                        });
+                        break;
                     case 'md':
-                        return 3;
+                        slider.forEach(element => {
+                            element.style.minWidth = '50%';
+                        });
+                        break;
                     case 'lg':
-                        return 4;
+                        slider.forEach(element => {
+                            element.style.minWidth = '25%';
+                        });
+                        break;
+
                     case 'xl':
-                        return 6
+                        slider.forEach(element => {
+                            element.style.minWidth = '16.66%';
+                        });
+                        break;
                 }
             }
         },
