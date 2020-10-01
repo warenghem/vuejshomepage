@@ -257,10 +257,14 @@ body {
   }
 
   a {
-    cursor: grabbing;
-
+    overflow: hidden;
+    max-height: 230px;
     img {
       width: 100% !important;
+      &:hover{
+        transition: 1s ease-in-out;
+        transform: scale(1.1);
+      }
     }
   }
 }
