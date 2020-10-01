@@ -38,9 +38,9 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col md="3" class="bottomRight d-none d-md-block">
-                    <div class="d-flex flex-column align-center justify-center h-100">
-                        <p class="mt-3  title text-center">Avancement du projet</p>
+                <v-col md="3" class="bottomRight d-none d-md-block" >
+                    <div class="d-flex flex-column align-center justify-center h-100" >
+                        <p class="mt-3  title text-center" id="formSection">Avancement du projet</p>
                         <div class="d-flex align-center justify-center w-100 position-relative">
                             <v-progress-circular
                                     :rotate="-90"
@@ -61,7 +61,7 @@
                             addresse
                             mail pour planter un arbre et rester au courant de l’avancée du projet.
                         </p>
-                        <div class="form" id="formSection">
+                        <div class="form" >
                             <form action="" class="d-flex flex-column px-4">
                                 <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                                 <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
@@ -81,7 +81,7 @@
                 </div>
             </v-row>
         </div>
-        <div class="d-md-none form-md" >
+        <div class="d-md-none form-md" id="formSection2">
             <p class="white--text">Avancement du projet</p>
             <v-progress-linear
                     :height="16"
@@ -97,7 +97,7 @@
                 Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse
                 mail pour planter un arbre et rester au courant de l’avancée du projet.
             </p>
-            <form action="" class="d-flex flex-column" id="formSection2">
+            <form action="" class="d-flex flex-column" >
                 <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                 <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
                 <button id="jePlanetBtn2" class="btn-theme">

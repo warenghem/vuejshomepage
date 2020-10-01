@@ -37,12 +37,6 @@
                 >
                     <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item
-                >
-                    <v-list-item-content>
-                        <button class="nav-btn">{{$t('btnTitle')}}</button>
-                    </v-list-item-content>
-                </v-list-item>
             </v-list>
         </v-navigation-drawer>
 
