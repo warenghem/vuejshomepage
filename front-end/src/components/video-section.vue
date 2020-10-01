@@ -215,6 +215,7 @@
             position: relative;
             z-index: 2;
             height: 100%;
+            margin-top: 51px;
 
             &::after, &::before {
                 content: "";
@@ -250,9 +251,7 @@
         }
 
         .topCenter {
-            @media(min-width: 62em) {
-                margin-bottom: 400px !important;
-            }
+                margin-bottom: 38%!important;
         }
 
         .bannerLeft {
@@ -310,7 +309,7 @@
             font-size: 19px;
             padding: 30px;
             position: absolute !important;
-            bottom: 0;
+            bottom: 51px;
             width: 100%;
             z-index: 4;
 

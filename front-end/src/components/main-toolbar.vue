@@ -142,18 +142,18 @@
 <style scoped lang="scss">
     .appBar {
         position: relative;
-       border-bottom: solid 1px rgba(255, 255, 255, 0.5);
         z-index: 300001;
-
         .topBar {
             background: #0A3137;
             color: #fff;
             padding: 7px;
             font-size: 12px;
         }
+        @media(min-width: 778px){
+            border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+        }
 
         .menu-bar {
-            border-bottom: solid 1px rgba(255, 255, 255, .5);
             background: transparent !important;
 
             &:hover {

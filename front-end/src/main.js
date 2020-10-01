@@ -35,7 +35,6 @@ export const app = new Vue({
         scrollToElement(divId) {
             this.$nextTick(() => {
                 const el = document.getElementById(divId);
-                console.log(el.offsetTop);
                 if (divId === 'formSection' && el.offsetTop < 1 ) {
                     const y = document.getElementById('formSection2').getBoundingClientRect().top + window.pageYOffset - 50;
                         window.scrollTo({top: y, behavior: 'smooth'});
