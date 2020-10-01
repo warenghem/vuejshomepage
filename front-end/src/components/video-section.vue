@@ -16,7 +16,7 @@
                 </div>
             </div>
             <v-row no-gutters class="homepage-slider-content">
-                <v-col lg="9" class="topCenter my-auto">
+                <v-col md="9" class="topCenter my-auto">
                     <div class="bannerLeft">
                         <h2 class="title text-center"> La maroquinerie végétale du futur. Dès à présent.</h2>
                         <h4 class="subtitle text-center">Rencontre entre les traditions maroquinières francaises et nos
@@ -38,8 +38,8 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col lg="3" class="bottomRight d-none d-lg-block">
-                    <div class="d-flex flex-column align-center justify-center">
+                <v-col md="3" class="bottomRight d-none d-md-block">
+                    <div class="d-flex flex-column align-center justify-center h-100">
                         <p class="mt-3  title text-center">Avancement du projet</p>
                         <div class="d-flex align-center justify-center w-100 position-relative">
                             <v-progress-circular
@@ -81,7 +81,7 @@
                 </div>
             </v-row>
         </div>
-        <div class="d-lg-none form-md">
+        <div class="d-md-none form-md">
             <p class="white--text">Avancement du projet</p>
             <v-progress-linear
                     :height="16"
