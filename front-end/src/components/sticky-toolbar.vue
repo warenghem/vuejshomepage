@@ -34,12 +34,6 @@
                 >
                     <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
-                <v-list-item
-                >
-                    <v-list-item-content>
-                        <button class="nav-btn">{{$t('btnTitle')}}</button>
-                    </v-list-item-content>
-                </v-list-item>
             </v-list>
         </v-navigation-drawer>
 
@@ -80,15 +74,15 @@
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
-            <v-toolbar-title>
+            <v-toolbar-title class="d-md-block d-none">
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
                     <img src="../assets/images/logo.svg" width="140px" alt="logo"/>
                 </router-link>
             </v-toolbar-title>
             <v-spacer style="flex-grow: 2!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
-            <v-toolbar-items class="py-1 d-none d-md-block">
-                <button class="nav-btn">{{$t('btnTitle')}}</button>
+            <v-toolbar-items class="py-1">
+                <button class="nav-btn" @click="$root.scrollToElement('formSection')">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
     </section>

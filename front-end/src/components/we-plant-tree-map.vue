@@ -23,7 +23,8 @@
             <div class="content">
                 <div class="card">
                     <div class="card-header d-flex justify-space-between px-3 align-center border-bottom-2 py-2">
-                        <v-btn rounded color="#0081a7" class="white--text">{{$t('btnTitle')}}</v-btn>
+                        <v-btn rounded color="#0081a7" class="white--text" @click="closeSlideUp">{{$t('btnTitle')}}
+                        </v-btn>
                         <v-btn
                                 text
                                 color="black"
@@ -455,6 +456,15 @@
                 const el = document.body;
                 el.classList.remove('modal-open');
                 document.documentElement.style.overflowY = 'auto'
+            },
+            closeSlideUp() {
+                document.querySelector('.slideArea').style.visibility = 'hidden';
+                document.querySelector('.indianforest').style.display = 'none';
+                document.querySelector('.mgforest').style.display = 'none';
+                const el = document.body;
+                el.classList.remove('modal-open');
+                document.documentElement.style.overflowY = 'auto';
+                this.$root.scrollToElement('formSection')
             }
         },
 

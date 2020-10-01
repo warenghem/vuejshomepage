@@ -13,7 +13,7 @@ Axios.defaults.baseURL = 'https://tree-nation.com/api/';
 
 Vue.config.productionTip = false;
 
-export const app =new Vue({
+export const app = new Vue({
     el: '#app',
     vuetify,
     router,
@@ -35,7 +35,16 @@ export const app =new Vue({
         scrollToElement(divId) {
             this.$nextTick(() => {
                 const el = document.getElementById(divId);
-                if (el) {
+                if (divId === 'formSection') {
+                    if (el.offsetTop > 0) {
+                        const y = el.getBoundingClientRect().top + window.pageYOffset - 50;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    } else {
+                        const y = document.getElementById('formSection2').getBoundingClientRect().top + window.pageYOffset - 50;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                }
+                else if (el) {
                     const y = el.getBoundingClientRect().top + window.pageYOffset - 50;
                     window.scrollTo({top: y, behavior: 'smooth'});
                 }

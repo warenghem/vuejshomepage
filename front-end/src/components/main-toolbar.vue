@@ -148,7 +148,7 @@
 <style scoped lang="scss">
     .appBar {
         position: relative;
-        border-bottom: 1px solid #fff;
+       border-bottom: solid 1px rgba(255, 255, 255, 0.5);
         z-index: 300001;
 
         .topBar {

@@ -61,7 +61,7 @@
                             addresse
                             mail pour planter un arbre et rester au courant de l’avancée du projet.
                         </p>
-                        <div class="form">
+                        <div class="form" id="formSection">
                             <form action="" class="d-flex flex-column px-4">
                                 <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                                 <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
@@ -81,7 +81,7 @@
                 </div>
             </v-row>
         </div>
-        <div class="d-md-none form-md">
+        <div class="d-md-none form-md" >
             <p class="white--text">Avancement du projet</p>
             <v-progress-linear
                     :height="16"
@@ -97,10 +97,10 @@
                 Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse
                 mail pour planter un arbre et rester au courant de l’avancée du projet.
             </p>
-            <form action="" class="d-flex flex-column">
+            <form action="" class="d-flex flex-column" id="formSection2">
                 <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
                 <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                <button id="jePlanetBtn" class="btn-theme">
+                <button id="jePlanetBtn2" class="btn-theme">
                     Je plante un arbre gratuitement
                 </button>
             </form>
@@ -325,7 +325,7 @@
 
         .bottomRight {
             font-family: 'teradeli-book', sans-serif !important;
-            border-left: 1px solid #fff;
+           border-left: solid 1px rgba(255, 255, 255, 0.5);
 
             .bottomText {
                 margin-top: 65px;

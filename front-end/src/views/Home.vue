@@ -91,19 +91,28 @@
                     const walk = (x - startX) * 3; //scroll-fast
                     slider.scrollLeft = scrollLeft - walk;
                 });
-                 this.getItemRow();
+                this.getItemRow();
             }, 3000);
 
 
         },
         methods: {
             handleScroll() {
-                if (document.getElementById('jePlanetBtn')) {
-                    if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop) {
-                        this.stickyToolbar = true;
-                    } else {
-                        this.stickyToolbar = false;
-                    }
+                if (document.getElementById('jePlanetBtn') && document.getElementById('jePlanetBtn').offsetTop > 0) {
+
+                        if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop) {
+                            this.stickyToolbar = true;
+                        } else {
+                            this.stickyToolbar = false;
+                        }
+                } else if (document.getElementById('jePlanetBtn2') && document.getElementById('jePlanetBtn2').offsetTop > 0) {
+                        if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn2').offsetTop) {
+                            this.stickyToolbar = true;
+                        } else {
+                            this.stickyToolbar = false;
+                        }
+                }else{
+                    this.stickyToolbar = false;
                 }
                 if (window.pageYOffset > document.getElementById('studioSection').offsetTop - 51) {
                     this.$root.currentId = 'studioSection'
