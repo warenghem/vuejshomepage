@@ -27,11 +27,11 @@
     export default {
         name: 'Home',
         components: {
+            MissionSection,
             ProductSection,
             WePlantTreeMap,
             VideoSection,
             StudioSection,
-            MissionSection,
             AppFooter,
             StickyToolbar,
             MainToolbar,

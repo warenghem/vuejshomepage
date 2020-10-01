@@ -178,7 +178,6 @@
 
     .videoSection {
         position: relative;
-        top: -51px;
         background-color: #000;
         height: 95vh !important;
         min-height: 25rem;
@@ -186,7 +185,7 @@
         overflow: hidden;
         border-bottom: solid 0.5px rgba(255, 255, 255, 0.1);
         color: white;
-
+        margin-top: -51px;
         &::after {
             background: linear-gradient(0.75deg, #000000 0%, transparent 100%);
             content: "";
@@ -251,7 +250,7 @@
         }
 
         .topCenter {
-                margin-bottom: 38%!important;
+                margin-bottom: 30%!important;
         }
 
         .bannerLeft {
