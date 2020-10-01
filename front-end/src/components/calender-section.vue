@@ -15,7 +15,7 @@
             <div class="items">
                <div class="inner left-caret">
                    <div class="icon-left-block">
-                       <img src="../assets/images/calender-icons/fanel.svg">
+                       <img src="../assets/images/calender-icons/fanel.svg" alt="fanel">
                    </div>
                    <div class="title">Step 1</div>
                    <div class="subTitle">Create perfect 3D objects with you.</div>
@@ -29,7 +29,7 @@
                <div class="inner vh"> </div>
                <div class="inner right-caret">
                    <div class="icon-right-block">
-                       <img src="../assets/images/calender-icons/bug.svg">
+                       <img src="../assets/images/calender-icons/bug.svg" alt="bug">
                    </div>
                    <div class="title">2nd step</div>
                    <div class="subTitle">Prototyping on the chosen objects.</div>
@@ -40,7 +40,7 @@
             <div class="items">
                <div class="inner left-caret">
                    <div class="icon-left-block">
-                       <img src="../assets/images/calender-icons/user.svg">
+                       <img src="../assets/images/calender-icons/user.svg" alt="user">
                    </div>
                    <div class="title">Step 3</div>
                    <div class="subTitle">Limited edition online pre-order campaign.</div>
@@ -53,7 +53,7 @@
                <div class="inner vh"> </div>
                <div class="inner right-caret">
                    <div class="icon-right-block">
-                       <img src="../assets/images/calender-icons/rocket.svg">
+                       <img src="../assets/images/calender-icons/rocket.svg" alt="rocket">
                    </div>
                    <div class="title">Step 4</div>
                    <div class="subTitle">Manufacture of objects and dispatch of orders.</div>
@@ -63,7 +63,7 @@
             </div>
             <div class="items">
                 <div class="icon-complete">
-                    <img src="../assets/images/calender-icons/right.svg">
+                    <img src="../assets/images/calender-icons/right.svg" alt="right">
                 </div>
             </div>
         </div>

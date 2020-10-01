@@ -199,6 +199,13 @@ body {
 }
 
 .appBar {
+  .theme--light.v-btn.v-btn--icon {
+    color: rgb(255 255 255);
+  }
+  .whiteBack .theme--light.v-btn.v-btn--icon {
+    color: black!important;
+  }
+
   .item {
     span {
       font-weight: 500;
@@ -213,9 +220,10 @@ body {
     text-transform: uppercase;
 
   }
-  .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled).current{
-      color:#0081a7!important;
-    }
+
+  .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled).current {
+    color: #0081a7 !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -259,9 +267,11 @@ body {
   a {
     overflow: hidden;
     max-height: 230px;
+
     img {
       width: 100% !important;
-      &:hover{
+
+      &:hover {
         transition: 1s ease-in-out;
         transform: scale(1.1);
       }
@@ -276,3 +286,4 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+

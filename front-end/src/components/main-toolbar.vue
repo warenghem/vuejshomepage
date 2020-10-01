@@ -149,7 +149,7 @@
     .appBar {
         position: relative;
         border-bottom: 1px solid #fff;
-        z-index: 1;
+        z-index: 300001;
 
         .topBar {
             background: #0A3137;
