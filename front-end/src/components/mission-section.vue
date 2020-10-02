@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="fp-section d-none d-lg-table">
+            <div class="page-title mission-title">{{$t('mission.title')}}</div>
             <div class="fp-tableCell" style="height: 900px;">
                 <div class="fp-bg" style="transform: translateX(0px) translateY(0px);">
                     <div class="homepage-item">
@@ -198,6 +199,7 @@
                 <v-expansion-panel
                         :style="{'background-image': 'url(' + require('../assets/images/banner-red.jpg') + ')'}">
                     <v-expansion-panel-header class="flex-column align-start">
+                        <div class="page-title px-0 py-3">{{$t('mission.title')}}</div>
                         <div class="pb-3">
                             <img src="../assets/images/magazine-plus.svg"
                                  alt="Wait For It"
@@ -481,5 +483,10 @@
 
     .image1 {
         background-image: url('../assets/images/Studio-e1593525488356-min-1.jpg');
+    }
+    .mission-title{
+        z-index: 1;
+        position: absolute;
+        top:20px;
     }
 </style>

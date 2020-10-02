@@ -22,19 +22,35 @@
   padding-left: 20px;
   position: relative;
 }
-.mission-accordion{
-  .minusIcon{
+
+.mission-accordion {
+  .v-expansion-panel {
+    background-size: cover;
+  }
+
+  ul {
+    padding-left: 0 !important;
+  }
+
+  .minusIcon {
     display: none;
   }
-  .v-expansion-panel-header--active{
-    .minusIcon{
+  .v-expansion-panel-header{
+    padding-bottom: 60px;
+  }
+
+  .v-expansion-panel-header--active {
+    .minusIcon {
       display: block;
     }
-    .plusIcon{
+
+    .plusIcon {
       display: none;
     }
-    .v-expansion-panel-header__icon{
-      display: none!important;
-    }
+
+  }
+
+  .v-expansion-panel-header__icon {
+    display: none !important;
   }
 }
