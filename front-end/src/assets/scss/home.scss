@@ -22,3 +22,19 @@
   padding-left: 20px;
   position: relative;
 }
+.mission-accordion{
+  .minusIcon{
+    display: none;
+  }
+  .v-expansion-panel-header--active{
+    .minusIcon{
+      display: block;
+    }
+    .plusIcon{
+      display: none;
+    }
+    .v-expansion-panel-header__icon{
+      display: none!important;
+    }
+  }
+}

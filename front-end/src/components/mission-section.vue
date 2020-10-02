@@ -57,47 +57,26 @@
                                 <div class="pb-3"><img src="../assets/images/magazine-plus.svg"
                                                        alt="Wait For It"></div>
                                 <div class="homepage-catalogue-links-item-title pb-3">
-                                    <a >
-                                        <h3 class=" text-left px-3 mb-4">
+                                    <a>
+                                        <div class="text-left px-3 mb-4">
                                             <div class="sub-title text-white">
-                                                Technologies durables. Tracabilité totale.
+                                                {{$t('mission.section1.title')}}
                                             </div>
                                             <div class="sub-title text-gray">
-                                                Puissantes, neutres en CO2, nos technologies accompagnent la
-                                                régénération de la nature.
+                                                {{$t('mission.section1.subtitle')}}
                                             </div>
-                                        </h3>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="homepage-catalogue-links-item-links">
                                     <div>
                                         <ul class="text-left mb-4 teradeli-light">
-                                            <li class="fp-list-item">
-                                                <div class="count">01
+                                            <li class="fp-list-item" v-for="(item,idx) in $t('mission.section1.items')"
+                                                :key="idx">
+                                                <div class="count">
+                                                    {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                                 </div>
-                                                <div class="col">Technologie Blockchain. Pour une transparence sans
-                                                    faille.
-                                                </div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">02
-                                                </div>
-                                                <div class="col">Bio-Technologies. Comme alternative au cuir
-                                                    animal.
-                                                </div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">03
-                                                </div>
-                                                <div class="col">Technologies neutres en CO2. Alimentées par des
-                                                    énergies renouvelables.
-                                                </div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">04
-                                                </div>
-                                                <div class="col">Technologies et electroniques fabriquées en France.
-                                                    Nos usines cherchent à innover sans altérer l’environnement.
+                                                <div class="col">{{item}}
                                                 </div>
                                             </li>
                                         </ul>
@@ -112,56 +91,31 @@
                             >
                                 <div class="pb-3"><img src="../assets/images/magazine-plus.svg"
                                                        alt="Wait For It"></div>
-                                <div class="homepage-catalogue-links-item-title pb-5">
-                                    <a >
-                                        <h3 class=" text-left px-3 mb-4">
+                                <div class="homepage-catalogue-links-item-title pb-3">
+                                    <a>
+                                        <div class="text-left px-3 mb-4">
                                             <div class="sub-title text-white">
-                                                Design en studio. Naturellement sobre.
+                                                {{$t('mission.section2.title')}}
                                             </div>
                                             <div class="sub-title text-gray">
-                                                Intuitives, brutes, sans excès, nos créations sont pensées pour
-                                                l’usage.
+                                                {{$t('mission.section2.subtitle')}}
                                             </div>
-                                        </h3>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="homepage-catalogue-links-item-links">
-                                    <ul class="list-unstyled list-custom text-left mb-4 teradeli-light">
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                01
-                                            </div>
-                                            <div class="col">Inspirées par les architectes et designers. La
-                                                personnalité affirmée de nos objets casse les codes de la
-                                                maroquinerie classique.
-                                            </div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                02
-                                            </div>
-                                            <div class="col">Centrés sur relation entre l’Homme et l’objet. Le
-                                                design est construit pour la fonctionnalité et le quotidien.
-                                            </div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                03
-                                            </div>
-                                            <div class="col">Focalisés sur un futur que nous devons réinventer. Le
-                                                style de chaque matière est étudié pour confondre l’objet dans le
-                                                paysage.
-                                            </div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                04
-                                            </div>
-                                            <div class="col">Passionés par des objets qui durent. Le design est
-                                                pensé intemporel, échappant à toute mode éphémère.
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <ul class="text-left mb-4 teradeli-light">
+                                            <li class="fp-list-item" v-for="(item,idx) in $t('mission.section2.items')"
+                                                :key="idx">
+                                                <div class="count">
+                                                    {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                                </div>
+                                                <div class="col">{{item}}
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class=" homepage-catalogue-links-item"
@@ -173,45 +127,26 @@
                                 <div class="pb-3"><img src="../assets/images/magazine-plus.svg"
                                                        alt="Wait For It"></div>
                                 <div class="homepage-catalogue-links-item-title pb-3">
-                                    <a >
-                                        <h3 class=" text-left px-3 mb-4">
+                                    <a>
+                                        <div class="text-left px-3 mb-4">
                                             <div class="sub-title text-white">
-                                                Fabriqué en France. Point.
+                                                {{$t('mission.section3.title')}}
                                             </div>
                                             <div class="sub-title text-gray">
-                                                Raffinés, artisanaux, locaux, nos objets développent l’industrie et
-                                                le savoir-faire Français.
+                                                {{$t('mission.section3.subtitle')}}
                                             </div>
-                                        </h3>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="homepage-catalogue-links-item-links">
-                                    <div class="item-desc text-left px-3 mb-4">
-                                        <ul class="list-unstyled list-custom text-left mb-4 teradeli-light">
-                                            <li class="fp-list-item">
-                                                <div class="count">01
+                                    <div>
+                                        <ul class="text-left mb-4 teradeli-light">
+                                            <li class="fp-list-item" v-for="(item,idx) in $t('mission.section3.items')"
+                                                :key="idx">
+                                                <div class="count">
+                                                    {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                                 </div>
-                                                <div class="col">Locaux : Véritable projet français de A à Z.</div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">02
-                                                </div>
-                                                <div class="col">Sociaux : Développer les emplois et les traditions
-                                                    francaises.
-                                                </div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">03
-                                                </div>
-                                                <div class="col">Éthiques : Ne pas profiter de pays à bas couts (y
-                                                    compris en Europe).
-                                                </div>
-                                            </li>
-                                            <li class="fp-list-item">
-                                                <div class="count">04
-                                                </div>
-                                                <div class="col">Écologiques : Évitons les transports et l’opacité
-                                                    de pays en dehors de nos règlementations nationales.
+                                                <div class="col">{{item}}
                                                 </div>
                                             </li>
                                         </ul>
@@ -227,56 +162,180 @@
                                 <div class="pb-3"><img src="../assets/images/magazine-plus.svg"
                                                        alt="Wait For It"></div>
                                 <div class="homepage-catalogue-links-item-title pb-3">
-                                    <a >
-                                        <h3 class=" text-left px-3 mb-4">
+                                    <a>
+                                        <div class="text-left px-3 mb-4">
                                             <div class="sub-title text-white">
-                                                La noblesse du vin. Complètement végétal.
+                                                {{$t('mission.section4.title')}}
                                             </div>
                                             <div class="sub-title text-gray">
-                                                Performantes, naturelles, solides, nos matières sont issues de la
-                                                terre et des vendanges.
+                                                {{$t('mission.section4.subtitle')}}
                                             </div>
-                                        </h3>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="homepage-catalogue-links-item-links">
-                                    <ul class="list-unstyled list-custom text-left mb-4 teradeli-light">
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                01
-                                            </div>
-                                            <div class="col">Issues de la rencontre entre la nature et nos
-                                                innovations technologiques
-                                            </div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                02
-                                            </div>
-                                            <div class="col">Beaucoup plus écologiques et aussi solides que le cuir
-                                                traditionnel.
-                                            </div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                03
-                                            </div>
-                                            <div class="col">Sans matière animale. Sans souffrance.</div>
-                                        </li>
-                                        <li class="fp-list-item">
-                                            <div class="count">
-                                                04
-                                            </div>
-                                            <div class="col">Délaissant le plastique. Nous n’en avons plus besoin.
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <ul class="text-left mb-4 teradeli-light">
+                                            <li class="fp-list-item" v-for="(item,idx) in $t('mission.section4.items')"
+                                                :key="idx">
+                                                <div class="count">
+                                                    {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                                </div>
+                                                <div class="col">{{item}}
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-lg-none mission-accordion">
+            <v-expansion-panels accordion>
+                <v-expansion-panel
+                        :style="{'background-image': 'url(' + require('../assets/images/banner-red.jpg') + ')'}">
+                    <v-expansion-panel-header class="flex-column align-start">
+                        <div class="pb-3">
+                            <img src="../assets/images/magazine-plus.svg"
+                                 alt="Wait For It"
+                                 class="plusIcon"
+                            >
+                            <img src="../assets/images/magazine-minus.svg"
+                                 alt="Wait For It"
+                                 class="minusIcon"
+                            >
+                        </div>
+                        <div class="sub-title text-white">
+                            {{$t('mission.section1.title')}}
+                        </div>
+                        <div class="sub-title text-gray">
+                            {{$t('mission.section1.subtitle')}}
+                        </div>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <div>
+                            <ul class="text-left mb-4 teradeli-light">
+                                <li class="fp-list-item" v-for="(item,idx) in $t('mission.section1.items')"
+                                    :key="idx">
+                                    <div class="count">
+                                        {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                    </div>
+                                    <div class="col">{{item}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+                <v-expansion-panel
+                        :style="{'background-image': 'url(' + require('../assets/images/roche-min.jpg') + ')'}">
+                    <v-expansion-panel-header class="flex-column align-start">
+                        <div class="pb-3">
+                            <img src="../assets/images/magazine-plus.svg"
+                                 alt="Wait For It"
+                                 class="plusIcon"
+                            >
+                            <img src="../assets/images/magazine-minus.svg"
+                                 alt="Wait For It"
+                                 class="minusIcon"
+                            >
+                        </div>
+                        <div class="sub-title text-white">
+                            {{$t('mission.section2.title')}}
+                        </div>
+                        <div class="sub-title text-gray">
+                            {{$t('mission.section2.subtitle')}}
+                        </div>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <div>
+                            <ul class="text-left mb-4 teradeli-light">
+                                <li class="fp-list-item" v-for="(item,idx) in $t('mission.section2.items')"
+                                    :key="idx">
+                                    <div class="count">
+                                        {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                    </div>
+                                    <div class="col">{{item}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+                <v-expansion-panel
+                        :style="{'background-image': 'url(' + require('../assets/images/Studio-e1593525488356-min-1.jpg') + ')'}">
+                    <v-expansion-panel-header class="flex-column align-start">
+                        <div class="pb-3">
+                            <img src="../assets/images/magazine-plus.svg"
+                                 alt="Wait For It"
+                                 class="plusIcon"
+                            >
+                            <img src="../assets/images/magazine-minus.svg"
+                                 alt="Wait For It"
+                                 class="minusIcon"
+                            >
+                        </div>
+                        <div class="sub-title text-white">
+                            {{$t('mission.section3.title')}}
+                        </div>
+                        <div class="sub-title text-gray">
+                            {{$t('mission.section3.subtitle')}}
+                        </div>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <div>
+                            <ul class="text-left mb-4 teradeli-light">
+                                <li class="fp-list-item" v-for="(item,idx) in $t('mission.section3.items')"
+                                    :key="idx">
+                                    <div class="count">
+                                        {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                    </div>
+                                    <div class="col">{{item}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+                <v-expansion-panel
+                        :style="{'background-image': 'url(' + require('../assets/images/Tech-02-min-1-scaled.jpg') + ')'}">
+                    <v-expansion-panel-header class="flex-column align-start">
+                        <div class="pb-3">
+                            <img src="../assets/images/magazine-plus.svg"
+                                 alt="Wait For It"
+                                 class="plusIcon"
+                            >
+                           <img src="../assets/images/magazine-minus.svg"
+                                 alt="Wait For It"
+                                 class="minusIcon"
+                            >
+                        </div>
+                        <div class="sub-title text-white">
+                            {{$t('mission.section4.title')}}
+                        </div>
+                        <div class="sub-title text-gray">
+                            {{$t('mission.section4.subtitle')}}
+                        </div>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <div>
+                            <ul class="text-left mb-4 teradeli-light">
+                                <li class="fp-list-item" v-for="(item,idx) in $t('mission.section4.items')"
+                                    :key="idx">
+                                    <div class="count">
+                                        {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
+                                    </div>
+                                    <div class="col">{{item}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </v-expansion-panels>
         </div>
     </div>
 </template>
@@ -309,354 +368,118 @@
                     el.style.opacity = '1';
                 });
             }
+        },
+        i18n: {
+            messages: {
+                en: {
+                    mission: {
+                        title: "The mission: to reunite man with nature",
+                        section1: {
+                            title: "Sustainable technologies. Total traceability.",
+                            subtitle: "Powerful, CO2 neutral, our technologies support the regeneration of nature.",
+                            items: [
+                                "Blockchain technology. For seamless transparency.",
+                                "Bio-Technologies. As an alternative to animal leather.",
+                                "CO2 neutral technologies. Powered by renewable energies.",
+                                "Technologies and electronics made in France. Our factories seek to innovate without altering the environment."
+                            ]
+                        },
+                        section2: {
+                            title: "Design in the studio. Naturally understated.",
+                            subtitle: "Intuitive, raw, without excess, our creations are designed for use.",
+                            items: [
+                                "Inspired by architects and designers. The assertive personality of our" +
+                                "objects break the codes of classic leather goods.",
+                                "Centered on the relationship between Man and the object. Design is built for the" +
+                                "functionality and everyday life.",
+                                "Focused on a future that we must reinvent. The style of each material is" +
+                                "studied to confuse the object in the landscape.",
+                                "Passionate about objects that last. The design is thought to be timeless, escaping any ephemeral fashion."
+                            ]
+                        },
+                        section3: {
+                            title: "Made in France. Point.",
+                            subtitle: "Refined, artisanal, local, our objects develop French industry and know-how.",
+                            items: [
+                                "Premises: Genuine French project from A to Z.",
+                                "Social: Developing French jobs and traditions.",
+                                "Ethics: Do not take advantage of low-cost countries (including Europe).",
+                                "Green: Let's avoid transport and the opacity of countries outside our national regulations."
+                            ]
+                        },
+                        section4: {
+                            title: "The nobility of wine. Completely vegetal.",
+                            subtitle: "Efficient, natural, solid, our materials come from the soil and the harvest.",
+                            items: [
+                                "Blockchain technology. For seamless transparency.",
+                                "Bio-Technologies. As an alternative to animal leather.",
+                                "CO2 neutral technologies. Powered by renewable energies.",
+                                "Technologies and electronics made in France. Our factories seek to innovate without altering the environment."
+                            ]
+                        }
+                    }
+                },
+                fr: {
+                    mission: {
+                        title: "La mission: réunifier l’Homme à la nature",
+                        section1: {
+                            title: "Technologies durables. Tracabilité totale.",
+                            subtitle: "Puissantes, neutres en CO2, nos technologies accompagnent la régénération de la nature.",
+                            items: [
+                                "Technologie Blockchain. Pour une transparence sans faille.",
+                                "Bio-Technologies. Comme alternative au cuir animal.",
+                                "Technologies neutres en CO2. Alimentées par des énergies renouvelables.",
+                                "Technologies et electroniques fabriquées en France. Nos usines cherchent à innover sans altérer l’environnement."
+                            ]
+                        },
+                        section2: {
+                            title: "Design en studio. Naturellement sobre.",
+                            subtitle: "Intuitives, brutes, sans excès, nos créations sont pensées pour l’usage.",
+                            items: [
+                                "Inspirées par les architectes et designers. La personnalité affirmée de nos " +
+                                "objets casse les codes de la maroquinerie classique.",
+                                "Centrés sur relation entre l’Homme et l’objet. Le design est construit pour la " +
+                                "fonctionnalité et le quotidien.",
+                                "Focalisés sur un futur que nous devons réinventer. Le style de chaque matière est " +
+                                "étudié pour confondre l’objet dans le paysage.",
+                                "Passionés par des objets qui durent. Le design est pensé intemporel, échappant à toute mode éphémère."
+                            ]
+                        },
+                        section3: {
+                            title: " Fabriqué en France. Point.",
+                            subtitle: "Raffinés, artisanaux, locaux, nos objets développent l’industrie et le savoir-faire Français.",
+                            items: [
+                                "Locaux : Véritable projet français de A à Z.",
+                                "Sociaux : Développer les emplois et les traditions francaises.",
+                                "Éthiques : Ne pas profiter de pays à bas couts (y compris en Europe).",
+                                "Écologiques : Évitons les transports et l’opacité de pays en dehors de nos règlementations nationales."
+                            ]
+                        },
+                        section4: {
+                            title: "La noblesse du vin. Complètement végétal.",
+                            subtitle: "Performantes, naturelles, solides, nos matières sont issues de la terre et des vendanges.",
+                            items: [
+                                "Technologie Blockchain. Pour une transparence sans faille.",
+                                "Bio-Technologies. Comme alternative au cuir animal.",
+                                "Technologies neutres en CO2. Alimentées par des énergies renouvelables.",
+                                "Technologies et electroniques fabriquées en France. Nos usines cherchent à innover sans altérer l’environnement."
+                            ]
+                        }
+                    }
+                },
+            }
         }
     }
 </script>
 
 <style scoped lang="scss">
-    .fp-section {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-        position: relative;
-        transition: background-position 1200ms cubic-bezier(0.694, 0, 0.335, 1);
-        overflow: hidden;
-    }
-
-    .fp-tableCell {
-        position: relative;
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%;
-        overflow: hidden !important;
-    }
-
-    .fp-bg {
-        transition: transform 1200ms cubic-bezier(0.694, 0, 0.335, 1);
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        position: absolute;
-    }
-
-    .homepage-item {
-        height: 100%;
-    }
-
-    .homepage-catalogue-title {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translateX(50%) translateY(-50%);
-        z-index: 3;
-        transition: opacity 0.3s ease;
-    }
-
-    .homepage-catalogue-background.active {
-        .homepage-catalogue-background-big {
-            div {
-                transition: transform 30s linear;
-                transform: scale(1.3);
-            }
-
-            &::after {
-                opacity: 1;
-            }
-        }
-    }
+    @import "../assets/scss/home/mission";
 
     .homepage-catalogue-links-item {
-        &:hover {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        position: absolute;
-        bottom: 0;
-        width: 25%;
-        text-align: center;
-        line-height: 1.4;
-        transform: translateY(100%) translateY(-155px) translateY(-64px);
-        padding-bottom: 30px;
-        transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
-        opacity: 1;
-        z-index: 10;
-        cursor: url(../assets/images/cross_100185.svg), auto;
-
-        a {
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        &:first-of-type {
-            right: 0% !important;
-        }
-
-        &:nth-of-type(2) {
-            right: 25% !important;
-        }
-
-        &:nth-of-type(3) {
-            right: 50% !important;
-        }
-
-        &:nth-of-type(4) {
-            right: 75% !important;
-        }
-    }
-
-    .homepage-catalogue-background {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    }
-
-    .homepage-catalogue-background-big {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
-        overflow: hidden;
-
-        div {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-        }
-
-        &::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            content: "";
-            background-color: rgba(0, 0, 0, .5);
-            z-index: 2;
-            opacity: .2;
-            transition: opacity 0.5s;
-        }
-    }
-
-    .homepage-catalogue-background-lines {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 3;
-        transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
-
-        div {
-            &:first-of-type {
-                right: 25% !important;
-            }
-
-            position: absolute;
-            top: 0;
-            bottom: 0;
-
-            &:not(:last-of-type) {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    width: 1px;
-                    background-color: #fff;
-                    opacity: 0.5;
-                }
-            }
-
-            &:nth-of-type(2) {
-                right: 50% !important;
-            }
-
-            &:nth-of-type(3) {
-                right: 75% !important;
-            }
-
-            &:nth-of-type(4) {
-                right: 100% !important;
-            }
-        }
-    }
-
-    .homepage-catalogue-background-divided2 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 2;
-        overflow: hidden;
-
-        > div {
-            &:first-of-type {
-                right: 0;
-                background-position: right center;
-
-                div {
-                    transform: translateX(-75%) !important;
-                }
-            }
-
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            overflow: hidden;
-            width: 25% !important;
-
-            &:nth-of-type(2) {
-                div {
-                    transform: translateX(-50%) !important;
-                }
-
-                background-position: right 20% center;
-                right: 25% !important;
-            }
-
-            &:nth-of-type(3) {
-                div {
-                    transform: translateX(-25%) !important;
-                }
-
-                background-position: right 40% center;
-                right: 50% !important;
-            }
-
-            &:nth-of-type(4) {
-                div {
-                    transform: translateX(-20%);
-                }
-
-                right: 60%;
-                background-position: right 60% center;
-            }
-
-            &:last-of-type {
-                div {
-                    transform: translateX(0);
-                }
-
-                background-position: right 80% center;
-                right: 75% !important;
-            }
-
-            > div {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                -webkit-background-size: cover;
-                background-size: cover;
-                background-position: center center;
-                width: 400% !important;
-            }
-        }
-    }
-
-    .homepage-catalogue-links {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-    }
-
-    .homepage-catalogue-links-item-title {
-        font-size: 22px;
-        margin-bottom: 30px;
-
-        > a {
-            display: block;
-
-            img {
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    .homepage-catalogue-links-item-links {
-        opacity: 1;
-        transition: opacity 1.5s ease;
-    }
-
-    .homepage-catalogue-background-maintitle {
-        opacity: 1;
-        transition: opacity 1.5s ease;
-    }
-
-    .homepage-catalogue-background-button {
-        opacity: 1;
-        transition: opacity 1.5s ease;
-    }
-
-    .opacityimportant {
-        opacity: 0.2 !important;
-    }
-
-    .bgi {
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    .gradientoverlay {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background-color: #121217;
-            opacity: 0.2;
-            z-index: 1;
-        }
-
-        &::after {
-            background: linear-gradient(0.75deg, #000000 0%, transparent 100%);
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 1;
-            opacity: 0.5;
-        }
-    }
-
-    .fp-list-item {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 18px;
-        color: white;
-
-        .count {
-            color: #0081A7 !important;
-            font-size: 16px;
-            margin-right: 4px !important;
-            flex: 0 0 8.3333333333%;
-            max-width: 8.3333333333%;
-            text-align: center;
-        }
+        cursor: url('../assets/images/cross_100185.svg'), auto;
     }
 
     .image1 {
         background-image: url('../assets/images/Studio-e1593525488356-min-1.jpg');
     }
-
-
 </style>

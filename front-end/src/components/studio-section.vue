@@ -79,7 +79,7 @@
         i18n: {
             messages: {
                 en: {
-                    kevin: "onvinced by a world where nature would be omnipresent around us, I decided to use my " +
+                    kevin: "Convinced by a world where nature would be omnipresent around us, I decided to use my " +
                         "knowledge acquired in the business world for causes that are close to our hearts. Let's " +
                         "create together ecologically perfect and intuitive French objects.",
                     alex: "After studying style and model making at Esmod Paris, I learned my skills in the creative " +
