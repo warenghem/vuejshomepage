@@ -303,8 +303,7 @@
                         padding: 29px 15px;
                     }
                     &:nth-child(1) {
-                        background: url(../assets/images/Sac-rendu-10-07-2020.2-min.jpg);
-                        background-position: center;
+                        background: url(../assets/images/Sac-rendu-10-07-2020.2-min.jpg) center;
                     }
                     &:nth-child(2) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);

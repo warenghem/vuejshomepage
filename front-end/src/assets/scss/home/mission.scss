@@ -181,7 +181,7 @@
   z-index: 2;
   overflow: hidden;
 
-  > div {
+  & > div {
     &:first-of-type {
       right: 0;
       background-position: right center;

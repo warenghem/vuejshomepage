@@ -40,7 +40,7 @@
                                 <div class="para-title">{{$t('madagascar.section1.title')}}</div>
                                 <div class="para-subtitle">{{$t('madagascar.section1.subtitle')}}</div>
                                 <div class="para-img">
-                                    <v-img src="../assets/images/specie-mango.jpg"></v-img>
+                                    <v-img src="../assets/images/specie-mango.jpg" alt="mango"></v-img>
                                 </div>
                                 <v-row>
                                     <v-col class="text-center ">
@@ -77,7 +77,7 @@
                             </v-col>
                             <v-col>
                                 <div class="para-title">{{$t('madagascar.section3.title')}}</div>
-                                <v-img class="py-3" src="../assets/images/map1.png"></v-img>
+                                <v-img class="py-3" src="../assets/images/map1.png" alt="map"></v-img>
                             </v-col>
                         </v-row>
 
@@ -88,7 +88,7 @@
                                 <div class="para-title">{{$t('india.section1.title')}}</div>
                                 <div class="para-subtitle">{{$t('india.section1.subtitle')}}</div>
                                 <div class="para-img">
-                                    <v-img src="../assets/images/mango.jpg"></v-img>
+                                    <v-img src="../assets/images/mango.jpg" alt="mango"></v-img>
                                 </div>
                                 <v-row>
                                     <v-col class="text-center ">
@@ -125,7 +125,7 @@
                             </v-col>
                             <v-col>
                                 <div class="para-title">{{$t('india.section3.title')}}</div>
-                                <v-img class="py-3" src="../assets/images/map2.png"></v-img>
+                                <v-img class="py-3" src="../assets/images/map2.png" alt="map2"></v-img>
                             </v-col>
                         </v-row>
                     </div>
