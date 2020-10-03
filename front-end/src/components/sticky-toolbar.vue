@@ -79,9 +79,9 @@
                     <img src="../assets/images/logo.svg" width="140px" alt="logo"/>
                 </router-link>
             </v-toolbar-title>
-            <v-spacer style="flex-grow: 2!important;" class="d-none d-md-block"></v-spacer>
+            <v-spacer style="flex-grow: 1.8!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
-            <v-toolbar-items class="py-1">
+            <v-toolbar-items class="py-1" style="max-width: 240px;">
                 <button class="nav-btn" @click="$root.scrollToElement('formSection')">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
@@ -103,6 +103,7 @@
     .appBar {
         position: fixed;
         z-index: 1000;
+        transform: translate3D(0, 0, 0);
         top: 0;
         width: 100%;
 

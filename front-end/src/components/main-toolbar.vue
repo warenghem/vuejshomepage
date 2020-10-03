@@ -162,6 +162,9 @@
                 .brand {
                     filter: brightness(1) invert(0);
                 }
+                .item{
+                    color: #000000;
+                }
             }
 
             .brand {
@@ -174,6 +177,7 @@
             }
 
             .item {
+                color: #ffffff;
                 &:before {
                     display: none;
                 }

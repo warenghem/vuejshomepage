@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="fp-section d-none d-lg-table">
-            <div class="page-title mission-title">{{$t('mission.title')}}</div>
+            <div class="page-title absolute-title">{{$t('mission.title')}}</div>
             <div class="fp-tableCell" style="height: 900px;">
                 <div class="fp-bg" style="transform: translateX(0px) translateY(0px);">
                     <div class="homepage-item">
@@ -346,7 +346,7 @@
 
 <script>
     export default {
-        name: "mission-section2",
+        name: "mission-section",
         data() {
             return {
                 currentMissionHover: null,
@@ -506,10 +506,6 @@
         background-image: url('../assets/images/mission/studio.jpg');
     }
 
-    .mission-title {
-        z-index: 1;
-        position: absolute;
-        top: 20px;
-    }
+
 
 </style>

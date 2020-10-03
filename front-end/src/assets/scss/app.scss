@@ -254,6 +254,14 @@ body {
   border-right: #eae8e4 solid 1px;
 }
 
+.border-bottom-1 {
+  border-bottom: solid 1px #1c1b1b99;;
+}
+
+.border-top-1 {
+  border-top: solid 1px #1c1b1b99;;
+}
+
 .instagram_gallery {
   overflow-x: auto;
   max-width: 100%;
@@ -291,5 +299,11 @@ body {
 }
 
 .opacity-02 {
-  opacity: 0.2!important;
+  opacity: 0.2 !important;
+}
+
+.absolute-title {
+  z-index: 1;
+  position: absolute!important;
+  top: 20px;
 }
