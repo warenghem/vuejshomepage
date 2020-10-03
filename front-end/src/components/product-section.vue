@@ -158,9 +158,11 @@
                     }
                     &:nth-child(1) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
+                        background-size: cover;
                     }
                     &:nth-child(2) {
                         background: url(../assets/images/PC-rendu-scaled.jpg);
+                        background-size: cover;
                     }
                     .content {
                         padding: 20px;
@@ -304,9 +306,11 @@
                     }
                     &:nth-child(1) {
                         background: url(../assets/images/Sac-rendu-10-07-2020.2-min.jpg) center;
+                        background-size: cover;
                     }
                     &:nth-child(2) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
+                        background-size: cover;
                     }
                     .content {
                         padding: 20px;
@@ -373,6 +377,7 @@
                     }
                     &:nth-child(1) {
                         background: url(../assets/images/WA-mif-seamless-REVISION.png);
+                        background-size: cover;
                     }
                     .content {
                         padding: 20px;
