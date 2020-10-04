@@ -91,7 +91,6 @@
                     const walk = (x - startX) * 3; //scroll-fast
                     slider.scrollLeft = scrollLeft - walk;
                 });
-                this.getItemRow();
             }, 3000);
 
 
@@ -130,38 +129,6 @@
                 }
 
             },
-            getItemRow() {
-                const slider = document.querySelector('.instagram_gallery').getElementsByTagName('a');
-                switch (this.$vuetify.breakpoint.name) {
-
-                    case 'xs':
-                        slider.forEach(element => {
-                            element.style.minWidth = '50%';
-                        });
-                        break;
-                    case 'sm':
-                        slider.forEach(element => {
-                            element.style.minWidth = '50%';
-                        });
-                        break;
-                    case 'md':
-                        slider.forEach(element => {
-                            element.style.minWidth = '50%';
-                        });
-                        break;
-                    case 'lg':
-                        slider.forEach(element => {
-                            element.style.minWidth = '25%';
-                        });
-                        break;
-
-                    case 'xl':
-                        slider.forEach(element => {
-                            element.style.minWidth = '16.66%';
-                        });
-                        break;
-                }
-            }
         },
     }
 

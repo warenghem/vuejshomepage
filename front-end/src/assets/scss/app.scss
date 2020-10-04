@@ -274,17 +274,38 @@ body {
   a {
     overflow: hidden;
     max-height: 230px;
+    @media (min-width: 990px) {
+      min-width: 16.666%;
+    }
+    @media (min-width: 800px) and (max-width: 989px) {
+      min-width: 20%;
+    }
+    @media (min-width: 700px) and (max-width: 799px) {
+      min-width: 25%;
+    }
+    @media (min-width: 600px) and (max-width: 699px) {
+      min-width: 33.333%;
+    }
+    @media (min-width: 480px) and (max-width: 599px) {
+      min-width: 50%;
+    }
+    @media (max-width: 479px) {
+      min-width: 100%;
+    }
+
 
     img {
       width: 100% !important;
+      transition: .5s;
 
       &:hover {
-        transition: 1s ease-in-out;
-        transform: scale(1.1);
+        transition: all .5s;
+        transform: scale(1.05);
       }
     }
   }
 }
+
 
 .modal-open {
   overflow: hidden !important;
@@ -304,6 +325,6 @@ body {
 
 .absolute-title {
   z-index: 1;
-  position: absolute!important;
+  position: absolute !important;
   top: 20px;
 }
