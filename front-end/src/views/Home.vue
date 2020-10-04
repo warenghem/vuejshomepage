@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div id="blackContent"></div>
         <MainToolbar></MainToolbar>
         <sticky-toolbar v-show="stickyToolbar" style="transform: translate3D(0,0,0);transition: ease-in-out 3s;"/>
         <VideoSection id="videoSection"></VideoSection>

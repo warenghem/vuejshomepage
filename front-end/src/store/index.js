@@ -25,7 +25,7 @@ export default new Vuex.Store({
         getForestDetail({commit}) {
             commit("SET_FOREST_DETAILS", {tree_count: 0, co2_compensated: 0});
             axios
-                .get("/1").then(({data}) => {
+                .get("/forests/145764").then(({data}) => {
                 commit("SET_FOREST_DETAILS", data);
 
             })

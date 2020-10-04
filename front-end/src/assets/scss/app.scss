@@ -229,6 +229,9 @@ body {
 
 #Eden_ProjetContainer {
   transform: translateX(-265px);
+  @media (max-width: 767px) {
+    transform: translateX(-118px) translateY(17px)!important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -328,3 +331,4 @@ body {
   position: absolute !important;
   top: 20px;
 }
+

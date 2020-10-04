@@ -1,9 +1,9 @@
 <template>
     <div>
 
-        <h2 class="page-title pt-md-5 pt-4"> {{$t('title')}}</h2>
-        <h3 class="page-details pb-md-5 py-2 teradeli-light"> {{$t('subtitle')}}</h3>
-        <div class="d-flex justify-center py-4 py-md-0">
+        <h2 class="page-title pt-md-5 pt-4 pr-4"> {{$t('title')}}</h2>
+        <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
+        <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
             <div class="text-center py-4 px-7">
                 <div class="sub-title">{{$store.state.tree_count}}</div>
                 <div style="color: #888;"> {{$t('term1')}}</div>
@@ -19,116 +19,140 @@
 
         </div>
         <div id="mapSection"></div>
-        <div class="slideArea">
-            <div class="content">
-                <div class="card">
-                    <div class="card-header d-flex justify-space-between px-3 align-center border-bottom-2 py-2">
-                        <v-btn rounded color="#0081a7" class="white--text" @click="closeSlideUp">{{$t('btnTitle')}}
-                        </v-btn>
-                        <v-btn
-                                text
-                                color="black"
-                                @click="closeSlide"
-                                style="font-size: 32px"
-                        >
-                            &times;
-                        </v-btn>
+        <div class="slideArea mgforest">
+            <div class="card">
+                <div class="d-flex justify-space-between px-3 align-center border-bottom-2">
+                    <div class="py-1 border-right-2" style="width: 100%">
+                        <button class="btn-theme"
+                                @click="closeSlideUp">
+                            {{$t('btnTitle')}}
+                        </button>
                     </div>
-                    <div class="px-7 pb-3  map-modal mgforest pt-7">
-                        <v-row class="mt-7 pt-2">
-                            <v-col lg="6">
-                                <div class="para-title">{{$t('madagascar.section1.title')}}</div>
-                                <div class="para-subtitle">{{$t('madagascar.section1.subtitle')}}</div>
-                                <div class="para-img">
-                                    <v-img src="../assets/images/specie-mango.jpg" alt="mango"></v-img>
-                                </div>
-                                <v-row>
-                                    <v-col class="text-center ">
-                                        <div class="para-subtitle">
-                                            20 Kg
-                                        </div>
-                                        <div class="para-text">{{$t('madagascar.section1.term1')}}</div>
-                                    </v-col>
-                                    <v-col class="text-center">
-                                        <div class="para-subtitle">25 ans</div>
-                                        <div class="para-text">{{$t('madagascar.section1.term2')}}</div>
-                                    </v-col>
-                                    <v-col class="text-center ">
-                                        <div class="para-subtitle">2 – 10 m</div>
-                                        <div class="para-text">{{$t('madagascar.section1.term3')}}</div>
-                                    </v-col>
-                                </v-row>
-                                <div class="para-subtitle-small">{{$t('madagascar.section1.paraTitle')}}</div>
-                                <div class="para-text" v-html="$t('madagascar.section1.paraText')">
-                                </div>
-                            </v-col>
-                            <v-col lg="6">
-                                <div class="para-title">{{$t('madagascar.section2.title')}}</div>
-                                <div class="para-subtitle">{{$t('madagascar.section2.subtitle')}}</div>
-                                <div class="para-img">
-                                    <v-img src="../assets/images/river.png" alt="tiger"></v-img>
-                                </div>
-                                <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle1')}}</div>
-                                <div class="para-text" v-html="$t('madagascar.section2.paraText1')">
-                                </div>
-                                <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle2')}}</div>
-                                <div class="para-text" v-html="$t('madagascar.section2.paraText2')">
-                                </div>
-                            </v-col>
-                            <v-col>
-                                <div class="para-title">{{$t('madagascar.section3.title')}}</div>
-                                <v-img class="py-3" src="../assets/images/map1.png" alt="map"></v-img>
-                            </v-col>
-                        </v-row>
+                    <v-btn
+                            text
+                            color="black"
+                            @click="closeSlide"
+                            style="font-size: 32px"
+                    >
+                        &times;
+                    </v-btn>
+                </div>
+                <div class="px-7 pb-3  map-modal  pt-7">
+                    <v-row class="mt-7 pt-2">
+                        <v-col lg="6">
+                            <div class="para-title">{{$t('madagascar.section1.title')}}</div>
+                            <div class="para-subtitle">{{$t('madagascar.section1.subtitle')}}</div>
+                            <div class="para-img">
+                                <v-img src="../assets/images/specie-mango.jpg" alt="mango"></v-img>
+                            </div>
+                            <v-row>
+                                <v-col class="text-center ">
+                                    <div class="para-subtitle">
+                                        20 Kg
+                                    </div>
+                                    <div class="para-text">{{$t('madagascar.section1.term1')}}</div>
+                                </v-col>
+                                <v-col class="text-center">
+                                    <div class="para-subtitle">25 ans</div>
+                                    <div class="para-text">{{$t('madagascar.section1.term2')}}</div>
+                                </v-col>
+                                <v-col class="text-center ">
+                                    <div class="para-subtitle">2 – 10 m</div>
+                                    <div class="para-text">{{$t('madagascar.section1.term3')}}</div>
+                                </v-col>
+                            </v-row>
+                            <div class="para-subtitle-small">{{$t('madagascar.section1.paraTitle')}}</div>
+                            <div class="para-text" v-html="$t('madagascar.section1.paraText')">
+                            </div>
+                        </v-col>
+                        <v-col lg="6">
+                            <div class="para-title">{{$t('madagascar.section2.title')}}</div>
+                            <div class="para-subtitle">{{$t('madagascar.section2.subtitle')}}</div>
+                            <div class="para-img">
+                                <v-img src="../assets/images/river.png" alt="tiger"></v-img>
+                            </div>
+                            <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle1')}}</div>
+                            <div class="para-text" v-html="$t('madagascar.section2.paraText1')">
+                            </div>
+                            <div class="para-subtitle-small">{{$t('madagascar.section2.paraTitle2')}}</div>
+                            <div class="para-text" v-html="$t('madagascar.section2.paraText2')">
+                            </div>
+                        </v-col>
+                        <v-col>
+                            <div class="para-title">{{$t('madagascar.section3.title')}}</div>
+                            <v-img class="py-3" src="../assets/images/map1.png" alt="map"></v-img>
+                        </v-col>
+                    </v-row>
 
+                </div>
+            </div>
+        </div>
+        <div class="slideArea indianforest">
+            <div class="card">
+                <div class="d-flex justify-space-between px-3 align-center border-bottom-2">
+                    <div class="py-1 border-right-2" style="width: 100%">
+                        <button class="btn-theme my-0"
+                                @click="closeSlideUp">
+                            {{$t('btnTitle')}}
+                        </button>
                     </div>
-                    <div class="px-7 pb-3  map-modal indianforest pt-7">
-                        <v-row class="mt-7 pt-2">
-                            <v-col lg="6">
-                                <div class="para-title">{{$t('india.section1.title')}}</div>
-                                <div class="para-subtitle">{{$t('india.section1.subtitle')}}</div>
-                                <div class="para-img">
-                                    <v-img src="../assets/images/mango.jpg" alt="mango"></v-img>
-                                </div>
-                                <v-row>
-                                    <v-col class="text-center ">
-                                        <div class="para-subtitle">
-                                            800 Kg
-                                        </div>
-                                        <div class="para-text">{{$t('india.section1.term1')}}</div>
-                                    </v-col>
-                                    <v-col class="text-center">
-                                        <div class="para-subtitle">100 ans</div>
-                                        <div class="para-text">{{$t('india.section1.term2')}}</div>
-                                    </v-col>
-                                    <v-col class="text-center ">
-                                        <div class="para-subtitle">35 – 45 m</div>
-                                        <div class="para-text">{{$t('india.section1.term3')}}</div>
-                                    </v-col>
-                                </v-row>
-                                <div class="para-subtitle-small">{{$t('india.section1.paraTitle')}}</div>
-                                <div class="para-text" v-html="$t('india.section1.paraText')">
-                                </div>
-                            </v-col>
-                            <v-col lg="6">
-                                <div class="para-title">{{$t('india.section2.title')}}</div>
-                                <div class="para-subtitle">{{$t('india.section2.subtitle')}}</div>
-                                <div class="para-img">
-                                    <v-img src="../assets/images/tiger.jpg" alt="tiger"></v-img>
-                                </div>
-                                <div class="para-subtitle-small">{{$t('india.section2.paraTitle1')}}</div>
-                                <div class="para-text" v-html="$t('india.section2.paraText1')">
-                                </div>
-                                <div class="para-subtitle-small">{{$t('india.section2.paraTitle2')}}</div>
-                                <div class="para-text" v-html="$t('india.section2.paraText2')">
-                                </div>
-                            </v-col>
-                            <v-col>
-                                <div class="para-title">{{$t('india.section3.title')}}</div>
-                                <v-img class="py-3" src="../assets/images/map2.png" alt="map2"></v-img>
-                            </v-col>
-                        </v-row>
-                    </div>
+                    <v-btn
+                            text
+                            color="black"
+                            @click="closeSlide"
+                            style="font-size: 32px"
+                            class="px-0"
+                            large
+                    >
+                        &times;
+                    </v-btn>
+                </div>
+                <div class="px-7 pb-3  map-modal pt-7">
+                    <v-row class="mt-7 pt-2">
+                        <v-col lg="6">
+                            <div class="para-title">{{$t('india.section1.title')}}</div>
+                            <div class="para-subtitle">{{$t('india.section1.subtitle')}}</div>
+                            <div class="para-img">
+                                <v-img src="../assets/images/mango.jpg" alt="mango"></v-img>
+                            </div>
+                            <v-row>
+                                <v-col class="text-center ">
+                                    <div class="para-subtitle">
+                                        800 Kg
+                                    </div>
+                                    <div class="para-text">{{$t('india.section1.term1')}}</div>
+                                </v-col>
+                                <v-col class="text-center">
+                                    <div class="para-subtitle">100 ans</div>
+                                    <div class="para-text">{{$t('india.section1.term2')}}</div>
+                                </v-col>
+                                <v-col class="text-center ">
+                                    <div class="para-subtitle">35 – 45 m</div>
+                                    <div class="para-text">{{$t('india.section1.term3')}}</div>
+                                </v-col>
+                            </v-row>
+                            <div class="para-subtitle-small">{{$t('india.section1.paraTitle')}}</div>
+                            <div class="para-text" v-html="$t('india.section1.paraText')">
+                            </div>
+                        </v-col>
+                        <v-col lg="6">
+                            <div class="para-title">{{$t('india.section2.title')}}</div>
+                            <div class="para-subtitle">{{$t('india.section2.subtitle')}}</div>
+                            <div class="para-img">
+                                <v-img src="../assets/images/tiger.jpg" alt="tiger"></v-img>
+                            </div>
+                            <div class="para-subtitle-small">{{$t('india.section2.paraTitle1')}}</div>
+                            <div class="para-text" v-html="$t('india.section2.paraText1')">
+                            </div>
+                            <div class="para-subtitle-small">{{$t('india.section2.paraTitle2')}}</div>
+                            <div class="para-text" v-html="$t('india.section2.paraText2')">
+                            </div>
+                        </v-col>
+                        <v-col>
+                            <div class="para-title">{{$t('india.section3.title')}}</div>
+                            <v-img class="py-3" src="../assets/images/map2.png" alt="map2"></v-img>
+                        </v-col>
+                    </v-row>
                 </div>
             </div>
         </div>
@@ -427,15 +451,15 @@
 
                         // Modal system
                         conttext.onclick = function () {
-                            document.querySelector('.slideArea').style.visibility = 'visible';
-                            document.querySelector(elt.modal).style.display = 'block';
+                            document.querySelector(elt.modal).classList.add('active');
+                            document.getElementById('blackContent').classList.add('overlay');
                             const el = document.body;
                             el.classList.add("modal-open");
                             document.documentElement.style.overflowY = 'hidden'
                         };
                         dot.onclick = function () {
-                            document.querySelector('.slideArea').style.visibility = 'visible';
-                            document.querySelector(elt.modal).style.display = 'block';
+                            document.querySelector(elt.modal).classList.add('active');
+                            document.getElementById('blackContent').classList.add('overlay');
                             const el = document.body;
                             el.classList.add("modal-open");
                             document.documentElement.style.overflowY = 'hidden'
@@ -450,17 +474,17 @@
 
 
             closeSlide() {
-                document.querySelector('.slideArea').style.visibility = 'hidden';
-                document.querySelector('.indianforest').style.display = 'none';
-                document.querySelector('.mgforest').style.display = 'none';
+                document.querySelector('.indianforest').classList.remove('active');
+                document.querySelector('.mgforest').classList.remove('active');
+                document.getElementById('blackContent').classList.remove('overlay');
                 const el = document.body;
                 el.classList.remove('modal-open');
                 document.documentElement.style.overflowY = 'auto'
             },
             closeSlideUp() {
-                document.querySelector('.slideArea').style.visibility = 'hidden';
-                document.querySelector('.indianforest').style.display = 'none';
-                document.querySelector('.mgforest').style.display = 'none';
+                document.querySelector('.indianforest').classList.remove('active');
+                document.querySelector('.mgforest').classList.remove('active');
+                document.getElementById('blackContent').classList.remove('overlay');
                 const el = document.body;
                 el.classList.remove('modal-open');
                 document.documentElement.style.overflowY = 'auto';
@@ -486,15 +510,12 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        left: 0;
-        right: 0;
         height: 100%;
-        z-index: 120000;
-        background: #0000007d;
-        display: flex;
-        flex-direction: row;
-        visibility: hidden;
-        justify-content: flex-end;
+        z-index: 100000 !important;
+        background: #fff;
+        max-height: 100%;
+        overflow-y: scroll;
+        transition: right 0.4s;
 
         .card-header {
             position: fixed;
@@ -502,37 +523,37 @@
             background: white;
         }
 
-        .content {
-            background: #fff;
-            max-height: 100%;
-            overflow-y: scroll;
-            @media only screen and (min-width: 1291px) {
-                width: 50vw !important;
-                .card-header {
-                    width: 49vw !important;
-                }
-            }
-
-            @media only screen and (max-width: 1290px) {
-                width: 70vw !important;
-                .card-header {
-                    width: 69vw !important;
-                }
-            }
-            @media only screen and (max-width: 48em) {
-                width: 100% !important;
-                .card-header {
-                    width: 99vw !important;
-                }
+        @media only screen and (min-width: 1291px) {
+            width: 50vw !important;
+            right: -50vw !important;
+            .card-header {
+                width: 49vw !important;
             }
         }
 
+        @media only screen and (max-width: 1290px) {
+            width: 70vw !important;
+            right: -70vw;
+            .card-header {
+                width: 69vw !important;
+            }
+        }
+        @media only screen and (max-width: 48em) {
+            width: 100vw !important;
+            right: -100vw;
+            .card-header {
+                width: 99vw !important;
+            }
+        }
+
+        &.active {
+            right: 0 !important;
+            visibility: visible !important;
+        }
 
     }
 
     .map-modal {
-        display: none;
-
         .para-title {
             font-weight: 700;
             margin-bottom: 5px;
@@ -565,6 +586,7 @@
             color: #888;
             font-size: 14px;
         }
+
     }
 
 </style>

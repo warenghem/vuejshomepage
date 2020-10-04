@@ -35,7 +35,8 @@
   .minusIcon {
     display: none;
   }
-  .v-expansion-panel-header{
+
+  .v-expansion-panel-header {
     padding-bottom: 60px;
   }
 
@@ -52,5 +53,26 @@
 
   .v-expansion-panel-header__icon {
     display: none !important;
+  }
+}
+
+#blackContent {
+  z-index: 100000;
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s linear 0.5s;
+  -webkit-transition: opacity 0.5s, visibility 0s linear 0.5s;
+  visibility: hidden;
+
+  &.overlay {
+    visibility: visible!important;
+    opacity: .8!important;
+    transition: opacity 0.5s,visibility 0s!important;
+    -webkit-transition: opacity 0.5s,visibility 0s!important;
   }
 }
