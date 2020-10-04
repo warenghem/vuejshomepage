@@ -78,7 +78,8 @@
                                             {{$t('btnTitle')}}
                                         </button>
                                         <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
-                                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!</v-alert>
+                                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!
+                                        </v-alert>
                                         <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
                                     </form>
                                 </template>
@@ -158,9 +159,11 @@
             clearInterval(this.interval)
         },
         mounted() {
-            setInterval(() => {
-                this.progressValue = 30
-            }, 3000);
+            this.interval = window.setInterval(function () {
+                if (this.progressValue < 30){
+                    this.progressValue = this.progressValue < 30 ? (this.progressValue + 5) : this.progressValue;
+                }
+            }.bind(this), 200);
             changeBackground();
 
             function changeBackground() {
