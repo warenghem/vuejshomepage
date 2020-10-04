@@ -15,7 +15,30 @@
                 >
                 </div>
             </div>
+            <div class="scrollicon">
+                                <div class="mouse">
+                                    <div class="frame">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.9 91">
+                                            <path class="st0" linejoin="round"
+                                                  d="M27.4 3.6L27.4 3.6C14.2 3.6 3.5 14.3 3.5 27.5v36c0 13.2 10.7 23.9 23.9 23.9h0c13.2 0 23.9-10.7 23.9-23.9v-36C51.4 14.3 40.7 3.6 27.4 3.6z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="mouse-left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
+                                            <path linejoin="round" class="Draw-Frame Animate-Draw"
+                                                  d="M27.4 87.5L27.4 87.5c-13.2 0-23.9-10.7-23.9-23.9v-36c0-13.2 10.7-23.9 23.9-23.9h0"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="mouse-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
+                                            <path linejoin="round" class="Draw-Frame Animate-Draw"
+                                                  d="M0 3.6L0 3.6c13.2 0 23.9 10.7 23.9 23.9v36c0 13.2-10.7 23.9-23.9 23.9h0"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
             <v-row no-gutters class="homepage-slider-content">
+
                 <v-col md="9" class="topCenter my-auto">
                     <div class="bannerLeft">
                         <h2 class="title text-center"> {{$t('video.title')}}</h2>
@@ -94,6 +117,7 @@
                     {{$store.state.co2_compensated}} <span>{{$t('video.forest.term2')}}</span> <br>
                     {{$store.state.reforest}} <span>{{$t('video.forest.term3')}}</span> <br>
                 </div>
+
             </v-row>
         </div>
         <div class="d-md-none form-md" id="formSection2">
@@ -153,6 +177,7 @@
             return {
                 interval: {},
                 progressValue: 0,
+                maxProgress: 34
             }
         },
         beforeDestroy() {
@@ -160,8 +185,9 @@
         },
         mounted() {
             this.interval = window.setInterval(function () {
-                if (this.progressValue < 30){
-                    this.progressValue = this.progressValue < 30 ? (this.progressValue + 5) : this.progressValue;
+                if (this.progressValue < this.maxProgress) {
+                    var change = this.maxProgress - this.progressValue > 5 ? 5 : this.maxProgress - this.progressValue;
+                    this.progressValue = this.progressValue < this.maxProgress ? (this.progressValue + change) : this.maxProgress;
                 }
             }.bind(this), 200);
             changeBackground();
