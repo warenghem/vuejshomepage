@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="d-flex justify-space-between px-3 align-center border-bottom-2">
                     <div class="py-1 border-right-2" style="width: 100%">
-                        <button class="btn-theme"
+                        <button class="btn-theme my-0"
                                 @click="closeSlideUp">
                             {{$t('btnTitle')}}
                         </button>

@@ -177,7 +177,7 @@
             return {
                 interval: {},
                 progressValue: 0,
-                maxProgress: 34
+                maxProgress: 30
             }
         },
         beforeDestroy() {
