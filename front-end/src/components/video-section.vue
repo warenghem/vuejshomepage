@@ -57,13 +57,32 @@
                             {{$t('video.rightSection.subtitle')}}
                         </p>
                         <div class="form px-3">
-                            <form action="" class="d-flex flex-column px-4">
-                                <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
-                                <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                                <button id="jePlanetBtn" class="btn-theme">
-                                    {{$t('btnTitle')}}
-                                </button>
-                            </form>
+                            <mailchimp-subscribe
+                                    url="https://warenghem.us20.list-manage.com/subscribe/post-json"
+                                    user-id="2f7dbf20677f88c14c1389365"
+                                    list-id="ee2afb40a2"
+                            >
+                                <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
+                                    <form @submit.prevent="subscribe" class="d-flex flex-column px-4">
+                                        <input type="text"
+                                               class="form-theme"
+                                               placeholder="PRENOM"
+                                               @input="setName($event.target.value)"
+                                        >
+                                        <input type="email"
+                                               class="form-theme"
+                                               placeholder="EMAIL"
+                                               @input="setEmail($event.target.value)"
+                                        >
+                                        <button id="jePlanetBtn" class="btn-theme" type="submit">
+                                            {{$t('btnTitle')}}
+                                        </button>
+                                        <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
+                                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!</v-alert>
+                                        <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
+                                    </form>
+                                </template>
+                            </mailchimp-subscribe>
                         </div>
                     </div>
 
@@ -89,23 +108,46 @@
             </v-progress-linear>
 
             <p class="text-white py-2 text-justify bottomText">
-               {{$t('video.rightSection.subtitle')}}
+                {{$t('video.rightSection.subtitle')}}
             </p>
-            <form action="" class="d-flex flex-column">
-                <input type="text" class="form-theme text-uppercase" placeholder="PRENOM ">
-                <input type="text" class="form-theme text-uppercase" placeholder="EMAIL ">
-                <button id="jePlanetBtn2" class="btn-theme">
-                    {{$t('btnTitle')}}
-                </button>
-            </form>
+            <mailchimp-subscribe
+                    url="https://warenghem.us20.list-manage.com/subscribe/post-json"
+                    user-id="2f7dbf20677f88c14c1389365"
+                    list-id="ee2afb40a2"
+            >
+                <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
+                    <form @submit.prevent="subscribe" class="d-flex flex-column">
+                        <input type="text"
+                               class="form-theme"
+                               placeholder="PRENOM"
+                               @input="setName($event.target.value)"
+                        >
+                        <input type="email"
+                               class="form-theme"
+                               placeholder="EMAIL"
+                               @input="setEmail($event.target.value)"
+                        >
+                        <button id="jePlanetBtn2" class="btn-theme" type="submit">
+                            {{$t('btnTitle')}}
+                        </button>
+                        <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
+                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!</v-alert>
+                        <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
+                    </form>
+                </template>
+            </mailchimp-subscribe>
         </div>
     </div>
 </template>
 
 <script>
+    import MailchimpSubscribe from './mailchp-subscribe'
 
     export default {
         name: "video-section",
+        components: {
+            MailchimpSubscribe,
+        },
         data() {
             return {
                 interval: {},

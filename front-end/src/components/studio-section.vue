@@ -113,7 +113,7 @@
                         ' accompagner.'
                 }
             }
-        }
+        },
     }
 </script>
 <style scoped lang="scss">
