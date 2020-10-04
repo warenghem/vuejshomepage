@@ -257,35 +257,6 @@
                         background-size: cover;
                     }
 
-                    .content {
-                        padding: 20px;
-                        text-align: center;
-
-                        small {
-                            color: #0083A4;
-                            font-family: 'teradeli-light', sans-serif !important;
-                            font-size: 13px;
-                        }
-
-                        h1 {
-                            color: #fff;
-                        }
-
-                        p {
-                            font-family: 'teradeli-book', sans-serif !important;
-                            font-size: 20px;
-                            color: rgba(255, 255, 255, .65) !important;
-
-                        }
-
-                        article {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            opacity: 0;
-                            color: #fff;
-                        }
-
-                    }
 
                     .overlay {
                         position: absolute;
@@ -337,35 +308,6 @@
                         background-size: cover;
                     }
 
-                    .content {
-                        padding: 20px;
-                        text-align: center;
-
-                        small {
-                            color: #0083A4;
-                            font-family: 'teradeli-light', sans-serif !important;
-                            font-size: 13px;
-                        }
-
-                        h1 {
-                            color: #fff;
-                        }
-
-                        p {
-                            font-family: 'teradeli-book', sans-serif !important;
-                            font-size: 20px;
-                            color: rgba(255, 255, 255, .65) !important;
-
-                        }
-
-                        article {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            opacity: 0;
-                            color: #fff;
-                        }
-
-                    }
 
                     .overlay {
                         position: absolute;
@@ -433,35 +375,6 @@
                         background-size: cover;
                     }
 
-                    .content {
-                        padding: 20px;
-                        text-align: center;
-
-                        small {
-                            color: #0083A4;
-                            font-family: 'teradeli-light', sans-serif !important;
-                            font-size: 13px;
-                        }
-
-                        h1 {
-                            color: #fff;
-                        }
-
-                        p {
-                            font-family: 'teradeli-book', sans-serif !important;
-                            font-size: 20px;
-                            color: rgba(255, 255, 255, .65) !important;
-
-                        }
-
-                        article {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            opacity: 0;
-                            color: #fff;
-                        }
-
-                    }
 
                     .overlay {
                         position: absolute;
@@ -513,35 +426,6 @@
                         background-size: cover;
                     }
 
-                    .content {
-                        padding: 20px;
-                        text-align: center;
-
-                        small {
-                            color: #0083A4;
-                            font-family: 'teradeli-light', sans-serif !important;
-                            font-size: 13px;
-                        }
-
-                        h1 {
-                            color: #fff;
-                        }
-
-                        p {
-                            font-family: 'teradeli-book', sans-serif !important;
-                            font-size: 20px;
-                            color: rgba(255, 255, 255, .65) !important;
-
-                        }
-
-                        article {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            opacity: 0;
-                            color: #fff;
-                        }
-
-                    }
 
                     .overlay {
                         position: absolute;
@@ -573,6 +457,39 @@
                 }
             }
         }
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        @media(max-width: 425px) {
+            text-align: right;
+        }
+
+        small {
+            color: #0083A4;
+            font-family: 'teradeli-light', sans-serif !important;
+            font-size: 13px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            font-family: 'teradeli-book', sans-serif !important;
+            font-size: 20px;
+            color: rgba(255, 255, 255, .65) !important;
+
+        }
+
+        article {
+            font-size: 14px;
+            letter-spacing: 1px;
+            opacity: 0;
+            color: #fff;
+        }
+
     }
 
 
