@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="fp-section d-none d-lg-table">
+        <div class="fp-section d-none d-lg-table border-top-2">
             <div class="page-title absolute-title">{{$t('mission.title')}}</div>
             <div class="fp-tableCell" style="height: 900px;">
                 <div class="fp-bg" style="transform: translateX(0px) translateY(0px);">

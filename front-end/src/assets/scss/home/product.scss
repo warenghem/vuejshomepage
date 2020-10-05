@@ -151,12 +151,11 @@
             display: -ms-flexbox !important;
             display: flex !important;
         }
-
+    }
         .d-xl-block {
             @media (min-width: 1200px) {
                 display: block !important;
             }
-        }
     }
 
     .row {

@@ -266,5 +266,10 @@
 <style scoped lang="scss">
 
     @import "../assets/scss/home/product";
+    .catalogue-item-content-title{
+        a{
+            cursor: url(../assets/images/cross_100185.svg), auto;
+        }
+    }
 
 </style>
