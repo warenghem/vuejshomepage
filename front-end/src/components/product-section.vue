@@ -1,117 +1,168 @@
 <template>
     <div>
-        <v-row no-gutters class="productSection border-top-1">
+        <div class="productSection">
             <div class="page-title absolute-title">{{$t('productTitle')}}</div>
-            <v-col cols="6" md="6" sm="12" class="parent-left">
-                <div class="vertical">
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[0].tag')}}</small>
-                            <h1>{{$t('products[0].title')}}</h1>
-                            <p> {{$t('products[0].summary')}}</p>
-                            <article>
-                                {{$t('products[0].desc')}}
-                            </article>
+            <div class="catalogue-grid h-100">
+                <div class="row h-100">
+                    <div class="cross p-0 col-lg-3 col-md-6 fineborderb-sm-0 fineborderb-md h-66 h-lg-33">
+                        <div class="catalogue-item h-100">
+                            <div class="h-100">
+                                <div class="catalogue-item-background bg-white">
+                                    <div :style="{'background-image': 'url(' + require('../assets/images/WA-mif-seamless-REVISION.png') + ')'}"
+                                         style="top: 0%;"
+                                         class="h-100 bgi"></div>
+                                </div>
+                                <div class="catalogue-item-content-title sub-title mt-4 mt-lg-0">
+                                    <a>
+                                        <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                            {{$t('products[0].tag')}}
+                                        </div>
+                                        <div class="text-white"> {{$t('products[0].title')}}</div>
+                                        <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                            {{$t('products[0].summary')}}
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                        {{$t('products[0].desc')}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="overlay"></div>
                     </div>
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[1].tag')}}</small>
-                            <h1>{{$t('products[1].title')}}</h1>
-                            <p> {{$t('products[1].summary')}}</p>
-                            <article>
-                                {{$t('products[1].desc')}}
-                            </article>
-
+                    <div class="cross p-0 col-lg-3 col-md-6 fineborderl-sm-0 fineborderl fineborderl-md fineborderb-sm-0 fineborderb-md fineborderl-sm-0 h-66 h-lg-33">
+                        <div class="catalogue-item h-100">
+                            <div class="h-100">
+                                <div class="catalogue-item-background bg-white">
+                                    <div :style="{'background-image': 'url(' + require('../assets/images/PC-rendu-scaled.jpg') + ')'}"
+                                         style="top: 0%;"
+                                         class="h-100 bgi"></div>
+                                </div>
+                                <div class="catalogue-item-content-title sub-title">
+                                    <a>
+                                        <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                            {{$t('products[1].tag')}}
+                                        </div>
+                                        <div class="text-white"> {{$t('products[1].title')}}</div>
+                                        <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                            {{$t('products[1].summary')}}
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                        {{$t('products[1].desc')}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="overlay"></div>
+                    </div>
+                    <div class="cross p-0 col-lg-6 col-md-6 d-lg-flex d-xl-block h-lg-33">
+                        <div class="catalogue-item fineborderb fineborderb-md fineborderb-sm-0 col-lg-12 col-xl-12 fineborderr-sm-0 fineborderl-xl h-50 h-lg-100 p-0">
+                            <div class="h-100">
+                                <div class="catalogue-item-background bg-white">
+                                    <div :style="{'background-image': 'url(' + require('../assets/images/WA-mif-seamless-REVISION.png') + ')'}"
+                                         style="top: 0%;"
+                                         class="h-100 bgi"></div>
+                                </div>
+                                <div class="catalogue-item-content-title sub-title">
+                                    <a>
+                                        <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                            {{$t('products[2].tag')}}
+                                        </div>
+                                        <div class="text-white"> {{$t('products[2].title')}}</div>
+                                        <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                            {{$t('products[2].summary')}}
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                        {{$t('products[2].desc')}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cross p-0 catalogue-item fineborderb-sm-0 fineborderb-lg fineborderb-md col-md-6 finebordert fineborderl-sm-0 h-50 h-33 finebordert-md-0 fineborderl-md h-lg-33">
+                        <div class="h-100">
+                            <div class="catalogue-item-background bg-white">
+                                <div :style="{'background-image': 'url(' + require('../assets/images/WA-mif-seamless-REVISION.png') + ')'}"
+                                     style="top: 0%;"
+                                     class="h-100 bgi"></div>
+                            </div>
+                            <div class="catalogue-item-content-title sub-title">
+                                <a>
+                                    <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                        {{$t('products[3].tag')}}
+                                    </div>
+                                    <div class="text-white"> {{$t('products[3].title')}}</div>
+                                    <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                        {{$t('products[3].summary')}}
+                                    </div>
+                                </a>
+                                <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                    {{$t('products[3].desc')}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 col-lg-6 col-md-12 catalogue-double row h-100 h-lg-33">
+                        <div class="cross catalogue-item col-md-6 fineborderr-sm-0 col-12 h-66 fineborderl h-md-33 fineborderl-md-0 h-lg-100">
+                            <div class="h-100">
+                                <div class="catalogue-item-background bg-white">
+                                    <div :style="{'background-image': 'url(' + require('../assets/images/Sac-rendu-10-07-2020.2-min.jpg') + ')'}"
+                                         style="top: 0%;"
+                                         class="h-100 bgi"></div>
+                                </div>
+                                <div class="catalogue-item-content-title sub-title">
+                                    <a>
+                                        <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                            {{$t('products[4].tag')}}
+                                        </div>
+                                        <div class="text-white"> {{$t('products[4].title')}}</div>
+                                        <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                            {{$t('products[4].summary')}}
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                        {{$t('products[4].desc')}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cross p-0 catalogue-item fineborderb-sm-0 fineborderb-lg fineborderl-md fineborderb-md col-md-6 fineborderl-xl fineborderl-sm-0 col-12 h-66 h-md-33 fineborderb-md-0 h-lg-100">
+                            <div class="h-100">
+                                <div class="catalogue-item-background bg-white">
+                                    <div :style="{'background-image': 'url(' + require('../assets/images/WA-mif-seamless-REVISION.png') + ')'}"
+                                         style="top: 0%;"
+                                         class="h-100 bgi"></div>
+                                </div>
+                                <div class="catalogue-item-content-title sub-title">
+                                    <a>
+                                        <div class="text-lightblue teradeli-light mb-1" style="font-size:13px">
+                                            {{$t('products[5].tag')}}
+                                        </div>
+                                        <div class="text-white"> {{$t('products[5].title')}}</div>
+                                        <div class="teradeli-book mt-2 px-3" style="font-size: 20px;">
+                                            {{$t('products[5].summary')}}
+                                        </div>
+                                    </a>
+                                    <div class="catalogue-item-content-list px-4 py-4 teradeli-light text-white">
+                                        {{$t('products[5].desc')}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="horizontal border-top-1">
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[2].tag')}}</small>
-                            <h1>{{$t('products[2].title')}}</h1>
-                            <p> {{$t('products[2].summary')}}</p>
-                            <article>
-                                {{$t('products[2].desc')}}
-                            </article>
-
-                        </div>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-            </v-col>
-
-            <v-col cols="6" md="6" sm="12" class="parent-right">
-                <div class="horizontal border-bottom-1">
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[3].tag')}}</small>
-                            <h1>{{$t('products[3].title')}}</h1>
-                            <p> {{$t('products[3].summary')}}</p>
-                            <article>
-                                {{$t('products[3].desc')}}
-                            </article>
-
-                        </div>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-                <div class="vertical">
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[4].tag')}}</small>
-                            <h1>{{$t('products[4].title')}}</h1>
-                            <p> {{$t('products[4].summary')}}</p>
-                            <article>
-                                {{$t('products[4].desc')}}
-                            </article>
-
-                        </div>
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="inner">
-                        <div class="content">
-                            <small>{{$t('products[5].tag')}}</small>
-                            <h1>{{$t('products[5].title')}}</h1>
-                            <p> {{$t('products[5].summary')}}</p>
-                            <article>
-                                {{$t('products[5].desc')}}
-                            </article>
-
-                        </div>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-            </v-col>
-
-        </v-row>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
         name: "product-section",
-        data() {
-            return {
-                interval: {},
-                progressValue: 0,
-            }
-        },
-        beforeDestroy() {
-            clearInterval(this.interval)
-        },
-        mounted() {
-            setInterval(() => {
-                this.progressValue = 30
-            }, 3000)
-        },
         i18n: {
             messages: {
                 en: {
-                    productTitle: 'Les objets en création',
+                    productTitle: 'Objects in creation',
                     products: [
                         {
                             tag: 'Visuals to come',
@@ -214,283 +265,6 @@
 
 <style scoped lang="scss">
 
-    .productSection {
-        position: relative;
-        min-height: 900px;
-        @media(max-width: 425px) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .parent-left {
-            @media(max-width: 425px) {
-                max-width: 100%;
-            }
-
-            .vertical {
-                height: 65%;
-                display: flex;
-                @media(max-width: 425px) {
-                    height: auto;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .inner {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    height: 100%;
-                    @media(max-width: 768px) {
-                        padding: 29px 15px;
-                    }
-
-                    &:nth-child(1) {
-                        background: url(../assets/images/WA-mif-seamless-REVISION.png);
-                        background-size: cover;
-                    }
-
-                    &:nth-child(2) {
-                        background: url(../assets/images/PC-rendu-scaled.jpg);
-                        background-size: cover;
-                    }
-
-
-                    .overlay {
-                        position: absolute;
-                        background: #1f4046f2;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        transition: opacity 0.4s ease-in-out;
-                    }
-
-                    &:hover {
-                        cursor: url(../assets/images/cross_100185.svg), auto;
-
-                        .overlay {
-                            opacity: 1;
-                        }
-
-                        .content {
-                            position: relative;
-                            z-index: 1;
-
-                            article {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-            .horizontal {
-                height: 35%;
-
-                .inner {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    height: 100%;
-                    @media(max-width: 768px) {
-                        padding: 29px 15px;
-                    }
-
-                    &:nth-child(1) {
-                        background: url(../assets/images/WA-mif-seamless-REVISION.png);
-                        background-size: cover;
-                    }
-
-
-                    .overlay {
-                        position: absolute;
-                        background: #1f4046f2;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        transition: opacity 0.4s ease-in-out;
-                    }
-
-                    &:hover {
-                        cursor: url(../assets/images/cross_100185.svg), auto;
-
-                        .overlay {
-                            opacity: 1;
-                        }
-
-                        .content {
-                            position: relative;
-                            z-index: 1;
-
-                            article {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .parent-right {
-            @media(max-width: 425px) {
-                max-width: 100%;
-            }
-
-            .vertical {
-                height: 65%;
-                display: flex;
-                @media(max-width: 425px) {
-                    height: auto;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .inner {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    height: 100%;
-                    @media(max-width: 768px) {
-                        padding: 29px 15px;
-                    }
-
-                    &:nth-child(1) {
-                        background: url(../assets/images/Sac-rendu-10-07-2020.2-min.jpg) center;
-                        background-size: cover;
-                    }
-
-                    &:nth-child(2) {
-                        background: url(../assets/images/WA-mif-seamless-REVISION.png);
-                        background-size: cover;
-                    }
-
-
-                    .overlay {
-                        position: absolute;
-                        background: #1f4046f2;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        transition: opacity 0.4s ease-in-out;
-                    }
-
-                    &:hover {
-                        cursor: url(../assets/images/cross_100185.svg), auto;
-
-                        .overlay {
-                            opacity: 1;
-                        }
-
-                        .content {
-                            position: relative;
-                            z-index: 1;
-
-                            article {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-            .horizontal {
-                height: 35%;
-
-                .inner {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    height: 100%;
-                    @media(max-width: 768px) {
-                        padding: 29px 15px;
-                    }
-
-                    &:nth-child(1) {
-                        background: url(../assets/images/WA-mif-seamless-REVISION.png);
-                        background-size: cover;
-                    }
-
-
-                    .overlay {
-                        position: absolute;
-                        background: #1f4046f2;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        transition: opacity 0.4s ease-in-out;
-                    }
-
-                    &:hover {
-                        cursor: url(../assets/images/cross_100185.svg), auto;
-
-                        .overlay {
-                            opacity: 1;
-                        }
-
-                        .content {
-                            position: relative;
-                            z-index: 1;
-
-                            article {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .content {
-        padding: 20px;
-        text-align: center;
-        @media(max-width: 425px) {
-            text-align: right;
-        }
-
-        small {
-            color: #0083A4;
-            font-family: 'teradeli-light', sans-serif !important;
-            font-size: 13px;
-        }
-
-        h1 {
-            color: #fff;
-        }
-
-        p {
-            font-family: 'teradeli-book', sans-serif !important;
-            font-size: 20px;
-            color: rgba(255, 255, 255, .65) !important;
-
-        }
-
-        article {
-            font-size: 14px;
-            letter-spacing: 1px;
-            opacity: 0;
-            color: #fff;
-        }
-
-    }
-
+    @import "../assets/scss/home/product";
 
 </style>

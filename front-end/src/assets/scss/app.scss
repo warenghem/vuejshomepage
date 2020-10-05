@@ -230,7 +230,7 @@ body {
 #Eden_ProjetContainer {
   transform: translateX(-265px);
   @media (max-width: 767px) {
-    transform: translateX(-118px) translateY(17px)!important;
+    transform: translateX(-118px) translateY(17px) !important;
   }
 }
 
@@ -321,7 +321,9 @@ body {
 .h-100 {
   height: 100%;
 }
-
+.h-50 {
+    height: 50%!important;
+}
 .opacity-02 {
   opacity: 0.2 !important;
 }
@@ -332,3 +334,14 @@ body {
   top: 20px;
 }
 
+.cross {
+  cursor: url('../images/cross_100185.svg'), auto;
+}
+.p-0{
+  padding: 0!important;
+}
+.bgi {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
