@@ -16,27 +16,27 @@
                 </div>
             </div>
             <div class="scrollicon">
-                                <div class="mouse">
-                                    <div class="frame">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.9 91">
-                                            <path class="st0" linejoin="round"
-                                                  d="M27.4 3.6L27.4 3.6C14.2 3.6 3.5 14.3 3.5 27.5v36c0 13.2 10.7 23.9 23.9 23.9h0c13.2 0 23.9-10.7 23.9-23.9v-36C51.4 14.3 40.7 3.6 27.4 3.6z"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="mouse-left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
-                                            <path linejoin="round" class="Draw-Frame Animate-Draw"
-                                                  d="M27.4 87.5L27.4 87.5c-13.2 0-23.9-10.7-23.9-23.9v-36c0-13.2 10.7-23.9 23.9-23.9h0"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="mouse-right">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
-                                            <path linejoin="round" class="Draw-Frame Animate-Draw"
-                                                  d="M0 3.6L0 3.6c13.2 0 23.9 10.7 23.9 23.9v36c0 13.2-10.7 23.9-23.9 23.9h0"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="mouse">
+                    <div class="frame">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.9 91">
+                            <path class="st0" linejoin="round"
+                                  d="M27.4 3.6L27.4 3.6C14.2 3.6 3.5 14.3 3.5 27.5v36c0 13.2 10.7 23.9 23.9 23.9h0c13.2 0 23.9-10.7 23.9-23.9v-36C51.4 14.3 40.7 3.6 27.4 3.6z"></path>
+                        </svg>
+                    </div>
+                    <div class="mouse-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
+                            <path linejoin="round" class="Draw-Frame Animate-Draw"
+                                  d="M27.4 87.5L27.4 87.5c-13.2 0-23.9-10.7-23.9-23.9v-36c0-13.2 10.7-23.9 23.9-23.9h0"></path>
+                        </svg>
+                    </div>
+                    <div class="mouse-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 91">
+                            <path linejoin="round" class="Draw-Frame Animate-Draw"
+                                  d="M0 3.6L0 3.6c13.2 0 23.9 10.7 23.9 23.9v36c0 13.2-10.7 23.9-23.9 23.9h0"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
             <v-row no-gutters class="homepage-slider-content">
 
                 <v-col md="9" class="topCenter my-auto">
@@ -156,11 +156,28 @@
                             {{$t('btnTitle')}}
                         </button>
                         <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
-                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!</v-alert>
+
                         <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
                     </form>
                 </template>
             </mailchimp-subscribe>
+        </div>
+        <div class="custom-toast" v-if="snackbar">
+            <div class="toast-box">
+                <div class="toast-header d-flex justify-space-between align-center">
+                    <div>Warenghem says</div>
+                    <div class="d-flex align-center"><small class="pr-2">just now </small>
+                        <span class="close" @click="snackbar=false">
+                            ×
+                        </span>
+                    </div>
+                </div>
+                <div class="toast-body">
+                    Merci! Pour éviter le SPAM, nous vous avons envoyé un email de confirmation avant de
+                    commencer la plantation... A tout de suite!
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
@@ -177,7 +194,8 @@
             return {
                 interval: {},
                 progressValue: 0,
-                maxProgress: 30
+                maxProgress: 30,
+                snackbar: true
             }
         },
         beforeDestroy() {
@@ -186,10 +204,9 @@
         mounted() {
             this.interval = window.setInterval(function () {
                 if (this.progressValue < this.maxProgress) {
-                    var change = this.maxProgress - this.progressValue > 5 ? 5 : this.maxProgress - this.progressValue;
-                    this.progressValue = this.progressValue < this.maxProgress ? (this.progressValue + change) : this.maxProgress;
+                    this.progressValue = this.progressValue < this.maxProgress ? this.progressValue + 1 : this.maxProgress;
                 }
-            }.bind(this), 200);
+            }.bind(this), 80);
             changeBackground();
 
             function changeBackground() {
@@ -287,4 +304,58 @@
 
 <style scoped lang="scss">
     @import "../assets/scss/home/video";
+
+    .custom-toast {
+        position: fixed;
+        top: 70px;
+        right: auto;
+        width: 350px;
+        z-index: 20000;
+        padding: 1.5rem !important;
+
+        .toast-box {
+            border-radius: 15px !important;
+            background-color: rgba(29, 29, 31, .7);
+            color: white;
+            backdrop-filter: saturate(180%) blur(20px);
+            max-width: 350px;
+            overflow: hidden;
+            font-size: .875rem;
+            background-clip: padding-box;
+            border: none;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .1);
+            padding: .5rem !important;
+
+            .toast-body {
+                font-size: 14px;
+                font-family: 'teradeli-light', sans-serif !important;
+                color: #eaeaea !important;
+                padding: .75rem;
+            }
+
+
+            .toast-header {
+                font-size: 14px;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: .25rem .75rem;
+                color: #888;
+                background-color: rgba(29, 29, 31, 0) !important;
+                background-clip: padding-box;
+                font-family: 'teradeli-light', sans-serif !important;
+            }
+
+            .close {
+                font-size: 1.5rem;
+                color: #000;
+                opacity: 0.75;
+                text-shadow: 0 1px 0 #888 !important;
+                cursor: pointer;
+            }
+        }
+
+
+    }
 </style>

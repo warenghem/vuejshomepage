@@ -36,7 +36,7 @@ export default {
                 id: this.listId,
                 EMAIL: this.email,
                 FNAME: this.name,
-                LANGUAGE: this.$i18n.locale === 'FR' ? 'Francais' : 'English',
+                LANGUAGE: this.$i18n.locale === 'fr' ? 'Francais' : 'English',
             })
         },
     },
@@ -59,6 +59,7 @@ export default {
             this.loading = true;
 
             const url = `${this.url}?${this.data}`;
+            console.log(this.data,url)
 
             jsonp(url, {param: 'c'}, this.onResponse)
         },

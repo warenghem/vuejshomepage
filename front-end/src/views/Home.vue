@@ -70,28 +70,30 @@
                 let isDown = false;
                 let startX;
                 let scrollLeft;
+                if (slider) {
+                    slider.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        slider.classList.add('active');
+                        startX = e.pageX - slider.offsetLeft;
+                        scrollLeft = slider.scrollLeft;
+                    });
+                    slider.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        slider.classList.remove('active');
+                    });
+                    slider.addEventListener('mouseup', () => {
+                        isDown = false;
+                        slider.classList.remove('active');
+                    });
+                    slider.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - slider.offsetLeft;
+                        const walk = (x - startX) * 3; //scroll-fast
+                        slider.scrollLeft = scrollLeft - walk;
+                    });
+                }
 
-                slider.addEventListener('mousedown', (e) => {
-                    isDown = true;
-                    slider.classList.add('active');
-                    startX = e.pageX - slider.offsetLeft;
-                    scrollLeft = slider.scrollLeft;
-                });
-                slider.addEventListener('mouseleave', () => {
-                    isDown = false;
-                    slider.classList.remove('active');
-                });
-                slider.addEventListener('mouseup', () => {
-                    isDown = false;
-                    slider.classList.remove('active');
-                });
-                slider.addEventListener('mousemove', (e) => {
-                    if (!isDown) return;
-                    e.preventDefault();
-                    const x = e.pageX - slider.offsetLeft;
-                    const walk = (x - startX) * 3; //scroll-fast
-                    slider.scrollLeft = scrollLeft - walk;
-                });
             }, 3000);
 
 
@@ -100,18 +102,18 @@
             handleScroll() {
                 if (document.getElementById('jePlanetBtn') && document.getElementById('jePlanetBtn').offsetTop > 0) {
 
-                        if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop) {
-                            this.stickyToolbar = true;
-                        } else {
-                            this.stickyToolbar = false;
-                        }
+                    if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop) {
+                        this.stickyToolbar = true;
+                    } else {
+                        this.stickyToolbar = false;
+                    }
                 } else if (document.getElementById('jePlanetBtn2') && document.getElementById('jePlanetBtn2').offsetTop > 0) {
-                        if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn2').offsetTop) {
-                            this.stickyToolbar = true;
-                        } else {
-                            this.stickyToolbar = false;
-                        }
-                }else{
+                    if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn2').offsetTop) {
+                        this.stickyToolbar = true;
+                    } else {
+                        this.stickyToolbar = false;
+                    }
+                } else {
                     this.stickyToolbar = false;
                 }
                 if (window.pageYOffset > document.getElementById('studioSection').offsetTop - 51) {
