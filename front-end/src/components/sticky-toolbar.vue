@@ -1,5 +1,5 @@
 <template>
-    <section class="appBar ">
+    <section class="appBar">
         <v-navigation-drawer v-model="sidebar" app>
             <v-list>
                 <v-list-item
@@ -101,11 +101,6 @@
 
 <style scoped lang="scss">
     .appBar {
-        position: fixed;
-        z-index: 1000;
-        transform: translate3D(0, 0, 0);
-        top: 0;
-        width: 100%;
 
         .topBar {
             background: #0A3137;

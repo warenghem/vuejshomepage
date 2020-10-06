@@ -2,7 +2,7 @@
     <div>
         <div id="blackContent"></div>
         <MainToolbar></MainToolbar>
-        <sticky-toolbar v-show="stickyToolbar" style="transform: translate3D(0,0,0);transition: ease-in-out 3s;"/>
+        <sticky-toolbar class="stickyBar" :class="{'active':stickyToolbar}"/>
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
         <ProductSection id="productSection"></ProductSection>

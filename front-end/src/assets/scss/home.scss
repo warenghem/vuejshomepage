@@ -8,13 +8,16 @@
 .text-white {
   color: white;
 }
+
 .text-lightblue {
-   color:#0081a7;
+  color: #0081a7;
 }
+
 .text-gray {
   color: #888;
 }
-.bg-white{
+
+.bg-white {
   background: white;
 }
 
@@ -75,9 +78,21 @@
   visibility: hidden;
 
   &.overlay {
-    visibility: visible!important;
-    opacity: .8!important;
-    transition: opacity 0.5s,visibility 0s!important;
-    -webkit-transition: opacity 0.5s,visibility 0s!important;
+    visibility: visible !important;
+    opacity: .8 !important;
+    transition: opacity 0.5s, visibility 0s !important;
+    -webkit-transition: opacity 0.5s, visibility 0s !important;
+  }
+}
+
+.stickyBar {
+  transition: ease-in-out 0.8s;
+  position: fixed;
+  z-index: 1000;
+  transform: translate3D(0, 0, 0);
+  top: -51px;
+  width: 100%;
+  &.active{
+    top:0!important;
   }
 }
