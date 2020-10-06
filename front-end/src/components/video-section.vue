@@ -146,6 +146,8 @@
                     url="https://warenghem.us20.list-manage.com/subscribe/post-json"
                     user-id="2f7dbf20677f88c14c1389365"
                     list-id="ee2afb40a2"
+                    @error="snackbarError=true"
+                    @success="snackbarSuccess=true"
             >
                 <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
                     <form @submit.prevent="subscribe" class="d-flex flex-column">
@@ -159,12 +161,18 @@
                                placeholder="$t('video.rightSection.label2')"
                                @input="setEmail($event.target.value)"
                         >
-                        <button id="jePlanetBtn2" class="btn-theme" type="submit">
-                            {{$t('btnTitle')}}
+                        <button id="jePlanetBtn2" class="btn-theme"
+                                type="submit"
+                                style="overflow-y: hidden;max-height: 48px">
+                                            <span v-if="loading">
+                                                <img src="../assets/images/ripple.svg"
+                                                     alt="loader"
+                                                     height="40px"
+                                                     style="margin-top: -13px;"
+                                                >
+                                            </span>
+                            <span v-else>{{$t('btnTitle')}}</span>
                         </button>
-                        <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
-
-                        <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
                     </form>
                 </template>
             </mailchimp-subscribe>

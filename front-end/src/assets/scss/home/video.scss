@@ -187,14 +187,6 @@
   }
 }
 
-.form {
-  @media(max-width: 768px) {
-    background: radial-gradient(circle at 50% 45%, #292929 0%, #0a0a0a 100%);
-    padding: 40px 17%;
-    width: 100%;
-  }
-}
-
 .form-md {
   background: radial-gradient(circle at 50% 45%, #292929 0%, #0a0a0a 100%);
   width: 100%;
