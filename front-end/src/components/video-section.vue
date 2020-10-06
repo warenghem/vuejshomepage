@@ -39,7 +39,7 @@
             </div>
             <v-row no-gutters class="homepage-slider-content">
 
-                <v-col md="9" class="topCenter my-auto">
+                <v-col class="topCenter my-auto col-xl-9 col-md-8">
                     <div class="bannerLeft">
                         <h2 class="title text-center"> {{$t('video.title')}}</h2>
                         <h4 class="subtitle text-center">{{$t('video.subtitle')}}</h4>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col md="3" class="bottomRight d-none d-md-block">
+                <v-col class="bottomRight d-none d-md-block col-xl-3 col-md-4">
                     <div class="d-flex flex-column align-center justify-center h-100">
                         <p class="mt-3  title text-center" id="formSection">{{$t('video.rightSection.title')}}</p>
                         <div class="d-flex align-center justify-center w-100 position-relative">
@@ -127,7 +127,7 @@
 
             </v-row>
         </div>
-        <div class="d-md-none form-md" id="formSection2">
+        <div class="d-lg-none form-md" id="formSection2">
             <p class="white--text">{{$t('video.rightSection.title')}}</p>
             <v-progress-linear
                     :height="16"
@@ -158,7 +158,7 @@
                         >
                         <input type="email"
                                class="form-theme"
-                               placeholder="$t('video.rightSection.label2')"
+                               :placeholder="$t('video.rightSection.label2')"
                                @input="setEmail($event.target.value)"
                         >
                         <button id="jePlanetBtn2" class="btn-theme"
