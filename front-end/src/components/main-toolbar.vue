@@ -42,9 +42,9 @@
 
         <v-app-bar class="menu-bar" flat height="50px">
 
-            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="hidden-sm-and-up">
+            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none">
             </v-app-bar-nav-icon>
-            <v-toolbar-items class="hidden-xs-only">
+            <v-toolbar-items class="d-none d-md-block">
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='missionSection'}"
                        @click="$root.scrollToElement('missionSection')"
@@ -71,7 +71,7 @@
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-xs-only">
+            <v-toolbar-items class="d-none d-md-block">
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='mapTreeSection'}"
                        @click="$root.scrollToElement('mapTreeSection')"

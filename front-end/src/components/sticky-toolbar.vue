@@ -40,7 +40,7 @@
         <v-app-bar class="menu-bar" flat height="50px"
                    :class="{'whiteBack':$root.currentId==='mapTreeSection'||$root.currentId==='studioSection'}">
 
-            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="hidden-md-and-up">
+            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none">
             </v-app-bar-nav-icon>
             <v-toolbar-items class="d-none d-md-block">
                 <v-btn text class="text-uppercase item"
