@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="blackContent"></div>
+        <div id="blackContent" @click="hideModal"></div>
         <MainToolbar></MainToolbar>
         <sticky-toolbar class="stickyBar" :class="{'active':stickyToolbar}"/>
         <VideoSection id="videoSection"></VideoSection>
@@ -132,6 +132,14 @@
                 }
 
             },
+            hideModal() {
+                document.querySelector('.indianforest').classList.remove('active');
+                document.querySelector('.mgforest').classList.remove('active');
+                document.getElementById('blackContent').classList.remove('overlay');
+                const el = document.body;
+                el.classList.remove('modal-open');
+                document.documentElement.style.overflowY = 'auto'
+            }
         },
     }
 
