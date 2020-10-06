@@ -206,7 +206,7 @@
                 if (this.progressValue < this.maxProgress) {
                     this.progressValue = this.progressValue < this.maxProgress ? this.progressValue + 1 : this.maxProgress;
                 }
-            }.bind(this), 80);
+            }.bind(this), 60);
             changeBackground();
 
             function changeBackground() {

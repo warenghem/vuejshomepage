@@ -67,7 +67,7 @@
             <v-spacer></v-spacer>
             <v-toolbar-title>
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
-                    <img src="../assets/images/logo.svg" width="100%" alt="logo"/>
+                    <img src="../assets/images/logo.svg" width="140px" alt="logo"/>
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
@@ -84,7 +84,7 @@
                 >
                     {{$t('toolbar.studio')}}
                 </v-btn>
-                <v-btn text>
+                <v-btn text v-if="$i18n.locale==='fr'">
                     <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
                             <v-btn
@@ -92,32 +92,20 @@
                                     v-bind="attrs"
                                     v-on="on"
                             >
-                                <img src="../assets/images/flag.jpg" width="24" alt="" v-if="$i18n.locale==='fr'"/>
-                                <img src="../assets/images/united-kingdom.svg" width="24" alt="" v-else/>
+                                <img src="../assets/images/flag.jpg" width="24" alt="" />
                             </v-btn>
                         </template>
                         <v-list>
                             <v-list-item
                             >
                                 <v-list-item-title class="cursor-pointer">
-                                    <img src="../assets/images/united-kingdom.svg"
-                                         width="24"
-                                         alt=""
-                                         @click="$store.dispatch('setLang', 'en')"
+                                    <router-link :to="{path:'/en/'}">
+                                        <img src="../assets/images/united-kingdom.svg"
+                                             width="24"
+                                             alt=""
+                                        />
+                                    </router-link>
 
-                                    />
-                                </v-list-item-title>
-                            </v-list-item>
-                            <v-list-item
-
-                            >
-                                <v-list-item-title class="cursor-pointer">
-                                    <img src="../assets/images/flag.jpg"
-                                         width="24"
-                                         alt=""
-                                         @click="$store.dispatch('setLang', 'fr')"
-
-                                    />
                                 </v-list-item-title>
                             </v-list-item>
                         </v-list>
@@ -143,13 +131,15 @@
     .appBar {
         position: relative;
         z-index: 300001;
+
         .topBar {
             background: #0A3137;
             color: #fff;
             padding: 7px;
             font-size: 12px;
         }
-        @media(min-width: 778px){
+
+        @media(min-width: 778px) {
             border-bottom: solid 1px rgba(255, 255, 255, 0.5);
         }
 
@@ -162,7 +152,8 @@
                 .brand {
                     filter: brightness(1) invert(0);
                 }
-                .item{
+
+                .item {
                     color: #000000;
                 }
             }
@@ -178,6 +169,7 @@
 
             .item {
                 color: #ffffff;
+
                 &:before {
                     display: none;
                 }
