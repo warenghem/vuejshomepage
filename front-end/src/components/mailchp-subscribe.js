@@ -43,7 +43,8 @@ export default {
 
     methods: {
         setEmail(value = '') {
-            this.email = value.trim()
+            this.email = value.trim();
+            this.$parent.email=this.email
         },
         setName(value = '') {
             this.name = value.trim()
@@ -59,7 +60,7 @@ export default {
             this.loading = true;
 
             const url = `${this.url}?${this.data}`;
-            console.log(this.data,url)
+            console.log(this.data,url);
 
             jsonp(url, {param: 'c'}, this.onResponse)
         },

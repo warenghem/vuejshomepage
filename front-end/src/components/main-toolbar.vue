@@ -84,7 +84,7 @@
                 >
                     {{$t('toolbar.studio')}}
                 </v-btn>
-                <v-btn text v-if="$i18n.locale==='fr'">
+                <v-btn text >
                     <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
                             <v-btn
@@ -92,7 +92,8 @@
                                     v-bind="attrs"
                                     v-on="on"
                             >
-                                <img src="../assets/images/flag.jpg" width="24" alt="" />
+                                <img src="../assets/images/flag.jpg" width="24" alt="" v-if="$i18n.locale==='fr'"/>
+                                <img src="../assets/images/united-kingdom.svg" width="24" alt="" v-else/>
                             </v-btn>
                         </template>
                         <v-list>
@@ -101,6 +102,18 @@
                                 <v-list-item-title class="cursor-pointer">
                                     <router-link :to="{path:'/en/'}">
                                         <img src="../assets/images/united-kingdom.svg"
+                                             width="24"
+                                             alt=""
+                                        />
+                                    </router-link>
+
+                                </v-list-item-title>
+                            </v-list-item>
+                            <v-list-item
+                            >
+                                <v-list-item-title class="cursor-pointer">
+                                    <router-link :to="{path:'/fr/'}">
+                                        <img src="../assets/images/flag.jpg"
                                              width="24"
                                              alt=""
                                         />

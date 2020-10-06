@@ -203,7 +203,7 @@
                     </div>
                 </div>
                 <div class="toast-body">
-                    {{$t('video.rightSection.error')}}
+                    {{email}} {{$t('video.rightSection.error')}}
                 </div>
             </div>
         </div>
@@ -226,6 +226,7 @@
                 maxProgress: 30,
                 snackbarSuccess: false,
                 snackbarError: false,
+                email:''
             }
         },
         beforeDestroy() {
@@ -303,7 +304,7 @@
                             subtitle: "Our objects are being created. In the meantime, let's reforest the planet. Enter your email address to plant a tree and stay informed of the progress of the project.",
                             label1: 'FIRST NAME',
                             label2: 'EMAIL',
-                            error: 'tukijuza@mailinator.com looks fake or invalid, please enter a real email address. ',
+                            error: 'looks fake or invalid, please enter a real email address. ',
                             success: 'Thank you! To avoid SPAM, we have sent you a confirmation email before ' +
                                 'start planting ... see you soon!'
                         }
@@ -327,7 +328,7 @@
                             subtitle: 'Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse mail pour planter un arbre et rester au courant de l’avancée du projet.',
                             label1: 'PRENOM ',
                             label2: 'EMAIL',
-                            error: 'tukijuza@mailinator.com looks fake or invalid, please enter a real email address.',
+                            error: 'semble faux ou invalide, veuillez saisir une véritable adresse e-mail.',
                             success: 'Merci! Pour éviter le SPAM, nous vous avons envoyé un email de confirmation avant de ' +
                                 'commencer la plantation... A tout de suite!'
                         }

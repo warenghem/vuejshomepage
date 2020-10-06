@@ -32,7 +32,7 @@ router.beforeEach((to, from, next) => {
   const lang = to.params.lang;
 
   if ( !['en','fr'].includes(lang) ) {
-    return next('fr/');
+    return next(i18n.locale+'/');
   }
 
   if ( i18n.locale !== lang ) {
