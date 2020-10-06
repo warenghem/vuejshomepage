@@ -7,6 +7,7 @@ import './assets/scss/app.scss'
 import './assets/scss/home.scss'
 import Axios from "axios";
 import i18n from './i18n'
+import './assets/fonts/font.css'
 
 Vue.prototype.$http = Axios;
 Axios.defaults.baseURL = 'https://tree-nation.com/api/';

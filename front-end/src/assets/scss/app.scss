@@ -18,10 +18,15 @@ body {
   font-family: 'teradeli-book', sans-serif;
 }
 
-.teradeli-light {
+.teradeli-book{
   font-family: 'teradeli-light', sans-serif !important;
 }
-
+.teradeli-light {
+  font-family: 'teradeli-book', sans-serif !important;
+}
+.teradeli-medium {
+  font-family: 'teradeli-medium', sans-serif !important;
+}
 .form-theme {
   border: 1px solid #fff;
   padding: 12px;
