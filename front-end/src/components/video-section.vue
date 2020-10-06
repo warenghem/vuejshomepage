@@ -89,12 +89,12 @@
                                     <form @submit.prevent="subscribe" class="d-flex flex-column px-4">
                                         <input type="text"
                                                class="form-theme"
-                                               placeholder="PRENOM"
+                                               :placeholder="$t('video.rightSection.label1')"
                                                @input="setName($event.target.value)"
                                         >
                                         <input type="email"
                                                class="form-theme"
-                                               placeholder="EMAIL"
+                                               :placeholder="$t('video.rightSection.label2')"
                                                @input="setEmail($event.target.value)"
                                         >
                                         <button id="jePlanetBtn" class="btn-theme" type="submit">
@@ -144,12 +144,12 @@
                     <form @submit.prevent="subscribe" class="d-flex flex-column">
                         <input type="text"
                                class="form-theme"
-                               placeholder="PRENOM"
+                               :placeholder="$t('video.rightSection.label1')"
                                @input="setName($event.target.value)"
                         >
                         <input type="email"
                                class="form-theme"
-                               placeholder="EMAIL"
+                               placeholder="$t('video.rightSection.label2')"
                                @input="setEmail($event.target.value)"
                         >
                         <button id="jePlanetBtn2" class="btn-theme" type="submit">
