@@ -54,7 +54,6 @@
                             <div class=" homepage-catalogue-links-item"
                                  @mouseover="fpMouseOver(1)"
                                  @mouseout="currentMissionHover=null"
-                                 @onclick="fpMouseOver(1)"
                                  :class="{'opacity-02':currentMissionHover}"
                             >
                                 <div class="pb-3"><img src="../assets/images/magazine-plus.svg"
@@ -88,7 +87,6 @@
                             </div>
                             <div class=" homepage-catalogue-links-item"
                                  @mouseover="fpMouseOver(2)"
-                                 @onclick="fpMouseOver(2)"
                                  @mouseout="currentMissionHover=null"
                                  :class="{'opacity-02':currentMissionHover}"
                             >
@@ -123,7 +121,6 @@
                             </div>
                             <div class=" homepage-catalogue-links-item"
                                  @mouseover="fpMouseOver(3)"
-                                 @onclick="fpMouseOver(3)"
                                  @mouseout="currentMissionHover=null"
                                  :class="{'opacity-02':currentMissionHover}"
                             >
@@ -158,7 +155,6 @@
                             </div>
                             <div class=" homepage-catalogue-links-item"
                                  @mouseover="fpMouseOver(4)"
-                                 @onclick="fpMouseOver(4)"
                                  @mouseout="currentMissionHover=null"
                                  :class="{'opacity-02':currentMissionHover}"
                             >
@@ -498,8 +494,11 @@
 <style scoped lang="scss">
     @import "../assets/scss/home/mission";
 
-    .homepage-catalogue-links-item {
-        cursor: url('../assets/images/cross_100185.svg'), auto;
+    .homepage-catalogue-links-item{
+        cursor: url('../assets/images/cross_100185.svg'), auto!important;
+    }
+    .homepage-catalogue-links-item a{
+        cursor: url('../assets/images/cross_100185.svg'), auto!important;
     }
 
     .image1 {
