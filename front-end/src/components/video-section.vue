@@ -79,14 +79,16 @@
                         <p class="text-white pb-3 px-4 text-justify bottomText">
                             {{$t('video.rightSection.subtitle')}}
                         </p>
-                        <div class="form px-3">
+                        <div class="w-100 px-5">
                             <mailchimp-subscribe
                                     url="https://warenghem.us20.list-manage.com/subscribe/post-json"
                                     user-id="2f7dbf20677f88c14c1389365"
                                     list-id="ee2afb40a2"
+                                    @error="snackbarError=true"
+                                    @success="snackbarSuccess=true"
                             >
-                                <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
-                                    <form @submit.prevent="subscribe" class="d-flex flex-column px-4">
+                                <template v-slot="{ subscribe, setEmail, setName,loading }">
+                                    <form @submit.prevent="subscribe" class="d-flex flex-column  w-100">
                                         <input type="text"
                                                class="form-theme"
                                                :placeholder="$t('video.rightSection.label1')"
@@ -97,13 +99,18 @@
                                                :placeholder="$t('video.rightSection.label2')"
                                                @input="setEmail($event.target.value)"
                                         >
-                                        <button id="jePlanetBtn" class="btn-theme" type="submit">
-                                            {{$t('btnTitle')}}
+                                        <button id="jePlanetBtn" class="btn-theme"
+                                                type="submit"
+                                                style="width: 100%!important; overflow-y: hidden;max-height: 48px">
+                                            <span v-if="loading">
+                                                <img src="../assets/images/ripple.svg"
+                                                     alt="loader"
+                                                     height="40px"
+                                                     style="margin-top: -13px;"
+                                                >
+                                            </span>
+                                            <span v-else>{{$t('btnTitle')}}</span>
                                         </button>
-                                        <v-alert dense dismissible v-if="error" type="error">{{ error }}</v-alert>
-                                        <v-alert dense dismissible v-if="success" type="success">Subscription Success!
-                                        </v-alert>
-                                        <v-alert dense dismissible v-if="loading" type="info">Loading…</v-alert>
                                     </form>
                                 </template>
                             </mailchimp-subscribe>
@@ -162,23 +169,37 @@
                 </template>
             </mailchimp-subscribe>
         </div>
-        <div class="custom-toast" v-if="snackbar">
+        <div class="custom-toast" v-if="snackbarSuccess">
             <div class="toast-box">
                 <div class="toast-header d-flex justify-space-between align-center">
                     <div>Warenghem says</div>
                     <div class="d-flex align-center"><small class="pr-2">just now </small>
-                        <span class="close" @click="snackbar=false">
+                        <span class="close" @click="snackbarSuccess=false">
                             ×
                         </span>
                     </div>
                 </div>
                 <div class="toast-body">
-                    Merci! Pour éviter le SPAM, nous vous avons envoyé un email de confirmation avant de
-                    commencer la plantation... A tout de suite!
+                    {{$t('video.rightSection.success')}}
                 </div>
             </div>
-
         </div>
+        <div class="custom-toast" v-if="snackbarError">
+            <div class="toast-box">
+                <div class="toast-header d-flex justify-space-between align-center">
+                    <div>Warenghem says</div>
+                    <div class="d-flex align-center"><small class="pr-2">just now </small>
+                        <span class="close" @click="snackbarError=false">
+                            ×
+                        </span>
+                    </div>
+                </div>
+                <div class="toast-body">
+                    {{$t('video.rightSection.error')}}
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -195,7 +216,8 @@
                 interval: {},
                 progressValue: 0,
                 maxProgress: 30,
-                snackbar: true
+                snackbarSuccess: false,
+                snackbarError: false,
             }
         },
         beforeDestroy() {
@@ -273,6 +295,9 @@
                             subtitle: "Our objects are being created. In the meantime, let's reforest the planet. Enter your email address to plant a tree and stay informed of the progress of the project.",
                             label1: 'FIRST NAME',
                             label2: 'EMAIL',
+                            error: 'tukijuza@mailinator.com looks fake or invalid, please enter a real email address. ',
+                            success: 'Thank you! To avoid SPAM, we have sent you a confirmation email before ' +
+                                'start planting ... see you soon!'
                         }
                     }
                 },
@@ -294,6 +319,9 @@
                             subtitle: 'Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse mail pour planter un arbre et rester au courant de l’avancée du projet.',
                             label1: 'PRENOM ',
                             label2: 'EMAIL',
+                            error: 'tukijuza@mailinator.com looks fake or invalid, please enter a real email address.',
+                            success: 'Merci! Pour éviter le SPAM, nous vous avons envoyé un email de confirmation avant de ' +
+                                'commencer la plantation... A tout de suite!'
                         }
                     }
                 },
@@ -325,6 +353,14 @@
             border: none;
             box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .1);
             padding: .5rem !important;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-transition: all 1s ease-out;
+            transition: all 1s ease-out;
+            -webkit-animation-name: bounceInLeft;
+            animation-name: bounceInLeft;
 
             .toast-body {
                 font-size: 14px;
@@ -357,5 +393,38 @@
         }
 
 
+    }
+
+    @keyframes bounceInLeft {
+        from,
+        60%,
+        75%,
+        90%,
+        to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
+        }
+        75% {
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+        }
+        to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
     }
 </style>

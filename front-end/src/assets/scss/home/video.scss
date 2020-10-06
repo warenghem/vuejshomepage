@@ -144,6 +144,7 @@
   .bottomRight {
     font-family: 'teradeli-book', sans-serif !important;
     border-left: solid 1px rgba(255, 255, 255, 0.5);
+    z-index: 4!important;
 
     .bottomText {
       margin-top: 65px;
