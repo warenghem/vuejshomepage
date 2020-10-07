@@ -3,7 +3,7 @@
         <div class="topBar text-center">
             Livraison gratuite dans le monde
         </div>
-        <v-navigation-drawer v-model="sidebar" app>
+        <v-navigation-drawer v-model="sidebar" app class="d-md-none">
             <v-list>
                 <v-list-item
                         :class="{'current':$root.currentId==='missionSection'}"
@@ -152,7 +152,7 @@
             font-size: 12px;
         }
 
-        @media(min-width: 778px) {
+        @media(min-width: 961px) {
             border-bottom: solid 1px rgba(255, 255, 255, 0.5);
         }
 

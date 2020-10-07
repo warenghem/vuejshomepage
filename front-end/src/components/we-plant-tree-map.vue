@@ -5,15 +5,15 @@
         <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.tree_count}}</div>
+                <div class="sub-title">{{treeCount}}</div>
                 <div style="color: #888;"> {{$t('term1')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.co2_compensated}} tonnes</div>
+                <div class="sub-title">{{co2}} tonnes</div>
                 <div style="color: #888;">{{$t('term2')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.reforest}}</div>
+                <div class="sub-title">{{reforest}}</div>
                 <div style="color: #888;">{{$t('term3')}}</div>
             </div>
 
@@ -310,6 +310,20 @@
                 }
             }
         },
+        data() {
+            return {
+                interval: {},
+                intersectionOptions: {
+                    root: null,
+                    rootMargin: '0px 0px 0px 0px',
+                    threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
+                },
+                treeCount: 0,
+                co2: 0,
+                reforest: 0,
+                wPointActive:true,
+            }
+        },
         mounted() {
             this.mapCreate();
         },
@@ -317,6 +331,7 @@
             if (this.chart) {
                 this.chart.dispose()
             }
+            clearInterval(this.interval)
         },
         methods: {
             mapCreate() {
@@ -489,7 +504,8 @@
                 el.classList.remove('modal-open');
                 document.documentElement.style.overflowY = 'auto';
                 this.$root.scrollToElement('formSection')
-            }
+            },
+
         },
 
 

@@ -1,6 +1,6 @@
 <template>
     <section class="appBar">
-        <v-navigation-drawer v-model="sidebar" app>
+        <v-navigation-drawer v-model="sidebar" app class="d-md-none">
             <v-list>
                 <v-list-item
                         :class="{'current':$root.currentId==='missionSection'}"

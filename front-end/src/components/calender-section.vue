@@ -1,62 +1,80 @@
 <template>
     <section class="calender">
 
-        <div class="section_info">
-            <h2>
-               {{$t('calendarSection.title')}}
-            </h2>
-            <h5>
-              {{$t('calendarSection.subtitle')}}
-            </h5>
+        <div class="section_info px-md-4 py-5">
+            <div class="page-title">
+                {{$t('calendarSection.title')}}
+            </div>
+            <div class="subtitle teradeli-light pb-md-5 py-4">
+                {{$t('calendarSection.subtitle')}}
+            </div>
         </div>
+        <div class="timeline-container">
+            <div class="timeline-item ">
+                <div class="timeline-icon">
+                    <img src="../assets/images/calender-icons/fanel.svg" alt="fanel">
+                </div>
+                <div class="timeline-content ">
+                    <div class="time">{{$t('calendarSection.step1.tag')}}</div>
+                    <h4 class="smalltitle">{{$t('calendarSection.step1.title')}}</h4>
+                    <div class="item-details">
+                        {{$t('calendarSection.step1.subtitle')}}
+                    </div>
+                    <div class="d-block d-md-none position-relative">
+                        <div class="d-flex align-items-center">
+                            <img src="../assets/images/Arrowleftwhite.svg" alt="fanel" width="26px">
+                            <span class="time pl-3 mb-0" style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
+                        </div>
 
-        <div class="calender-container">
-            <div class="items">
-                <div class="inner left-caret">
-                    <div class="icon-left-block">
-                        <img src="../assets/images/calender-icons/fanel.svg" alt="fanel">
                     </div>
-                    <div class="title">{{$t('calendarSection.step1.tag')}}</div>
-                    <div class="subTitle">{{$t('calendarSection.step1.title')}}</div>
-                    <div class="desc">{{$t('calendarSection.step1.subtitle')}}</div>
                 </div>
-                <div class="inner vh"></div>
-            </div>
-            <div class="items">
-                <div class="inner vh"></div>
-                <div class="inner right-caret">
-                    <div class="icon-right-block">
-                        <img src="../assets/images/calender-icons/bug.svg" alt="bug">
+                <div class="d-none d-md-block position-absolute"
+                     style="right: 0;padding-right: 130px;bottom: 80px;">
+                    <div class="d-flex align-items-center">
+                        <img src="../assets/images/Arrowleftwhite.svg" alt="fanel" width="26px">
+                        <span class="time pl-3 mb-0" style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
                     </div>
-                    <div class="title">{{$t('calendarSection.step2.tag')}}</div>
-                    <div class="subTitle">{{$t('calendarSection.step2.title')}}</div>
-                    <div class="desc">{{$t('calendarSection.step2.subtitle')}}</div>
                 </div>
             </div>
-            <div class="items">
-                <div class="inner left-caret">
-                    <div class="icon-left-block">
-                        <img src="../assets/images/calender-icons/user.svg" alt="user">
-                    </div>
-                    <div class="title">{{$t('calendarSection.step3.tag')}}</div>
-                    <div class="subTitle">{{$t('calendarSection.step3.title')}}</div>
-                    <div class="desc">{{$t('calendarSection.step3.subtitle')}}</div>
+            <div class="timeline-item ">
+                <div class="timeline-icon">
+                    <img src="../assets/images/calender-icons/bug.svg" alt="bug">
                 </div>
-                <div class="inner vh"></div>
-            </div>
-            <div class="items">
-                <div class="inner vh"></div>
-                <div class="inner right-caret">
-                    <div class="icon-right-block">
-                        <img src="../assets/images/calender-icons/rocket.svg" alt="rocket">
+                <div class="timeline-content right ">
+                    <div class="time">{{$t('calendarSection.step2.tag')}}</div>
+                    <h4 class="smalltitle">{{$t('calendarSection.step2.title')}}</h4>
+                    <div class="item-details">
+                        {{$t('calendarSection.step2.subtitle')}}
                     </div>
-                    <div class="title">{{$t('calendarSection.step4.tag')}}</div>
-                    <div class="subTitle">{{$t('calendarSection.step4.title')}}</div>
-                    <div class="desc">{{$t('calendarSection.step4.subtitle')}}</div>
                 </div>
             </div>
-            <div class="items">
-                <div class="icon-complete">
+            <div class="timeline-item ">
+                <div class="timeline-icon">
+                    <img src="../assets/images/calender-icons/user.svg" alt="user">
+                </div>
+                <div class="timeline-content ">
+                    <div class="time">{{$t('calendarSection.step3.tag')}}</div>
+                    <h4 class="smalltitle">{{$t('calendarSection.step3.title')}}</h4>
+                    <div class="item-details">
+                        {{$t('calendarSection.step2.subtitle')}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item ">
+                <div class="timeline-icon">
+                    <img src="../assets/images/calender-icons/rocket.svg" alt="user">
+                </div>
+                <div class="timeline-content right ">
+                    <div class="time">{{$t('calendarSection.step4.tag')}}</div>
+                    <h4 class="smalltitle">{{$t('calendarSection.step4.title')}}</h4>
+                    <div class="item-details">
+                        {{$t('calendarSection.step4.subtitle')}}
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon complete">
                     <img src="../assets/images/calender-icons/right.svg" alt="right">
                 </div>
             </div>
@@ -71,15 +89,15 @@
                 en: {
                     calendarSection: {
                         title: 'The calendar before the launch of each object',
-                        subtitle: 'To follow the progress of the project. It will refine over time. '+
+                        subtitle: 'To follow the progress of the project. It will refine over time. ' +
                             'Subscribe to the Newsletter and follow us on Instagram and Facebook for' +
                             'be notified.',
                         tag: 'We are here',
                         step1: {
                             tag: 'Step 1',
                             title: 'Creating perfect 3D objects with you.',
-                            subtitle: "Thanks to photorealistic 3D technology, we create endlessly. With our "+
-                                "community, we demand performance, design, and purism. "+
+                            subtitle: "Thanks to photorealistic 3D technology, we create endlessly. With our " +
+                                "community, we demand performance, design, and purism. " +
                                 "All of our choices will be documented on our blog."
                         },
                         step2: {
@@ -92,7 +110,7 @@
                             tag: 'Step 3',
                             title: 'Limited edition online pre-order campaign.',
                             subtitle: 'Based on our community, we will launch a crowdfunding campaign' +
-                                'on the Ulule platform. The parts will be limited to avoid the '+
+                                'on the Ulule platform. The parts will be limited to avoid the ' +
                                 'overproduction and waste.'
                         },
                         step4: {
@@ -143,195 +161,192 @@
     }
 </script>
 <style lang="scss" scoped>
-    .vh {
-        visibility: hidden;
-
-        @media(max-width: 425px) {
-            visibility: unset;
-            display: none;
-        }
-    }
-
-    .icon-complete {
-        height: 40px;
-        background: #3781a7;
-        width: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        bottom: 0;
-        position: absolute;
-
-        img {
-            width: 16px;
-        }
-
-        @media(max-width: 425px) {
-            left: -5px;
-        }
-    }
 
     .calender {
-        padding: 50px 15px;
+        border-top: solid 1px rgba(255, 255, 255, 0.5);
         background: #1a1a1a;
+        background: radial-gradient(circle at 50% 45%, #292929 0%, #0a0a0a 100%);
         color: #fff;
+        padding-bottom: 90px;
 
-        .section_info {
-            h2 {
-                font-family: 'teradeli-medium', sans-serif;
-                line-height: 2;
-                color: #888;
-                font-size: 20px;
-            }
+        .subtitle {
+            font-size: 13px;
+            padding-left: 20px;
+            max-width: 400px;
+            line-height: 1rem !important;
+        }
 
-            h5 {
-                font-size: 13px;
-                max-width: 400px;
-                line-height: 1rem !important;
-                color: #fff;
-                font-family: 'teradeli-light', sans-serif;
+    }
+
+
+    .timeline-container {
+        position: relative;
+        max-width: 760px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+
+        &:before {
+            content: "";
+            width: 3px;
+            height: 100%;
+            background: #0081a7;
+            left: 50%;
+            top: 0;
+            position: absolute;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+
+            &:after {
+                display: block;
+                clear: both;
+                content: "";
             }
         }
 
-        .calender-container {
-            position: relative;
-            max-width: 760px;
-            padding-bottom: 30px;
-            min-height: 100vh;
-            margin: 50px auto 0;
+        .timeline-content {
+            width: 45%;
+            background: #151515;
+            padding: 20px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 15px;
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
 
             &:before {
-                content: "";
-                width: 3px;
-                height: 100%;
-                background: #0081a7;
-                left: 50%;
-                top: 0;
+                content: '';
                 position: absolute;
+                left: 45%;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid #151515;
+            }
+        }
 
-                @media(max-width: 425px) {
-                    left: 12px;
+        .timeline-content.right {
+            float: right;
+
+            &:before {
+                content: '';
+                right: 45%;
+                left: inherit;
+                border-left: 0;
+                border-right: 7px solid #151515;
+            }
+        }
+
+        .timeline-icon {
+            background: #0081a7;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 50.9%;
+            overflow: hidden;
+            margin-left: -25px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 16px;
+            }
+
+            .icon {
+                color: #fff;
+                font-size: 18px;
+                margin-top: -14px;
+            }
+        }
+
+        .timeline-icon.complete {
+            background: #0081a7;
+        }
+    }
+
+    .time {
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #0081a7;
+        font-size: 16px;
+    }
+
+    .smalltitle {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #fff;
+        font-family: 'teradeli-medium', sans-serif;
+        line-height: 1rem !important;
+    }
+
+    .item-details {
+        margin-bottom: 15px;
+        color: #86868b;
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.47059;
+        font-weight: 900;
+        letter-spacing: -.022em;
+        font-family: 'teradeli-light', sans-serif;
+    }
+
+    @media (max-width: 767px) {
+        .timeline-container {
+            width: 90%;
+
+            &:before {
+                left: 0;
+            }
+
+            .timeline-icon {
+                left: 5px;
+            }
+
+            .timeline-content {
+                width: 90%;
+                float: right;
+
+                &:before {
+                    left: 10%;
+                    margin-left: -7px;
+                    border-left: 0;
+                    border-right: 7px solid #151515;
                 }
             }
 
-            .items {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-
-                .inner {
-                    flex: 1;
-                    background: #151515;
-                    margin: 0 20px;
-                    max-width: 300px;
-                    padding: 20px 20px;
-                    border-radius: 15px;
-                    margin-bottom: 20px;
-                    position: relative;
-
-
-                    &.left-caret {
-                        &:after {
-                            content: "";
-                            height: 15px;
-                            width: 15px;
-                            background: #151515;
-                            position: absolute;
-                            right: -8px;
-                            top: 15px;
-                            transform: rotate(45deg);
-                            @media(max-width: 425px) {
-                                left: -8px;
-                            }
-                        }
-                    }
-
-                    &.right-caret {
-                        &:after {
-                            content: "";
-                            height: 15px;
-                            width: 15px;
-                            background: #151515;
-                            position: absolute;
-                            left: -8px;
-                            top: 15px;
-                            transform: rotate(45deg);
-                        }
-                    }
-
-
-                    .icon-left-block {
-                        position: absolute;
-                        height: 40px;
-                        background: #3781a7;
-                        width: 40px;
-                        border-radius: 50%;
-                        right: -62px;
-                        top: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        @media(max-width: 768px) {
-                            top: -1px;
-                            right: -56px;
-                        }
-
-                        @media(max-width: 425px) {
-                            left: -53px;
-                        }
-
-                        img {
-                            width: 16px;
-                        }
-
-
-                    }
-
-                    .icon-right-block {
-                        position: absolute;
-                        height: 40px;
-                        background: #3781a7;
-                        width: 40px;
-                        border-radius: 50%;
-                        left: -59px;
-                        top: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        @media(max-width: 768px) {
-                            left: -54px;
-                        }
-
-                        img {
-                            width: 16px;
-                        }
-                    }
-
-                    .title {
-                        color: #0081a7;
-                        font-size: 16px;
-                    }
-
-                    .subTitle {
-                        font-size: 18px;
-                        color: #fff;
-                        font-family: 'teradeli-medium', sans-serif;
-                        line-height: 1rem !important;
-                        margin: 10px 0;
-                    }
-
-                    .desc {
-                        color: #86868b;
-                        font-size: 13px;
-                        line-height: 1.47059;
-                        letter-spacing: -.022em;
-                        font-family: 'teradeli-light', sans-serif;
-                    }
+            .timeline-content.right {
+                &:before {
+                    left: 10%;
+                    margin-left: -7px;
+                    border-left: 0;
+                    border-right: 7px solid #151515;
                 }
             }
         }
     }
+
+
 </style>
