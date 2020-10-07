@@ -5,15 +5,15 @@
         <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{treeCount}}</div>
+                <div class="sub-title">{{$store.state.tree_count}}</div>
                 <div style="color: #888;"> {{$t('term1')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{co2}} tonnes</div>
+                <div class="sub-title">{{$store.state.co2_compensated}} tonnes</div>
                 <div style="color: #888;">{{$t('term2')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{reforest}}</div>
+                <div class="sub-title">{{$store.state.reforest}}</div>
                 <div style="color: #888;">{{$t('term3')}}</div>
             </div>
 
