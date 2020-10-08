@@ -62,7 +62,7 @@
                 'callback': null,
                 'styling': false,
                 'margin': 0,
-                'lazy_load': true,
+                'lazy_load': false,
                 'on_error': console.error
             });
             setTimeout(() => {
