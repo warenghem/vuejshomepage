@@ -1,6 +1,6 @@
 <template>
     <section class="appBar">
-        <v-navigation-drawer v-model="sidebar" app class="d-md-none">
+        <v-navigation-drawer v-model="sidebar" dark app class="d-md-none">
             <v-list>
                 <v-list-item
                         :class="{'current':$root.currentId==='missionSection'}"
@@ -40,9 +40,9 @@
         <v-app-bar class="menu-bar" flat height="50px"
                    :class="{'whiteBack':$root.currentId==='mapTreeSection'||$root.currentId==='studioSection'}">
 
-            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none">
+            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-lg-none ml-3">
             </v-app-bar-nav-icon>
-            <v-toolbar-items class="d-none d-md-block">
+            <v-toolbar-items class="d-none d-lg-block">
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='missionSection'}"
                        @click="$root.scrollToElement('missionSection')"
@@ -74,14 +74,14 @@
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
-            <v-toolbar-title class="d-md-block d-none">
+            <v-toolbar-title class="d-md-block d-none centerabsolute v-toolbar__logo">
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
                     <img src="../assets/images/logo.svg" width="140px" alt="logo"/>
                 </router-link>
             </v-toolbar-title>
             <v-spacer style="flex-grow: 1.8!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
-            <v-toolbar-items class="py-1" style="max-width: 240px;">
+            <v-toolbar-items class="py-1 mr-3" style="max-width: 240px;">
                 <button class="nav-btn" @click="$root.scrollToElement('formSection')">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
@@ -140,10 +140,6 @@
             .item {
                 color: white;
                 padding: 0 10px;
-
-                &:before {
-                    display: none;
-                }
 
                 &.current {
                     color: #0081a7 !important;

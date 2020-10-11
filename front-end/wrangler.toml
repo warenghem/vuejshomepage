@@ -1,0 +1,10 @@
+name = "vuejshomepage"
+type = "webpack"
+account_id = "4ee4dc20e660cf6bc08c1383352f011a"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "dist"
+entry-point = "workers-site"

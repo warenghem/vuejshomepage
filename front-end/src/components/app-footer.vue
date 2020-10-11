@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex justify-center border-top-2 align-center flex-column flex-md-row">
+        <div class="d-flex justify-center border-top-2 align-center flex-column flex-md-row py-5">
             <div class="app-box text-center py-3 py-md-4 px-7">
                 <a href="https://tree-nation.com/profile/impact/kevin-brosseau#co2">
                     <v-img src="../assets/images/Label-Tech-white.png" width="200px" alt=""></v-img>
@@ -21,7 +21,7 @@
             <div class="insta-row border-left-2 border-right-2">
                 <h3 class="ins-subtitle">INSTAGRAM</h3>
                 <h2 class="ins-title">WARENGHEM LIVE</h2>
-                <div id="instaFeed"></div>
+                <div id="instaFeed" style="transform: translateY(6px);"></div>
             </div>
         </div>
     </div>

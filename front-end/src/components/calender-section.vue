@@ -22,7 +22,7 @@
                     </div>
                     <div class="d-block d-md-none position-relative">
                         <div class="d-flex align-items-center">
-                            <img src="../assets/images/Arrowleftwhite.svg" alt="fanel" width="26px">
+                            <img src="../assets/images/Arrowleftwhite.svg" class="d-none d-md-block" alt="fanel" width="26px">
                             <span class="time pl-3 mb-0" style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
                         </div>
 
@@ -300,6 +300,7 @@
         color: #fff;
         font-family: 'teradeli-medium', sans-serif;
         line-height: 1rem !important;
+        font-weight: 100;
     }
 
     .item-details {
@@ -347,6 +348,5 @@
             }
         }
     }
-
 
 </style>

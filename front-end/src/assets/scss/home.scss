@@ -21,6 +21,10 @@
   background: white;
 }
 
+.hand {
+  cursor: pointer;
+}
+
 .page-title {
   font-family: 'teradeli-medium', sans-serif;
   line-height: 1;
@@ -29,6 +33,16 @@
   font-size: 20px;
   padding-left: 20px;
   position: relative;
+  font-weight: 500;
+}
+
+.page-details {
+  color: #888;
+  font-size: 13px;
+  padding-left: 20px;
+  max-width: 400px;
+  line-height: 1rem !important;
+  font-weight: 500;
 }
 
 .mission-accordion {
@@ -95,4 +109,45 @@
   &.active{
     top:0!important;
   }
+}
+
+.gradientoverlay {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #121217;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  &::after {
+    background: linear-gradient(0.75deg, #000000 0%, transparent 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}
+
+.v-toolbar__logo {
+  width: 140px;
+}
+
+.z-2 {
+  z-index: 2;
+  position: relative;
+}
+
+.backgroundcover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

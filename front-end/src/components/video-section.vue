@@ -39,8 +39,8 @@
             </div>
             <v-row no-gutters class="homepage-slider-content">
 
-                <v-col class="topCenter my-auto col-xl-9 col-md-8">
-                    <div class="bannerLeft">
+                <v-col class="topCenter my-auto col-lg-9 col-md-8">
+                    <div class="bannerLeft px-2">
                         <h2 class="title text-center"> {{$t('video.title')}}</h2>
                         <h4 class="subtitle text-center">{{$t('video.subtitle')}}</h4>
                     </div>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col class="bottomRight d-none d-md-block col-xl-3 col-md-4">
+                <v-col class="bottomRight d-none d-md-block col-lg-3 col-md-4">
                     <div class="d-flex flex-column align-center justify-center h-100">
                         <p class="mt-3  title text-center" id="formSection">{{$t('video.rightSection.title')}}</p>
                         <div class="d-flex align-center justify-center w-100 position-relative">
@@ -127,61 +127,63 @@
 
             </v-row>
         </div>
-        <div class="d-lg-none form-md" id="formSection2">
-            <p class="white--text">{{$t('video.rightSection.title')}}</p>
-            <v-progress-linear
-                    :height="16"
-                    :value="progressValue"
-                    color="#0081a7"
-                    background-color="white"
-                    rounded
-            >
-                <span style="font-size: 12px">{{progressValue}}%</span>
-            </v-progress-linear>
+        <div class="d-md-none form-md py-5" id="formSection2">
+            <div class="m-auto" style="max-width:500px;margin:auto">
+                <p class="white--text">{{$t('video.rightSection.title')}}</p>
+                <v-progress-linear
+                        :height="16"
+                        :value="progressValue"
+                        color="#0081a7"
+                        background-color="white"
+                        rounded
+                >
+                    <span style="font-size: 12px">{{progressValue}}%</span>
+                </v-progress-linear>
 
-            <p class="text-white py-2 text-justify bottomText">
-                {{$t('video.rightSection.subtitle')}}
-            </p>
-            <mailchimp-subscribe
-                    url="https://warenghem.us20.list-manage.com/subscribe/post-json"
-                    user-id="2f7dbf20677f88c14c1389365"
-                    list-id="ee2afb40a2"
-                    @error="snackbarError=true"
-                    @success="snackbarSuccess=true"
-            >
-                <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
-                    <form @submit.prevent="subscribe" class="d-flex flex-column">
-                        <input type="text"
-                               class="form-theme"
-                               :placeholder="$t('video.rightSection.label1')"
-                               @input="setName($event.target.value)"
-                        >
-                        <input type="email"
-                               class="form-theme"
-                               :placeholder="$t('video.rightSection.label2')"
-                               @input="setEmail($event.target.value)"
-                        >
-                        <button id="jePlanetBtn2" class="btn-theme"
-                                type="submit"
-                                style="overflow-y: hidden;max-height: 48px">
-                                            <span v-if="loading">
-                                                <img src="../assets/images/ripple.svg"
-                                                     alt="loader"
-                                                     height="40px"
-                                                     style="margin-top: -13px;"
-                                                >
-                                            </span>
-                            <span v-else>{{$t('btnTitle')}}</span>
-                        </button>
-                    </form>
-                </template>
-            </mailchimp-subscribe>
+                <p class="text-white py-2 text-justify bottomText">
+                    {{$t('video.rightSection.subtitle')}}
+                </p>
+                <mailchimp-subscribe
+                        url="https://warenghem.us20.list-manage.com/subscribe/post-json"
+                        user-id="2f7dbf20677f88c14c1389365"
+                        list-id="ee2afb40a2"
+                        @error="snackbarError=true"
+                        @success="snackbarSuccess=true"
+                >
+                    <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
+                        <form @submit.prevent="subscribe" class="d-flex flex-column">
+                            <input type="text"
+                                class="form-theme"
+                                :placeholder="$t('video.rightSection.label1')"
+                                @input="setName($event.target.value)"
+                            >
+                            <input type="email"
+                                class="form-theme"
+                                :placeholder="$t('video.rightSection.label2')"
+                                @input="setEmail($event.target.value)"
+                            >
+                            <button id="jePlanetBtn2" class="btn-theme"
+                                    type="submit"
+                                    style="overflow-y: hidden;max-height: 48px">
+                                                <span v-if="loading">
+                                                    <img src="../assets/images/ripple.svg"
+                                                        alt="loader"
+                                                        height="40px"
+                                                        style="margin-top: -13px;"
+                                                    >
+                                                </span>
+                                <span v-else>{{$t('btnTitle')}}</span>
+                            </button>
+                        </form>
+                    </template>
+                </mailchimp-subscribe>
+            </div>
         </div>
         <div class="custom-toast" v-if="snackbarSuccess">
             <div class="toast-box">
                 <div class="toast-header d-flex justify-space-between align-center">
-                    <div>Warenghem says</div>
-                    <div class="d-flex align-center"><small class="pr-2">just now </small>
+                    <div>{{$t('video.rightSection.alerttitle')}}</div>
+                    <div class="d-flex align-center"><small class="pr-2">{{$t('video.rightSection.alerttime')}} </small>
                         <span class="close" @click="snackbarSuccess=false">
                             ×
                         </span>
@@ -195,8 +197,8 @@
         <div class="custom-toast" v-if="snackbarError">
             <div class="toast-box">
                 <div class="toast-header d-flex justify-space-between align-center">
-                    <div>Warenghem says</div>
-                    <div class="d-flex align-center"><small class="pr-2">just now </small>
+                    <div>{{$t('video.rightSection.alerttitle')}}</div>
+                    <div class="d-flex align-center"><small class="pr-2">{{$t('video.rightSection.alerttime')}} </small>
                         <span class="close" @click="snackbarError=false">
                             ×
                         </span>
@@ -304,7 +306,9 @@
                             subtitle: "Our objects are being created. In the meantime, let's reforest the planet. Enter your email address to plant a tree and stay informed of the progress of the project.",
                             label1: 'FIRST NAME',
                             label2: 'EMAIL',
-                            error: 'looks fake or invalid, please enter a real email address. ',
+                            alerttitle: 'Warenghem says',
+                            alerttime: 'just now',
+                            error: 'looks invalid or already subscribed. ',
                             success: 'Thank you! To avoid SPAM, we have sent you a confirmation email before ' +
                                 'start planting ... see you soon!'
                         }
@@ -328,7 +332,9 @@
                             subtitle: 'Nous objets sont en cours de création. En attendant, reforestons la planète. Rentrez votre addresse mail pour planter un arbre et rester au courant de l’avancée du projet.',
                             label1: 'PRENOM ',
                             label2: 'EMAIL',
-                            error: 'semble faux ou invalide, veuillez saisir une véritable adresse e-mail.',
+                            alerttitle: 'Warenghem dit',
+                            alerttime: 'maintenant',
+                            error: 'semble invalide ou déjà enregistré.',
                             success: 'Merci! Pour éviter le SPAM, nous vous avons envoyé un email de confirmation avant de ' +
                                 'commencer la plantation... A tout de suite!'
                         }

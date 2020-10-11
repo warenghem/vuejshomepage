@@ -42,7 +42,7 @@
 
         <v-app-bar class="menu-bar" flat height="50px">
 
-            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none">
+            <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none ml-3">
             </v-app-bar-nav-icon>
             <v-toolbar-items class="d-none d-md-block">
                 <v-btn text class="text-uppercase item"
@@ -65,7 +65,7 @@
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
-            <v-toolbar-title>
+            <v-toolbar-title class="centerabsolute v-toolbar__logo">
                 <router-link to="/" tag="span" style="cursor: pointer" class="brand">
                     <img src="../assets/images/logo.svg" width="140px" alt="logo"/>
                 </router-link>
@@ -84,19 +84,27 @@
                 >
                     {{$t('toolbar.studio')}}
                 </v-btn>
-                <v-btn text >
-                    <v-menu offset-y>
+                <v-btn 
+                text
+                class="px-0"
+                >
+                    <v-menu 
+                    offset-y
+                    >
                         <template v-slot:activator="{ on, attrs }">
                             <v-btn
                                     text
                                     v-bind="attrs"
                                     v-on="on"
+                                    :ripple="false"
+                                    class="nohover"
                             >
                                 <img src="../assets/images/flag.jpg" width="24" alt="" v-if="$i18n.locale==='fr'"/>
                                 <img src="../assets/images/united-kingdom.svg" width="24" alt="" v-else/>
                             </v-btn>
                         </template>
-                        <v-list>
+                        <v-list
+                        >
                             <v-list-item
                             >
                                 <v-list-item-title class="cursor-pointer">
@@ -141,6 +149,7 @@
 </script>
 
 <style scoped lang="scss">
+
     .appBar {
         position: relative;
         z-index: 300001;
@@ -158,16 +167,17 @@
 
         .menu-bar {
             background: transparent !important;
+            @media(min-width: 961px) {
+                &:hover {
+                    background: white !important;
 
-            &:hover {
-                background: white !important;
+                    .brand {
+                        filter: brightness(1) invert(0);
+                    }
 
-                .brand {
-                    filter: brightness(1) invert(0);
-                }
-
-                .item {
-                    color: #000000;
+                    .item {
+                        color: #000000;
+                    }
                 }
             }
 
@@ -182,27 +192,6 @@
 
             .item {
                 color: #ffffff;
-
-                &:before {
-                    display: none;
-                }
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    height: 1px;
-                    width: 1px;
-                    transition: width 0.6s ease;
-                    left: 14px;
-                    bottom: 0;
-                }
-
-                &:hover {
-                    &:after {
-                        background: #000;
-                        width: 70%;
-                    }
-                }
             }
         }
 

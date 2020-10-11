@@ -21,8 +21,8 @@
         <div id="mapSection"></div>
         <div class="slideArea mgforest">
             <div class="card">
-                <div class="d-flex justify-space-between px-3 align-center border-bottom-2">
-                    <div class="py-1 border-right-2" style="width: 100%">
+                <div style="height: 60px" class="d-flex justify-space-between align-center border-bottom-2">
+                    <div class="py-1 border-right-2 pl-3" style="width: 100%">
                         <button class="btn-theme my-0"
                                 @click="closeSlideUp">
                             {{$t('btnTitle')}}
@@ -33,12 +33,13 @@
                             color="black"
                             @click="closeSlide"
                             style="font-size: 32px"
+                            class="px-0 h-100"
                     >
                         &times;
                     </v-btn>
                 </div>
-                <div class="px-7 pb-3  map-modal  pt-7">
-                    <v-row class="mt-7 pt-2">
+                <div class="px-7 pb-3  map-modal">
+                    <v-row>
                         <v-col lg="6">
                             <div class="para-title">{{$t('madagascar.section1.title')}}</div>
                             <div class="para-subtitle">{{$t('madagascar.section1.subtitle')}}</div>
@@ -48,12 +49,12 @@
                             <v-row>
                                 <v-col class="text-center ">
                                     <div class="para-subtitle">
-                                        20 Kg
+                                        20kg
                                     </div>
                                     <div class="para-text">{{$t('madagascar.section1.term1')}}</div>
                                 </v-col>
                                 <v-col class="text-center">
-                                    <div class="para-subtitle">25 ans</div>
+                                    <div class="para-subtitle">{{$t('madagascar.section1.term2bis')}}</div>
                                     <div class="para-text">{{$t('madagascar.section1.term2')}}</div>
                                 </v-col>
                                 <v-col class="text-center ">
@@ -80,7 +81,9 @@
                         </v-col>
                         <v-col>
                             <div class="para-title">{{$t('madagascar.section3.title')}}</div>
-                            <v-img class="py-3" src="../assets/images/map1.png" alt="map"></v-img>
+                            <a href="https://www.google.com/maps/d/edit?mid=17AwywoebWVZcltzhsfdwTKS7IC5yDtvN&usp=sharing">
+                                <v-img class="py-3" src="../assets/images/map1.png" alt="map"></v-img>
+                            </a>
                         </v-col>
                     </v-row>
 
@@ -89,7 +92,7 @@
         </div>
         <div class="slideArea indianforest">
             <div class="card">
-                <div class="d-flex justify-space-between px-3 align-center border-bottom-2">
+                <div style="height: 60px" class="d-flex justify-space-between align-center border-bottom-2 pl-3">
                     <div class="py-1 border-right-2" style="width: 100%">
                         <button class="btn-theme my-0"
                                 @click="closeSlideUp">
@@ -101,14 +104,14 @@
                             color="black"
                             @click="closeSlide"
                             style="font-size: 32px"
-                            class="px-0"
+                            class="px-0 h-100"
                             large
                     >
                         &times;
                     </v-btn>
                 </div>
-                <div class="px-7 pb-3  map-modal pt-7">
-                    <v-row class="mt-7 pt-2">
+                <div class="px-7 pb-3  map-modal">
+                    <v-row>
                         <v-col lg="6">
                             <div class="para-title">{{$t('india.section1.title')}}</div>
                             <div class="para-subtitle">{{$t('india.section1.subtitle')}}</div>
@@ -118,16 +121,16 @@
                             <v-row>
                                 <v-col class="text-center ">
                                     <div class="para-subtitle">
-                                        800 Kg
+                                        800kg
                                     </div>
                                     <div class="para-text">{{$t('india.section1.term1')}}</div>
                                 </v-col>
                                 <v-col class="text-center">
-                                    <div class="para-subtitle">100 ans</div>
+                                    <div class="para-subtitle">{{$t('india.section1.term2bis')}}</div>
                                     <div class="para-text">{{$t('india.section1.term2')}}</div>
                                 </v-col>
                                 <v-col class="text-center ">
-                                    <div class="para-subtitle">35 – 45 m</div>
+                                    <div class="para-subtitle">35–45m</div>
                                     <div class="para-text">{{$t('india.section1.term3')}}</div>
                                 </v-col>
                             </v-row>
@@ -150,7 +153,9 @@
                         </v-col>
                         <v-col>
                             <div class="para-title">{{$t('india.section3.title')}}</div>
-                            <v-img class="py-3" src="../assets/images/map2.png" alt="map2"></v-img>
+                            <a href="https://www.google.com/maps/d/edit?mid=1bayTFmMWGfd9RN9Yia5q4Vt-lOcOEkbl&usp=sharing">
+                                <v-img class="py-3" src="../assets/images/map2.png" alt="map2"></v-img>
+                            </a>
                         </v-col>
                     </v-row>
                 </div>
@@ -188,6 +193,7 @@
                                 'displacing entire animal species and Malagasy people.</p>',
                             term1: 'CO2 compensation',
                             term2: 'Lifetime',
+                            term2bis: '25y',
                             term3: 'Cut',
                         },
                         section2: {
@@ -218,6 +224,7 @@
                                 'As well as the most beautiful waterfalls like Joranda and Barehipani Falls.</p>',
                             term1: 'CO2 compensation',
                             term2: 'Lifetime',
+                            term2bis: '100y',
                             term3: 'Cut',
                         },
                         section2: {
@@ -257,6 +264,7 @@
                                 'déplaçant des espèces animales entières et les Malgaches.</p>',
                             term1: 'Compensation CO2',
                             term2: 'Durée de vie',
+                            term2bis: '25ans',
                             term3: 'Taille',
                         },
                         section2: {
@@ -280,8 +288,8 @@
                     india: {
                         section1: {
                             title: 'Fôret',
-                            subtitle: 'Mango trees',
-                            paraTitle: 'Local flora and fauna.',
+                            subtitle: 'Manguiers',
+                            paraTitle: 'Faune et Flore locale.',
                             paraText: '<p>Le parc national de Similipal est le 7e plus grand parc national d’Inde ' +
                                 '(2 750 km2), et fait partie du Réseau mondial des réserves de biosphère ' +
                                 'de l’UNESCO depuis 2009. Il abrite le tigre du Bengale, l’éléphant d’Asie, ' +
@@ -289,15 +297,16 @@
                                 'et Barehipani Falls.</p>',
                             term1: 'Compensation CO2',
                             term2: 'Durée de vie',
+                            term2bis: '100ans',
                             term3: 'Taille',
                         },
                         section2: {
                             title: 'Projet',
                             subtitle: 'Des arbres pour les tigres, Inde',
                             paraTitle1: 'Le livre de la jungle 2.',
-                            paraText1: "<p>LeLe projet vise 50 000 arbres en bordure du parc national de Similipal " +
+                            paraText1: "<p>Le projet vise 50 000 arbres en bordure du parc national de Similipal " +
                                 "pour enrichir la fôret vierge locale, en particulier pour les tigres du Bengale.</p>",
-                            paraTitle2: 'How about we drop by to help them?',
+                            paraTitle2: 'Et si nous passions les aider ?',
                             paraText2: "<p>La région du projet est habitée par une variété de communautés tribales " +
                                 "(Bhumija, Gondas, Kolha… Environ 4 093 jours de travail seront créés pour eux.</p>" +
                                 "<p>L’aéroport le plus proche est celui de Biju Patnaik, situé de 200 km du site." +
@@ -450,7 +459,7 @@
 
                         // create conttext
                         var conttext = document.createElement("div");
-                        conttext.className = "conttext appshadow";
+                        conttext.className = "conttext appshadow hand";
                         conttext.id = elt.id + "Container";
                         holder.appendChild(conttext);
 
@@ -513,14 +522,6 @@
 
 </script>
 <style lang="scss" scoped>
-
-    .page-details {
-        color: #888;
-        font-size: 13px;
-        padding-left: 20px;
-        max-width: 400px;
-        line-height: 1rem !important;
-    }
 
     .slideArea {
         position: fixed;
