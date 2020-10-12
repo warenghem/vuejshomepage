@@ -2,19 +2,33 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import i18n from '../i18n'
+
 Vue.use(VueRouter);
 
 const routes = [
     {
         path: '/:lang',
         component: {
-        render: h => h('router-view')
-      },
+            render: h => h('router-view')
+        },
         children: [
             {
                 path: '',
                 name: 'home',
-                component: Home
+                component: Home,
+                meta: {
+                    title: 'Home Page',
+                    metaTags: [
+                        {
+                            name: 'description',
+                            content: 'The home page of our example app.'
+                        },
+                        {
+                            property: 'og:description',
+                            content: 'The home page of our example app.'
+                        }
+                    ]
+                }
             }
         ]
     },
@@ -29,16 +43,16 @@ const router = new VueRouter({
     },
 });
 router.beforeEach((to, from, next) => {
-  const lang = to.params.lang;
+    const lang = to.params.lang;
 
-  if ( !['en','fr'].includes(lang) ) {
-    return next(i18n.locale+'/');
-  }
+    if (!['en', 'fr'].includes(lang)) {
+        return next(i18n.locale + '/');
+    }
 
-  if ( i18n.locale !== lang ) {
-    i18n.locale = lang;
-  }
+    if (i18n.locale !== lang) {
+        i18n.locale = lang;
+    }
 
-  return next();
+    return next();
 });
 export default router
