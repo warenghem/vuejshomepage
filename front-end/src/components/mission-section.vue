@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="fp-section d-none d-lg-table border-top-2">
+        <div class="fp-section d-none d-lg-table finebordert">
             <div class="page-title absolute-title">{{$t('mission.title')}}</div>
             <div class="fp-tableCell" style="height: 900px;">
                 <div class="fp-bg" style="transform: translateX(0px) translateY(0px);">
@@ -192,32 +192,36 @@
                 </div>
             </div>
         </div>
-        <div class="d-lg-none mission-accordion">
+        <div class="d-lg-none mission-accordion finebordert" style="background:black">
             <v-expansion-panels accordion>
                 <v-expansion-panel
-                        :style="{'background-image': 'url(' + require('../assets/images/mission/home.jpg') + ')'}">
-                    <v-expansion-panel-header class="flex-column align-start">
-                        <div class="page-title px-0 py-3">{{$t('mission.title')}}</div>
-                        <div class="pb-3">
-                            <img src="../assets/images/magazine-plus.svg"
-                                 alt="Wait For It"
-                                 class="plusIcon"
-                            >
-                            <img src="../assets/images/magazine-minus.svg"
-                                 alt="Wait For It"
-                                 class="minusIcon"
-                            >
-                        </div>
-                        <div class="sub-title text-white">
-                            {{$t('mission.section1.title')}}
-                        </div>
-                        <div class="sub-title text-gray">
-                            {{$t('mission.section1.subtitle')}}
+                        :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/home.jpg') + ')'}"
+                        class="gradientoverlay backgroundcover"
+                        >
+                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0 z-2">
+                        <div style="position:absolute" class="page-title px-5 pt-5">{{$t('mission.title')}}</div>
+                        <div class="pa-10 h-100 mt-8 z-2">
+                            <div class="pb-3">
+                                <img width="35px" src="../assets/images/magazine-plus.svg"
+                                    alt="Wait For It"
+                                    class="plusIcon"
+                                >
+                                <img style="padding-bottom:2px" width="35px" src="../assets/images/magazine-minus.svg"
+                                    alt="Wait For It"
+                                    class="minusIcon"
+                                >
+                            </div>
+                            <div class="sub-title text-white">
+                                {{$t('mission.section4.title')}}
+                            </div>
+                            <div class="sub-title text-gray">
+                                {{$t('mission.section4.subtitle')}}
+                            </div>
                         </div>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
                         <div>
-                            <ul class="text-left mb-4 teradeli-light">
+                            <ul class="text-left mb-4 teradeli-light z-2">
                                 <li class="fp-list-item" v-for="(item,idx) in $t('mission.section1.items')"
                                     :key="idx">
                                     <div class="count">
@@ -231,28 +235,32 @@
                     </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel
-                        :style="{'background-image': 'url(' + require('../assets/images/mission/roche.jpg') + ')'}">
-                    <v-expansion-panel-header class="flex-column align-start">
-                        <div class="pb-3">
-                            <img src="../assets/images/magazine-plus.svg"
-                                 alt="Wait For It"
-                                 class="plusIcon"
-                            >
-                            <img src="../assets/images/magazine-minus.svg"
-                                 alt="Wait For It"
-                                 class="minusIcon"
-                            >
-                        </div>
-                        <div class="sub-title text-white">
-                            {{$t('mission.section2.title')}}
-                        </div>
-                        <div class="sub-title text-gray">
-                            {{$t('mission.section2.subtitle')}}
+                        :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/roche.jpg') + ')'}"
+                        class="gradientoverlay backgroundcover"
+                        >
+                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                        <div class="pa-10 h-100 z-2">
+                            <div class="pb-3">
+                                <img width="35px" src="../assets/images/magazine-plus.svg"
+                                    alt="Wait For It"
+                                    class="plusIcon"
+                                >
+                                <img style="padding-bottom:2px" width="35px" src="../assets/images/magazine-minus.svg"
+                                    alt="Wait For It"                                    
+                                    class="minusIcon"
+                                >
+                            </div>
+                            <div class="sub-title text-white">
+                                {{$t('mission.section3.title')}}
+                            </div>
+                            <div class="sub-title text-gray">
+                                {{$t('mission.section3.subtitle')}}
+                            </div>
                         </div>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
                         <div>
-                            <ul class="text-left mb-4 teradeli-light">
+                            <ul class="text-left mb-4 teradeli-light z-2">
                                 <li class="fp-list-item" v-for="(item,idx) in $t('mission.section2.items')"
                                     :key="idx">
                                     <div class="count">
@@ -266,28 +274,32 @@
                     </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel
-                        :style="{'background-image': 'url(' + require('../assets/images/mission/studio.jpg') + ')'}">
-                    <v-expansion-panel-header class="flex-column align-start">
-                        <div class="pb-3">
-                            <img src="../assets/images/magazine-plus.svg"
-                                 alt="Wait For It"
-                                 class="plusIcon"
-                            >
-                            <img src="../assets/images/magazine-minus.svg"
-                                 alt="Wait For It"
-                                 class="minusIcon"
-                            >
-                        </div>
-                        <div class="sub-title text-white">
-                            {{$t('mission.section3.title')}}
-                        </div>
-                        <div class="sub-title text-gray">
-                            {{$t('mission.section3.subtitle')}}
+                        :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/studio.jpg') + ')'}"
+                        class="gradientoverlay backgroundcover"
+                        >
+                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                        <div class="pa-10 h-100 z-2">
+                            <div class="pb-3">
+                                <img width="35px" src="../assets/images/magazine-plus.svg"
+                                    alt="Wait For It"
+                                    class="plusIcon"
+                                >
+                                <img style="padding-bottom:2px" width="35px" src="../assets/images/magazine-minus.svg"
+                                    alt="Wait For It"                                    
+                                    class="minusIcon"
+                                >
+                            </div>
+                            <div class="sub-title text-white">
+                                {{$t('mission.section2.title')}}
+                            </div>
+                            <div class="sub-title text-gray">
+                                {{$t('mission.section2.subtitle')}}
+                            </div>
                         </div>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
                         <div>
-                            <ul class="text-left mb-4 teradeli-light">
+                            <ul class="text-left mb-4 teradeli-light z-2">
                                 <li class="fp-list-item" v-for="(item,idx) in $t('mission.section3.items')"
                                     :key="idx">
                                     <div class="count">
@@ -301,28 +313,32 @@
                     </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel
-                        :style="{'background-image': 'url(' + require('../assets/images/mission/tech.jpg') + ')'}">
-                    <v-expansion-panel-header class="flex-column align-start">
-                        <div class="pb-3">
-                            <img src="../assets/images/magazine-plus.svg"
-                                 alt="Wait For It"
-                                 class="plusIcon"
-                            >
-                            <img src="../assets/images/magazine-minus.svg"
-                                 alt="Wait For It"
-                                 class="minusIcon"
-                            >
-                        </div>
-                        <div class="sub-title text-white">
-                            {{$t('mission.section4.title')}}
-                        </div>
-                        <div class="sub-title text-gray">
-                            {{$t('mission.section4.subtitle')}}
+                        :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/tech.jpg') + ')'}"
+                        class="gradientoverlay backgroundcover"
+                        >
+                   <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                        <div class="pa-10 h-100 z-2">
+                            <div class="pb-3">
+                                <img width="35px" src="../assets/images/magazine-plus.svg"
+                                    alt="Wait For It"
+                                    class="plusIcon"
+                                >
+                                <img style="padding-bottom:2px" width="35px" src="../assets/images/magazine-minus.svg"
+                                    alt="Wait For It"                                    
+                                    class="minusIcon"
+                                >
+                            </div>
+                            <div class="sub-title text-white">
+                                {{$t('mission.section1.title')}}
+                            </div>
+                            <div class="sub-title text-gray">
+                                {{$t('mission.section1.subtitle')}}
+                            </div>
                         </div>
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
                         <div>
-                            <ul class="text-left mb-4 teradeli-light">
+                            <ul class="text-left mb-4 teradeli-light z-2">
                                 <li class="fp-list-item" v-for="(item,idx) in $t('mission.section4.items')"
                                     :key="idx">
                                     <div class="count">

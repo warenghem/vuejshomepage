@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="productSection">
+        <div class="productSection finebordert">
             <div class="page-title absolute-title">{{$t('productTitle')}}</div>
             <div class="catalogue-grid h-100">
                 <div class="row h-100">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cross p-0 col-lg-6 col-md-6 d-lg-flex d-xl-block h-lg-33">
+                    <div class="cross p-0 col-lg-6 col-md-6 d-lg-flex d-xl-block h-lg-33 fineborderb-sm-0 fineborderb-lg fineborderb-md">
                         <div class="catalogue-item fineborderb fineborderb-md fineborderb-sm-0 col-lg-12 col-xl-12 fineborderr-sm-0 fineborderl-xl h-50 h-lg-100 p-0">
                             <div class="h-100">
                                 <div class="catalogue-item-background bg-white">

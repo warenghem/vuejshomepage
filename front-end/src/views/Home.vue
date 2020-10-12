@@ -54,7 +54,7 @@
         mounted() {
 
             new InstagramFeed({
-                'username': 'warenghem_paris',
+                'username': 'warenghem.studios',
                 'container': document.getElementById("instaFeed"),
                 'display_profile': false,
                 'display_biography': false,
@@ -62,7 +62,7 @@
                 'callback': null,
                 'styling': false,
                 'margin': 0,
-                'lazy_load': false,
+                'lazy_load': true,
                 'on_error': console.error
             });
             setTimeout(() => {

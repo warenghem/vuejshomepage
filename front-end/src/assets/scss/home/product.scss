@@ -1,9 +1,8 @@
 .productSection {
         height: 900px;
-        border-top: solid 1px rgba(255, 255, 255, .6);
         background-color: #000;
         position: relative;
-        @media (max-width: 991px) {
+        @media (max-width: 960px) {
             height: 100% !important;
         }
     }
@@ -129,23 +128,7 @@
     .h-66 {
         height: 66.6666% !important;
     }
-
-    .fineborderr {
-        border-right: solid 1px rgba(255, 255, 255, 0.6);
-    }
-
-    .fineborderl {
-        border-left: solid 1px rgba(255, 255, 255, 0.6);
-    }
-
-    .finebordert {
-        border-top: solid 1px rgba(255, 255, 255, 0.6);
-    }
-
-    .fineborderb {
-        border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-    }
-
+    
     .d-lg-flex {
         @media (min-width: 992px) {
             display: -ms-flexbox !important;
@@ -172,7 +155,7 @@
         }
     }
 
-    @media (max-width: 1264px) {
+    @media (max-width: 1263px) {
         .catalogue-item-content-title {
             top: 45%;
         }
@@ -413,69 +396,5 @@
                     margin-bottom: 10px;
                 }
             }
-        }
-    }
-
-    @media (min-width: 1201px) {
-        .fineborderb-xl {
-            border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-            border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderr-xl {
-            border-right: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderl-xl {
-            border-left: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .finebordert-xl {
-            border-top: solid 1px rgba(255, 255, 255, 0.6);
-        }
-    }
-
-    @media (max-width: 1200px) {
-        .fineborderr-md {
-            border-right: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderl-md {
-            border-left: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .finebordert-md {
-            border-top: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderb-md {
-            border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderb-md-0 {
-            border-bottom: none;
-        }
-        .fineborderl-md-0 {
-            border-left: none;
-        }
-        .finebordert-md-0 {
-            border-top: none;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .fineborderr-sm {
-            border-right: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderl-sm {
-            border-left: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .finebordert-sm {
-            border-top: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderb-sm {
-            border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-        }
-        .fineborderr-sm-0 {
-            border-right: none;
-        }
-        .fineborderl-sm-0 {
-            border-left: none;
-        }
-        .fineborderb-sm-0 {
-            border-bottom: none;
         }
     }
