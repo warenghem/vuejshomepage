@@ -20,12 +20,6 @@
                     <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
-                        :class="{'current':$root.currentId==='calendarSection'}"
-                        @click="$root.scrollToElement('calendarSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.calendar')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
                         :class="{'current':$root.currentId==='mapTreeSection'}"
                         @click="$root.scrollToElement('mapTreeSection')"
                 >
@@ -56,12 +50,6 @@
                        @click="$root.scrollToElement('productSection')"
                 >
                     {{$t('toolbar.product')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='calendarSection'}"
-                       @click="$root.scrollToElement('calendarSection')"
-                >
-                    {{$t('toolbar.calendar')}}
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>

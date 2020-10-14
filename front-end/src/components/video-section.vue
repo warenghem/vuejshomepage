@@ -38,8 +38,7 @@
                 </div>
             </div>
             <v-row no-gutters class="homepage-slider-content">
-
-                <v-col class="topCenter my-auto col-lg-9 col-md-8">
+                <v-col class="topCenter my-auto col-12">
                     <div class="bannerLeft px-2">
                         <h2 class="title text-center"> {{$t('video.title')}}</h2>
                         <h4 class="subtitle text-center">{{$t('video.subtitle')}}</h4>
@@ -58,66 +57,79 @@
                             <span>{{$t('video.tag3')}}</span>
                         </div>
                     </div>
-                </v-col>
-                <v-col class="bottomRight d-none d-md-block col-lg-3 col-md-4">
-                    <div class="d-flex flex-column align-center justify-center h-100">
-                        <p class="mt-3  title text-center" id="formSection">{{$t('video.rightSection.title')}}</p>
-                        <div class="d-flex align-center justify-center w-100 position-relative">
-                            <v-progress-circular
-                                    :rotate="-90"
-                                    :size="150"
-                                    :width="15"
-                                    :value="progressValue"
-                                    color="#0081a7"
-                            >
-                                {{progressValue}}%
-                            </v-progress-circular>
-                            <div class="progressHints d-none d-md-block" v-html="$t('video.rightSection.tag')">
-                            </div>
-                        </div>
-
-                        <p class="text-white pb-3 px-4 text-justify bottomText">
-                            {{$t('video.rightSection.subtitle')}}
-                        </p>
-                        <div class="w-100 px-5">
-                            <mailchimp-subscribe
-                                    url="https://warenghem.us20.list-manage.com/subscribe/post-json"
-                                    user-id="2f7dbf20677f88c14c1389365"
-                                    list-id="ee2afb40a2"
-                                    @error="snackbarError=true"
-                                    @success="snackbarSuccess=true"
-                            >
-                                <template v-slot="{ subscribe, setEmail, setName,loading }">
-                                    <form @submit.prevent="subscribe" class="d-flex flex-column  w-100">
-                                        <input type="text"
-                                               class="form-theme"
-                                               :placeholder="$t('video.rightSection.label1')"
-                                               @input="setName($event.target.value)"
+                    <div class="mx-auto text-center">
+                        <v-dialog
+                        v-model="dialog"
+                        persistent
+                        max-width="600px"
+                        >
+                            <template v-slot:activator="{ on, attrs }">
+                                <button
+                                class="btn-theme"
+                                v-bind="attrs"
+                                v-on="on"
+                                >
+                                {{$t('btnTitle')}}
+                                </button>
+                            </template>
+                            <v-card>
+                                <v-btn
+                                    icon
+                                    @click="dialog = false"
+                                >
+                                    <v-icon
+                                        color="white"
+                                        medium
                                         >
-                                        <input type="email"
-                                               class="form-theme"
-                                               :placeholder="$t('video.rightSection.label2')"
-                                               @input="setEmail($event.target.value)"
-                                        >
-                                        <button id="jePlanetBtn" class="btn-theme"
-                                                type="submit"
-                                                style="width: 100%!important; overflow-y: hidden;max-height: 48px">
-                                            <span v-if="loading">
-                                                <img src="../assets/images/ripple.svg"
-                                                     alt="loader"
-                                                     height="40px"
-                                                     style="margin-top: -13px;"
-                                                >
-                                            </span>
-                                            <span v-else>{{$t('btnTitle')}}</span>
-                                        </button>
-                                    </form>
-                                </template>
-                            </mailchimp-subscribe>
-                        </div>
+                                            mdi-close
+                                    </v-icon>
+                                </v-btn>
+                                <v-card-text>
+                                    <div class="d-flex flex-column align-center justify-center h-100">
+                                        <p class="text-white pb-3 px-4 text-justify bottomText">
+                                            {{$t('video.rightSection.subtitle')}}
+                                        </p>
+                                        <div class="w-100 px-5">
+                                            <mailchimp-subscribe
+                                                    url="https://warenghem.us20.list-manage.com/subscribe/post-json"
+                                                    user-id="2f7dbf20677f88c14c1389365"
+                                                    list-id="ee2afb40a2"
+                                                    @error="snackbarError=true"
+                                                    @success="snackbarSuccess=true"
+                                            >
+                                                <template v-slot="{ subscribe, setEmail, setName,loading }">
+                                                    <form @submit.prevent="subscribe" class="d-flex flex-column  w-100">
+                                                        <input type="text"
+                                                            class="form-theme"
+                                                            :placeholder="$t('video.rightSection.label1')"
+                                                            @input="setName($event.target.value)"
+                                                        >
+                                                        <input type="email"
+                                                            class="form-theme"
+                                                            :placeholder="$t('video.rightSection.label2')"
+                                                            @input="setEmail($event.target.value)"
+                                                        >
+                                                        <button id="jePlanetBtn" class="btn-theme"
+                                                                type="submit"
+                                                                style="width: 100%!important; overflow-y: hidden;max-height: 48px">
+                                                            <span v-if="loading">
+                                                                <img src="../assets/images/ripple.svg"
+                                                                    alt="loader"
+                                                                    height="40px"
+                                                                    style="margin-top: -13px;"
+                                                                >
+                                                            </span>
+                                                            <span v-else>{{$t('btnTitle')}}</span>
+                                                        </button>
+                                                    </form>
+                                                </template>
+                                            </mailchimp-subscribe>
+                                        </div>
+                                    </div>
+                                </v-card-text>
+                            </v-card>
+                        </v-dialog>
                     </div>
-
-
                 </v-col>
                 <div class="bottomleft">
                     {{$store.state.tree_count}} <span>{{$t('video.forest.term1')}}</span> <br>
@@ -223,6 +235,7 @@
         },
         data() {
             return {
+                dialog: false,
                 interval: {},
                 progressValue: 0,
                 maxProgress: 30,

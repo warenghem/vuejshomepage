@@ -463,3 +463,9 @@ body {
 .position-absolute{
   position: absolute;
 }
+.v-dialog.v-dialog--active.v-dialog--persistent {
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.theme--light.v-card {
+  background: none!important;
+}

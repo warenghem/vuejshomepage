@@ -198,7 +198,7 @@
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/home.jpg') + ')'}"
                         class="gradientoverlay backgroundcover"
                         >
-                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0 z-2">
+                    <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0 z-2">
                         <div style="position:absolute" class="page-title px-5 pt-5">{{$t('mission.title')}}</div>
                         <div class="pa-10 h-100 mt-8 z-2">
                             <div class="pb-3">
@@ -238,7 +238,7 @@
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/roche.jpg') + ')'}"
                         class="gradientoverlay backgroundcover"
                         >
-                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                    <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
                             <div class="pb-3">
                                 <img width="35px" src="../assets/images/magazine-plus.svg"
@@ -277,7 +277,7 @@
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/studio.jpg') + ')'}"
                         class="gradientoverlay backgroundcover"
                         >
-                    <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                    <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
                             <div class="pb-3">
                                 <img width="35px" src="../assets/images/magazine-plus.svg"
@@ -316,7 +316,7 @@
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/tech.jpg') + ')'}"
                         class="gradientoverlay backgroundcover"
                         >
-                   <v-expansion-panel-header v-ripple style="min-height:320px" class="flex-column align-start p-0">
+                   <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
                             <div class="pb-3">
                                 <img width="35px" src="../assets/images/magazine-plus.svg"

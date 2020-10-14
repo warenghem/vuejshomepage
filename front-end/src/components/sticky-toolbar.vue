@@ -1,6 +1,6 @@
 <template>
     <section class="appBar">
-        <v-navigation-drawer v-model="sidebar" dark app class="d-md-none">
+        <v-navigation-drawer v-model="sidebar" dark app class="d-lg-none">
             <v-list>
                 <v-list-item
                         :class="{'current':$root.currentId==='missionSection'}"
@@ -17,12 +17,6 @@
                     <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
                 </v-list-item>
                 <v-list-item
-                        :class="{'current':$root.currentId==='calendarSection'}"
-                        @click="$root.scrollToElement('calendarSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.calendar')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
                         :class="{'current':$root.currentId==='mapTreeSection'}"
                         @click="$root.scrollToElement('mapTreeSection')"
                 >
@@ -37,7 +31,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-app-bar class="menu-bar" flat height="50px"
+        <v-app-bar class="menu-bar" flat height="50px"  
                    :class="{'whiteBack':$root.currentId==='mapTreeSection'||$root.currentId==='studioSection'}">
 
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-lg-none ml-3">
@@ -54,11 +48,6 @@
                        @click="$root.scrollToElement('productSection')"
                 >
                     {{$t('toolbar.product')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='calendarSection'}"
-                       @click="$root.scrollToElement('calendarSection')">
-                    {{$t('toolbar.calendar')}}
                 </v-btn>
                 <v-btn text class="text-uppercase item"
                        :class="{'current':$root.currentId==='mapTreeSection'}"
