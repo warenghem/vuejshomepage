@@ -2,18 +2,13 @@
     <div>
         <div class="videoSection">
             <div class="homepage-slider-background" ref="backgroundImg">
-                <div class="homepage-slider-background-item active activeNew"
+                <div class="homepage-slider-background-item active activeNew gradientoverlay blackoverlay"
                      data-direction="top"
-                     :style="{'background-image': 'url(' + require('../assets/images/banner1.jpg') + ')'}"
+                     :style="{'background-image': 'url(' + require('../assets/images/01vk.png') + ')'}"
                      data-idx="1"
                 >
                 </div>
-                <div class="homepage-slider-background-item"
-                     :style="{'background-image': 'url(' + require('../assets/images/banner2.jpg') + ')'}"
-                     data-direction="right"
-                     data-idx="2"
-                >
-                </div>
+
             </div>
             <div class="scrollicon">
                 <div class="mouse">
@@ -138,58 +133,6 @@
                 </div>
 
             </v-row>
-        </div>
-        <div class="d-md-none form-md py-5" id="formSection2">
-            <div class="m-auto" style="max-width:500px;margin:auto">
-                <p class="white--text">{{$t('video.rightSection.title')}}</p>
-                <v-progress-linear
-                        :height="16"
-                        :value="progressValue"
-                        color="#0081a7"
-                        background-color="white"
-                        rounded
-                >
-                    <span style="font-size: 12px">{{progressValue}}%</span>
-                </v-progress-linear>
-
-                <p class="text-white py-2 text-justify bottomText">
-                    {{$t('video.rightSection.subtitle')}}
-                </p>
-                <mailchimp-subscribe
-                        url="https://warenghem.us20.list-manage.com/subscribe/post-json"
-                        user-id="2f7dbf20677f88c14c1389365"
-                        list-id="ee2afb40a2"
-                        @error="snackbarError=true"
-                        @success="snackbarSuccess=true"
-                >
-                    <template v-slot="{ subscribe, setEmail, setName, error, success, loading }">
-                        <form @submit.prevent="subscribe" class="d-flex flex-column">
-                            <input type="text"
-                                class="form-theme"
-                                :placeholder="$t('video.rightSection.label1')"
-                                @input="setName($event.target.value)"
-                            >
-                            <input type="email"
-                                class="form-theme"
-                                :placeholder="$t('video.rightSection.label2')"
-                                @input="setEmail($event.target.value)"
-                            >
-                            <button id="jePlanetBtn2" class="btn-theme"
-                                    type="submit"
-                                    style="overflow-y: hidden;max-height: 48px">
-                                                <span v-if="loading">
-                                                    <img src="../assets/images/ripple.svg"
-                                                        alt="loader"
-                                                        height="40px"
-                                                        style="margin-top: -13px;"
-                                                    >
-                                                </span>
-                                <span v-else>{{$t('btnTitle')}}</span>
-                            </button>
-                        </form>
-                    </template>
-                </mailchimp-subscribe>
-            </div>
         </div>
         <div class="custom-toast" v-if="snackbarSuccess">
             <div class="toast-box">

@@ -24,7 +24,7 @@
                 <div style="height: 60px" class="d-flex justify-space-between align-center border-bottom-2">
                     <div class="py-1 border-right-2 pl-3" style="width: 100%">
                         <button class="btn-theme my-0"
-                                @click="closeSlideUp">
+                                @click="dialog = true">
                             {{$t('btnTitle')}}
                         </button>
                     </div>
@@ -95,7 +95,7 @@
                 <div style="height: 60px" class="d-flex justify-space-between align-center border-bottom-2 pl-3">
                     <div class="py-1 border-right-2" style="width: 100%">
                         <button class="btn-theme my-0"
-                                @click="closeSlideUp">
+                                @click="dialog = true">
                             {{$t('btnTitle')}}
                         </button>
                     </div>

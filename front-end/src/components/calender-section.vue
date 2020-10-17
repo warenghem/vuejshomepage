@@ -177,8 +177,7 @@
         }
 
     }
-
-
+    
     .timeline-container {
         position: relative;
         max-width: 760px;

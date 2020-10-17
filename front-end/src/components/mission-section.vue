@@ -20,21 +20,21 @@
                             </div>
                             <div class="homepage-catalogue-background-divided2" :class="{'d-none':currentMissionHover}">
                                 <div>
-                                    <div class="image1  gradientoverlay imageItem"
+                                    <div class="image1 blackoverlay gradientoverlay imageItem"
                                          data-idx="1"
                                          :style="{'background-image': 'url(' + require('../assets/images/mission/tech.jpg') + ')'}"
                                     >
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="image2  gradientoverlay imageItem"
+                                    <div class="image2 blackoverlay gradientoverlay imageItem"
                                          data-idx="2"
                                          :style="{'background-image': 'url(' + require('../assets/images/mission/studio.jpg') + ')'}"
                                     >
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="image3 gradientoverlay imageItem"
+                                    <div class="image3 blackoverlay gradientoverlay imageItem"
                                          data-idx="3"
                                          :style="{'background-image': 'url(' + require('../assets/images/mission/roche.jpg') + ')'}"
                                     >
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="image4 gradientoverlay imageItem"
+                                    <div class="image4 blackoverlay gradientoverlay imageItem"
                                          data-idx="4"
                                          :style="{'background-image': 'url(' + require('../assets/images/mission/home.jpg') + ')'}"
                                     >
@@ -196,7 +196,7 @@
             <v-expansion-panels accordion>
                 <v-expansion-panel
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/home.jpg') + ')'}"
-                        class="gradientoverlay backgroundcover"
+                        class="gradientoverlay blackoverlay backgroundcover"
                         >
                     <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0 z-2">
                         <div style="position:absolute" class="page-title px-5 pt-5">{{$t('mission.title')}}</div>
@@ -236,7 +236,7 @@
                 </v-expansion-panel>
                 <v-expansion-panel
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/roche.jpg') + ')'}"
-                        class="gradientoverlay backgroundcover"
+                        class="gradientoverlay blackoverlay backgroundcover"
                         >
                     <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
@@ -275,7 +275,7 @@
                 </v-expansion-panel>
                 <v-expansion-panel
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/studio.jpg') + ')'}"
-                        class="gradientoverlay backgroundcover"
+                        class="gradientoverlay blackoverlay backgroundcover"
                         >
                     <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
@@ -314,7 +314,7 @@
                 </v-expansion-panel>
                 <v-expansion-panel
                         :style="{'min-height': '320px','background-image': 'url(' + require('../assets/images/mission/tech.jpg') + ')'}"
-                        class="gradientoverlay backgroundcover"
+                        class="gradientoverlay blackoverlay backgroundcover"
                         >
                    <v-expansion-panel-header style="min-height:320px" class="flex-column align-start p-0">
                         <div class="pa-10 h-100 z-2">
@@ -520,7 +520,4 @@
     .image1 {
         background-image: url('../assets/images/mission/studio.jpg');
     }
-
-
-
 </style>

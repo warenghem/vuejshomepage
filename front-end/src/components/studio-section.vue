@@ -127,6 +127,7 @@
             }
         },
     }
+    
 </script>
 <style scoped lang="scss">
     .team-section {

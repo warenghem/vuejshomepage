@@ -5,6 +5,7 @@
         <sticky-toolbar class="stickyBar" :class="{'active':stickyToolbar}"/>
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
+        <CalenderSection id="calenderSection"></CalenderSection>
         <ProductSection id="productSection"></ProductSection>
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
@@ -18,6 +19,7 @@
     import AppFooter from "../components/app-footer";
     import VideoSection from '../components/video-section';
     import MissionSection from '../components/mission-section';
+    import CalenderSection from '../components/calender-section';
     import ProductSection from '../components/product-section';
     import StudioSection from '../components/studio-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
@@ -27,6 +29,7 @@
         name: 'Home',
         components: {
             MissionSection,
+            CalenderSection,
             ProductSection,
             WePlantTreeMap,
             VideoSection,

@@ -1,5 +1,8 @@
 {
   "message": "mera hasib",
+  "secondtoolbar": {
+    "message": "Livraison gratuite à partir de 100 euros"
+  },
   "toolbar": {
     "mission": "mission",
     "product": "produits",

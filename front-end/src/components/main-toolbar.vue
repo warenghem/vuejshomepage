@@ -1,7 +1,7 @@
 <template>
     <section class="appBar">
-        <div class="topBar text-center">
-            Livraison gratuite dans le monde
+        <div class="topBar text-center d-none">
+            {{$t('secondtoolbar.message')}}
         </div>
         <v-navigation-drawer v-model="sidebar" app class="d-md-none">
             <v-list>

@@ -289,34 +289,6 @@
   opacity: 0.2 !important;
 }
 
-
-
-.gradientoverlay {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #121217;
-    opacity: 0.2;
-    z-index: 1;
-  }
-
-  &::after {
-    background: linear-gradient(0.75deg, #000000 0%, transparent 100%);
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-    opacity: 0.5;
-  }
-}
-
 .fp-list-item {
   display: flex;
   align-items: center;

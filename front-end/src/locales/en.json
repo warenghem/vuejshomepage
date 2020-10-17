@@ -1,5 +1,8 @@
 {
   "message": "i am hasib",
+  "secondtoolbar": {
+    "message": "Free delivery"
+  },
   "toolbar": {
     "mission": "mission",
     "product": "products",
