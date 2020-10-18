@@ -387,7 +387,7 @@
                             text: "India - Trees for Tiger",
                             latitude: 22.003975,
                             longitude: 86.06648,
-                            image: "https://www.warenghem.com/wp-content/uploads/2020/07/Cahjukjhpture-e1593881403399.png",
+                            image: "../assets/images/map2.png",
                             modal: ".indianforest",
                         },
                         {
@@ -395,7 +395,7 @@
                             text: "Madagascar - Eden Project",
                             latitude: -16.270975,
                             longitude: 44.445852,
-                            image: "https://www.warenghem.com/wp-content/uploads/2020/07/Capture-d’écran-2020-06-09-à-21.51.54-e1593881234941.png",
+                            image: "../assets/images/map1.png",
                             modal: ".mgforest",
                         },
                     ];
