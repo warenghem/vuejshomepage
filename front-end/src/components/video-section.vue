@@ -4,13 +4,13 @@
             <div class="homepage-slider-background" ref="backgroundImg">
                 <div class="homepage-slider-background-item active activeNew gradientoverlay blackoverlay"
                      data-direction="top"
-                     :style="{'background-image': 'url(' + require('../assets/images/01vk.png') + ')'}"
+                     :style="{'background-image': 'url(' + require('../assets/images/S048+PF.jpg') + ')'}"
                      data-idx="1"
                 >
                 </div>
 
             </div>
-            <div class="scrollicon">
+            <div class="scrollicon d-none d-lg-block">
                 <div class="mouse">
                     <div class="frame">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.9 91">
@@ -246,7 +246,7 @@
             messages: {
                 en: {
                     video: {
-                        title: 'The vegetable leather goods of the future. Now.',
+                        title: 'Vegetable shoes & leather goods of the future. Now.',
                         subtitle: 'Meeting between French leather traditions and our wine leathers',
                         tag1: 'Ecological / Vegan',
                         tag2: 'Made in France',
@@ -272,7 +272,7 @@
                 },
                 fr: {
                     video: {
-                        title: 'La maroquinerie végétale du futur. Dès à présent.',
+                        title: ' Maroquinerie & chaussures végétales du futur. Dès à présent.',
                         subtitle: 'Rencontre entre les traditions maroquinières francaises et nos cuirs de vin',
                         tag1: 'Ecologique / Vegan',
                         tag2: 'Made in France',

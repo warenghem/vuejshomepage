@@ -227,7 +227,7 @@
                                     <div class="count">
                                         {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                     </div>
-                                    <div class="col">{{item}}
+                                    <div class="col py-1 pr-0">{{item}}
                                     </div>
                                 </li>
                             </ul>
@@ -266,7 +266,7 @@
                                     <div class="count">
                                         {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                     </div>
-                                    <div class="col">{{item}}
+                                    <div class="col py-1 pr-0">{{item}}
                                     </div>
                                 </li>
                             </ul>
@@ -305,7 +305,7 @@
                                     <div class="count">
                                         {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                     </div>
-                                    <div class="col">{{item}}
+                                    <div class="col py-1 pr-0">{{item}}
                                     </div>
                                 </li>
                             </ul>
@@ -344,7 +344,7 @@
                                     <div class="count">
                                         {{(idx+1)>9?(idx+1):'0'+(idx+1)}}
                                     </div>
-                                    <div class="col">{{item}}
+                                    <div class="col py-1 pr-0">{{item}}
                                     </div>
                                 </li>
                             </ul>
