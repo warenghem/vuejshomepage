@@ -9,76 +9,48 @@
                 {{$t('calendarSection.subtitle')}}
             </div>
         </div>
-        <div class="timeline-container">
-            <div class="timeline-item ">
-                <div class="timeline-icon">
-                    <img src="../assets/images/calender-icons/fanel.svg" alt="fanel">
-                </div>
-                <div class="timeline-content ">
-                    <div class="time">{{$t('calendarSection.step1.tag')}}</div>
-                    <h4 class="smalltitle">{{$t('calendarSection.step1.title')}}</h4>
-                    <div class="item-details">
-                        {{$t('calendarSection.step1.subtitle')}}
-                    </div>
-                    <div class="d-block d-md-none position-relative">
+        <v-container class="timeline-container">
+            <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+                <v-timeline-item
+                        :color="'#151515'"
+                        fill-dot
+                        v-for="(item,i) in $t('calendarSection.steps')"
+                        :key="'time_'+i"
+                >
+                    <template v-slot:icon>
+                        <img :src="images[i]" alt="timeline-icon" width="16px">
+                    </template>
+                    <div slot="opposite" v-if="i===0">
                         <div class="d-flex align-items-center">
-                            <img src="../assets/images/Arrowleftwhite.svg" class="d-none d-md-block" alt="fanel" width="26px">
-                            <span class="time pl-3 mb-0" style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
+                            <img src="../assets/images/Arrowleftwhite.svg" class="d-none d-md-block" alt="fanel"
+                                 width="26px">
+                            <span class="time pl-3 mb-0"
+                                  style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
                         </div>
+                    </div>
+                    <v-card
+                            :color="'#151515'"
+                            dark
+                            class="pa-4"
+                    >
 
-                    </div>
-                </div>
-                <div class="d-none d-md-block position-absolute"
-                     style="right: 0;padding-right: 130px;bottom: 80px;">
-                    <div class="d-flex align-items-center">
-                        <img src="../assets/images/Arrowleftwhite.svg" alt="fanel" width="26px">
-                        <span class="time pl-3 mb-0" style="color: #888!important;">{{$t('calendarSection.tag')}}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item ">
-                <div class="timeline-icon">
-                    <img src="../assets/images/calender-icons/bug.svg" alt="bug">
-                </div>
-                <div class="timeline-content right ">
-                    <div class="time">{{$t('calendarSection.step2.tag')}}</div>
-                    <h4 class="smalltitle">{{$t('calendarSection.step2.title')}}</h4>
-                    <div class="item-details">
-                        {{$t('calendarSection.step2.subtitle')}}
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item ">
-                <div class="timeline-icon">
-                    <img src="../assets/images/calender-icons/user.svg" alt="user">
-                </div>
-                <div class="timeline-content ">
-                    <div class="time">{{$t('calendarSection.step3.tag')}}</div>
-                    <h4 class="smalltitle">{{$t('calendarSection.step3.title')}}</h4>
-                    <div class="item-details">
-                        {{$t('calendarSection.step2.subtitle')}}
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item ">
-                <div class="timeline-icon">
-                    <img src="../assets/images/calender-icons/rocket.svg" alt="user">
-                </div>
-                <div class="timeline-content right ">
-                    <div class="time">{{$t('calendarSection.step4.tag')}}</div>
-                    <h4 class="smalltitle">{{$t('calendarSection.step4.title')}}</h4>
-                    <div class="item-details">
-                        {{$t('calendarSection.step4.subtitle')}}
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-icon complete">
-                    <img src="../assets/images/calender-icons/right.svg" alt="right">
-                </div>
-            </div>
-        </div>
+                        <div class="time">{{item.tag}}</div>
+                        <h4 class="smalltitle">{{item.title}}</h4>
+                        <div class="item-details">
+                            {{item.subtitle}}
+                        </div>
+                    </v-card>
+                </v-timeline-item>
+                <v-timeline-item
+                        :color="'#151515'"
+                        fill-dot
+                >
+                    <template v-slot:icon>
+                        <img :src="images[4]" alt="timeline-icon" width="16px">
+                    </template>
+                </v-timeline-item>
+            </v-timeline>
+        </v-container>
     </section>
 </template>
 <script>
@@ -93,32 +65,29 @@
                             'Subscribe to the Newsletter and follow us on Instagram and Facebook for' +
                             'be notified.',
                         tag: 'We are here',
-                        step1: {
+                        steps: [{
                             tag: 'Step 1',
                             title: 'Creating perfect 3D objects with you.',
                             subtitle: "Thanks to photorealistic 3D technology, we create endlessly. With our " +
                                 "community, we demand performance, design, and purism. " +
                                 "All of our choices will be documented on our blog."
-                        },
-                        step2: {
+                        }, {
                             tag: 'Step 2',
                             title: 'Prototyping on the chosen objects.',
                             subtitle: 'Development of prototypes with our French leatherworkers on the basis of our' +
                                 '3D. Daily tests of objects with a selection of people. Press articles.'
-                        },
-                        step3: {
+                        }, {
                             tag: 'Step 3',
                             title: 'Limited edition online pre-order campaign.',
                             subtitle: 'Based on our community, we will launch a crowdfunding campaign' +
                                 'on the Ulule platform. The parts will be limited to avoid the ' +
                                 'overproduction and waste.'
-                        },
-                        step4: {
+                        }, {
                             tag: 'Step 4',
                             title: 'Making objects and sending orders',
                             subtitle: 'Our French leather workers will sign and number each object.' +
                                 'Before sending them carefully to your home.'
-                        },
+                        }],
                     }
                 },
                 fr: {
@@ -128,39 +97,47 @@
                             'Inscrivez vous à la Newsletter et suivez nous sur Instagram et Facebook pour ' +
                             'en être notifié.',
                         tag: 'Nous en sommes ici',
-                        step1: {
+                        steps: [{
                             tag: 'Etape 1',
                             title: 'Créations d’objets parfaits en 3D avec vous.',
                             subtitle: 'Grâce à la technologie photoréalistique 3D, nous créons à l’infini. Avec notre ' +
                                 'communauté, nous revandiquons performance, design, et purisme. ' +
                                 'Tous nos choix seront documentés sur notre blog.'
-                        },
-                        step2: {
+                        }, {
                             tag: 'Etape 2',
                             title: 'Prototypage sur les objets choisis.',
                             subtitle: 'Développement des prototypes avec nos maroquiniers francais sur la base de nos ' +
                                 '3D. Tests des objets au quotidien avec une selection de personnes. Articles de presse.'
-                        },
-                        step3: {
+                        }, {
                             tag: 'Etape 3',
                             title: 'Campagne de précommande en ligne en édition limité.',
                             subtitle: 'Sur la base de notre communauté, nous lancerons une campagne de crowdfunding ' +
                                 'sur la plateforme Ulule. Les pièces seront limités pour éviter la ' +
                                 'surproduction et les déchets.'
-                        },
-                        step4: {
+                        }, {
                             tag: 'Etape 4',
                             title: 'Fabrication des objets et envoi des commandes',
                             subtitle: 'Nos maroquiniers francais signerons et numéroterons chaque objet.' +
                                 ' Avant de les envoyer soigneusement chez vous.'
-                        },
+                        }],
                     }
                 }
+            }
+        },
+        data() {
+            return {
+                images: [
+                    require('../assets/images/calender-icons/fanel.svg'),
+                    require('../assets/images/calender-icons/bug.svg'),
+                    require('../assets/images/calender-icons/user.svg'),
+                    require('../assets/images/calender-icons/rocket.svg'),
+                    require('../assets/images/calender-icons/right.svg'),
+                ]
             }
         }
     }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 
     .calender {
         border-top: solid 1px rgba(255, 255, 255, 0.5);
@@ -177,112 +154,21 @@
         }
 
     }
-    
+
     .timeline-container {
         position: relative;
         max-width: 760px;
         margin: 0 auto;
         padding-bottom: 30px;
+    }
 
-        &:before {
-            content: "";
-            width: 3px;
-            height: 100%;
-            background: #0081a7;
-            left: 50%;
-            top: 0;
-            position: absolute;
-        }
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+    }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-
-            &:after {
-                display: block;
-                clear: both;
-                content: "";
-            }
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: #151515;
-            padding: 20px;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            -ms-border-radius: 4px;
-            -o-border-radius: 4px;
-            border-radius: 15px;
-            -moz-background-clip: padding;
-            -webkit-background-clip: padding-box;
-            background-clip: padding-box;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 45%;
-                top: 20px;
-                width: 0;
-                height: 0;
-                border-top: 7px solid transparent;
-                border-bottom: 7px solid transparent;
-                border-left: 7px solid #151515;
-            }
-        }
-
-        .timeline-content.right {
-            float: right;
-
-            &:before {
-                content: '';
-                right: 45%;
-                left: inherit;
-                border-left: 0;
-                border-right: 7px solid #151515;
-            }
-        }
-
-        .timeline-icon {
-            background: #0081a7;
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            top: 0;
-            left: 50.9%;
-            overflow: hidden;
-            margin-left: -25px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            border-radius: 50%;
-            -moz-background-clip: padding;
-            -webkit-background-clip: padding-box;
-            background-clip: padding-box;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 16px;
-            }
-
-            .icon {
-                color: #fff;
-                font-size: 18px;
-                margin-top: -14px;
-            }
-        }
-
-        .timeline-icon.complete {
-            background: #0081a7;
-        }
+    .timeline-content {
+        border-radius: 15px;
     }
 
     .time {
@@ -313,39 +199,7 @@
         font-family: 'teradeli-light', sans-serif;
     }
 
-    @media (max-width: 767px) {
-        .timeline-container {
-            width: 90%;
-
-            &:before {
-                left: 0;
-            }
-
-            .timeline-icon {
-                left: 5px;
-            }
-
-            .timeline-content {
-                width: 90%;
-                float: right;
-
-                &:before {
-                    left: 10%;
-                    margin-left: -7px;
-                    border-left: 0;
-                    border-right: 7px solid #151515;
-                }
-            }
-
-            .timeline-content.right {
-                &:before {
-                    left: 10%;
-                    margin-left: -7px;
-                    border-left: 0;
-                    border-right: 7px solid #151515;
-                }
-            }
-        }
+    .v-timeline::before {
+        background: #0081a7 !important;
     }
-
 </style>
