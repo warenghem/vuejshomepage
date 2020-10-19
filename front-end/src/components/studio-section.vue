@@ -1,9 +1,9 @@
 <template>
     <section class="team-section">
         <h2 class="page-title py-md-5 py-4">{{$t('title')}}</h2>
-        <v-row no-gutters>
+        <v-row no-gutters class="pt-4">
             <v-col lg="4" sm="6">
-                <div class="item-inner">
+                <div class="item-inner py-2">
                     <div class="profile-holder mb-3">
                         <img src="../assets/images/profile/kevin.png"
                              alt="Wait for it">
@@ -20,7 +20,7 @@
 
             </v-col>
             <v-col lg="4" sm="6">
-                <div class="item-inner">
+                <div class="item-inner py-2">
                     <div class="profile-holder mb-3">
                         <img src="../assets/images/profile/alex.jpg"
                              alt="Wait for it">
@@ -37,7 +37,7 @@
 
             </v-col>
             <v-col lg="4" sm="6">
-                <div class="item-inner">
+                <div class="item-inner py-2">
                     <div class="profile-holder mb-3">
                         <img src="../assets/images/profile/julie.png"
                              alt="Wait for it">
@@ -55,7 +55,7 @@
 
             </v-col>
             <v-col lg="4" sm="6">
-                <div class="item-inner">
+                <div class="item-inner py-2">
                     <div class="profile-holder mb-3">
                         <img src="../assets/images/profile/quentin.png"
                              alt="Wait for it">
