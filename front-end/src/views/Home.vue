@@ -6,7 +6,7 @@
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
         <ProductSection id="productSection"></ProductSection>
-        <CalenderSection id="calenderSection"></CalenderSection>
+        <CalenderSection id="calendarSection"></CalenderSection>
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
         <app-footer></app-footer>

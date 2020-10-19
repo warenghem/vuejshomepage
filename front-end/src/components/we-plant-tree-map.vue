@@ -1,19 +1,21 @@
 <template>
-    <div>
-
+    <div  v-intersect.once="mapIntersect">
         <h2 class="page-title pt-md-5 pt-4 pr-4"> {{$t('title')}}</h2>
         <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.tree_count}}</div>
+                <div class="sub-title">
+                   <animated-number :number="treeCount" :change="1"/>
+                </div>
                 <div style="color: #888;"> {{$t('term1')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.co2_compensated}} tonnes</div>
+                <div class="sub-title">
+                    <animated-number :number="co2" :change="0.01" :time="20"/> tonnes</div>
                 <div style="color: #888;">{{$t('term2')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title">{{$store.state.reforest}}</div>
+                <div class="sub-title"><animated-number :number="reforest" :change="0.001"/></div>
                 <div style="color: #888;">{{$t('term3')}}</div>
             </div>
 
@@ -169,10 +171,12 @@
     import * as am4core from "@amcharts/amcharts4/core"
     import * as am4maps from "@amcharts/amcharts4/maps"
     import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow"
+    import AnimatedNumber from "./animated-number";
 
 
     export default {
         name: "we-plant-tree-map",
+        components: {AnimatedNumber},
         i18n: {
             messages: {
                 en: {
@@ -321,16 +325,15 @@
         },
         data() {
             return {
-                interval: {},
                 intersectionOptions: {
                     root: null,
                     rootMargin: '0px 0px 0px 0px',
                     threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
                 },
-                treeCount: 0,
-                co2: 0,
-                reforest: 0,
                 wPointActive:true,
+                treeCount:0,
+                co2:0,
+                reforest:0
             }
         },
         mounted() {
@@ -340,7 +343,6 @@
             if (this.chart) {
                 this.chart.dispose()
             }
-            clearInterval(this.interval)
         },
         methods: {
             mapCreate() {
@@ -514,6 +516,11 @@
                 document.documentElement.style.overflowY = 'auto';
                 this.$root.scrollToElement('formSection')
             },
+            mapIntersect(){
+                this.treeCount=this.$store.state.tree_count;
+                this.co2=parseFloat(this.$store.state.co2_compensated);
+                this.reforest=parseFloat(this.$store.state.reforest)
+            }
 
         },
 

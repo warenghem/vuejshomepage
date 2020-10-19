@@ -19,7 +19,6 @@ function loadLocaleMessages() {
 
 function getStartingLocale() {
     const browserLocale = getBrowserLocale({countryCodeOnly: true});
-    console.log(browserLocale);
     if (browserLocale === 'fr') {
         return 'fr'
     } else {
