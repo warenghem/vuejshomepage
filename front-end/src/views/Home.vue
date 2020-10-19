@@ -101,18 +101,7 @@
         methods: {
             handleScroll() {
                 if (document.getElementById('jePlanetBtn') && document.getElementById('jePlanetBtn').offsetTop > 0) {
-
-                    if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop) {
-                        this.stickyToolbar = true;
-                    } else {
-                        this.stickyToolbar = false;
-                    }
-                } else if (document.getElementById('jePlanetBtn2') && document.getElementById('jePlanetBtn2').offsetTop > 0) {
-                    if (window.pageYOffset - 70 > document.getElementById('jePlanetBtn2').offsetTop) {
-                        this.stickyToolbar = true;
-                    } else {
-                        this.stickyToolbar = false;
-                    }
+                    this.stickyToolbar = window.pageYOffset - 70 > document.getElementById('jePlanetBtn').offsetTop;
                 } else {
                     this.stickyToolbar = false;
                 }

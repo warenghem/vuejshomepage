@@ -63,6 +63,7 @@
                                 class="btn-theme"
                                 v-bind="attrs"
                                 v-on="on"
+                                id="jePlanetBtn"
                                 >
                                 {{$t('btnTitle')}}
                                 </button>
@@ -104,7 +105,7 @@
                                                             :placeholder="$t('video.rightSection.label2')"
                                                             @input="setEmail($event.target.value)"
                                                         >
-                                                        <button id="jePlanetBtn" class="btn-theme"
+                                                        <button class="btn-theme"
                                                                 type="submit"
                                                                 style="width: 100%!important; overflow-y: hidden;max-height: 48px">
                                                             <span v-if="loading">
@@ -196,50 +197,50 @@
                     this.progressValue = this.progressValue < this.maxProgress ? this.progressValue + 1 : this.maxProgress;
                 }
             }.bind(this), 50);
-            changeBackground();
-
-            function changeBackground() {
-                var activeIndex = parseInt(document.querySelector(".homepage-slider-background-item.active").getAttribute('data-idx'));
-                var previousIndex = 0;
-                var nextIndex = 0;
-                if (activeIndex === 1) {
-                    previousIndex = 2;
-                } else {
-                    previousIndex = activeIndex - 1;
-                }
-                if (activeIndex === 2) {
-                    nextIndex = 1;
-                } else {
-                    nextIndex = activeIndex + 1;
-                }
-                document.querySelector(".homepage-slider-background-item[data-idx='" + previousIndex + "']").classList.remove("activeNew");
-
-                // Set Next Direction
-                var direction = document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").getAttribute("data-direction");
-                switch (direction) {
-                    case "right":
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "bottom");
-                        break;
-                    case "bottom":
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "left");
-                        break;
-                    case "left":
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "top");
-                        break;
-                    case "top":
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "right");
-                        break;
-                }
-                setTimeout(function () {
-                    document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").classList.add('active', 'activeNew');
-                    document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").classList.remove("activeNew");
-                    setTimeout(function () {
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").classList.remove("active");
-                        document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").setAttribute("data-direction", "");
-                        changeBackground();
-                    }, 5000);
-                }, 100);
-            }
+            // changeBackground();
+            //
+            // function changeBackground() {
+            //     var activeIndex = parseInt(document.querySelector(".homepage-slider-background-item.active").getAttribute('data-idx'));
+            //     var previousIndex = 0;
+            //     var nextIndex = 0;
+            //     if (activeIndex === 1) {
+            //         previousIndex = 2;
+            //     } else {
+            //         previousIndex = activeIndex - 1;
+            //     }
+            //     if (activeIndex === 2) {
+            //         nextIndex = 1;
+            //     } else {
+            //         nextIndex = activeIndex + 1;
+            //     }
+            //     document.querySelector(".homepage-slider-background-item[data-idx='" + previousIndex + "']").classList.remove("activeNew");
+            //
+            //     // Set Next Direction
+            //     var direction = document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").getAttribute("data-direction");
+            //     switch (direction) {
+            //         case "right":
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "bottom");
+            //             break;
+            //         case "bottom":
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "left");
+            //             break;
+            //         case "left":
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "top");
+            //             break;
+            //         case "top":
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").setAttribute("data-direction", "right");
+            //             break;
+            //     }
+            //     setTimeout(function () {
+            //         document.querySelector(".homepage-slider-background-item[data-idx='" + nextIndex + "']").classList.add('active', 'activeNew');
+            //         document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").classList.remove("activeNew");
+            //         setTimeout(function () {
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").classList.remove("active");
+            //             document.querySelector(".homepage-slider-background-item[data-idx='" + activeIndex + "']").setAttribute("data-direction", "");
+            //             changeBackground();
+            //         }, 5000);
+            //     }, 100);
+            // }
         },
         methods: {},
         i18n: {

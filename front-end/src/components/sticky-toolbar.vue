@@ -71,7 +71,7 @@
             <v-spacer style="flex-grow: 1.8!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
             <v-toolbar-items class="py-1 mr-3" style="max-width: 240px;">
-                <button class="nav-btn" @click="$root.scrollToElement('formSection')">{{$t('btnTitle')}}</button>
+                <button class="nav-btn" @click="$root.scrollToElement('jePlanetBtn')">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
     </section>
