@@ -6,30 +6,14 @@
         <v-navigation-drawer v-model="sidebar" app class="d-md-none">
             <v-list>
                 <v-list-item
-                        :class="{'current':$root.currentId==='missionSection'}"
-                        @click="$root.scrollToElement('missionSection')"
+                        v-for="(link,l_idx) in $store.state.link.links"
+                        :class="{'current':$root.currentId===link.elId}"
+                        @click="$root.scrollToElement(link.elId)"
+                        :key="'link_'+l_idx"
                 >
                     <v-list-item-content>
-                        {{$t('toolbar.mission')}}
+                        {{$t(link.name)}}
                     </v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='productSection'}"
-                        @click="$root.scrollToElement('productSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='mapTreeSection'}"
-                        @click="$root.scrollToElement('mapTreeSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.reforest')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='studioSection'}"
-                        @click="$root.scrollToElement('studioSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -38,18 +22,14 @@
 
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-md-none ml-3">
             </v-app-bar-nav-icon>
-            <v-toolbar-items class="d-none d-md-block">
+            <v-toolbar-items class="d-none d-md-block" v-for="(link,l_idx) in $store.state.link.links"
+                             :key="'link_btn_l_'+l_idx">
                 <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='missionSection'}"
-                       @click="$root.scrollToElement('missionSection')"
+                       :class="{'current':$root.currentId===link.elId}"
+                       @click="$root.scrollToElement(link.elId)"
+                       v-if="link.position==='left'"
                 >
-                    {{$t('toolbar.mission')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='productSection'}"
-                       @click="$root.scrollToElement('productSection')"
-                >
-                    {{$t('toolbar.product')}}
+                    {{$t(link.name)}}
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
@@ -59,25 +39,24 @@
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
+            <v-toolbar-items class="d-none d-md-block"
+                             v-for="(link,l_idx) in $store.state.link.links"
+                             :key="'link_btn_r_'+l_idx">
+                <v-btn text class="text-uppercase item"
+                       :class="{'current':$root.currentId===link.elId}"
+                       @click="$root.scrollToElement(link.elId)"
+                       v-if="link.position==='right'"
+                >
+                    {{$t(link.name)}}
+                </v-btn>
+            </v-toolbar-items>
             <v-toolbar-items class="d-none d-md-block">
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='mapTreeSection'}"
-                       @click="$root.scrollToElement('mapTreeSection')"
+                <v-btn
+                        text
+                        class="px-0"
                 >
-                    {{$t('toolbar.reforest')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='studioSection'}"
-                       @click="$root.scrollToElement('studioSection')"
-                >
-                    {{$t('toolbar.studio')}}
-                </v-btn>
-                <v-btn 
-                text
-                class="px-0"
-                >
-                    <v-menu 
-                    offset-y
+                    <v-menu
+                            offset-y
                     >
                         <template v-slot:activator="{ on, attrs }">
                             <v-btn
@@ -87,31 +66,27 @@
                                     :ripple="false"
                                     class="nohover"
                             >
-                                <img src="../assets/images/flag.jpg" width="24" alt="" v-if="$i18n.locale==='fr'"/>
-                                <img src="../assets/images/united-kingdom.svg" width="24" alt="" v-else/>
+                                <div v-for="(flag,idx) in $store.state.flags" :key="'flag_'+idx">
+                                    <img :src="flag.img"
+                                         width="24"
+                                         alt="lang flag"
+                                         v-if="$i18n.locale===flag.lang"
+                                    />
+                                </div>
+
                             </v-btn>
                         </template>
                         <v-list
                         >
                             <v-list-item
+                                    v-for="(flag,idx) in $store.state.flags"
+                                    :key="'flag_list_'+idx"
                             >
                                 <v-list-item-title class="cursor-pointer">
-                                    <router-link :to="{path:'/en/'}">
-                                        <img src="../assets/images/united-kingdom.svg"
+                                    <router-link :to="{path:flag.path}">
+                                        <img :src="flag.img"
                                              width="24"
-                                             alt=""
-                                        />
-                                    </router-link>
-
-                                </v-list-item-title>
-                            </v-list-item>
-                            <v-list-item
-                            >
-                                <v-list-item-title class="cursor-pointer">
-                                    <router-link :to="{path:'/fr/'}">
-                                        <img src="../assets/images/flag.jpg"
-                                             width="24"
-                                             alt=""
+                                             alt="flag"
                                         />
                                     </router-link>
 
