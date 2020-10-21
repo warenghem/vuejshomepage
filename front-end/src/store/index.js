@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import axios from "axios";
 import {app} from '../main'
 import link from './link'
+import langs from './langs'
 
 Vue.use(Vuex);
 
@@ -11,10 +12,6 @@ export default new Vuex.Store({
         tree_count: 0,
         co2_compensated: 0,
         reforest: 0,
-        flags: [
-            {img: require('../assets/images/flag.jpg'), path: '/fr/', lang: 'fr'},
-            {img: require('../assets/images/united-kingdom.svg'), path: '/en/', lang: 'en'}
-        ]
     },
 
     mutations: {
@@ -44,6 +41,7 @@ export default new Vuex.Store({
         }
     },
     modules: {
-        link
+        link,langs
+
     }
 })

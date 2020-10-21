@@ -66,7 +66,7 @@
                                     :ripple="false"
                                     class="nohover"
                             >
-                                <div v-for="(flag,idx) in $store.state.flags" :key="'flag_'+idx">
+                                <div v-for="(flag,idx) in $store.state.langs.items" :key="'flag_'+idx">
                                     <img :src="flag.img"
                                          width="24"
                                          alt="lang flag"
@@ -79,7 +79,7 @@
                         <v-list
                         >
                             <v-list-item
-                                    v-for="(flag,idx) in $store.state.flags"
+                                    v-for="(flag,idx) in $store.state.langs.items"
                                     :key="'flag_list_'+idx"
                             >
                                 <v-list-item-title class="cursor-pointer">

@@ -36,7 +36,7 @@ export default {
                 id: this.listId,
                 EMAIL: this.email,
                 FNAME: this.name,
-                LANGUAGE: this.$i18n.locale === 'fr' ? 'Francais' : 'English',
+                LANGUAGE: this.$store.state.langs.items.find(lang => lang.lang === this.$i18n.locale).full
             })
         },
     },
@@ -44,12 +44,18 @@ export default {
     methods: {
         setEmail(value = '') {
             this.email = value.trim();
-            this.$parent.email=this.email
+            this.$parent.email = this.email
         },
         setName(value = '') {
             this.name = value.trim()
         },
-
+        getLang(){
+            this.lang=this.$store.state.langs.items.some(lang => {
+                    if (lang.lang === this.$i18n.locale) {
+                        return lang.full
+                    }
+                })
+        },
         subscribe() {
             if (this.email === null || this.name === null || this.loading) {
                 return
@@ -60,7 +66,7 @@ export default {
             this.loading = true;
 
             const url = `${this.url}?${this.data}`;
-            console.log(this.data,url);
+            console.log(this.data, url);
 
             jsonp(url, {param: 'c'}, this.onResponse)
         },
