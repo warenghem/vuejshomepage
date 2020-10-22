@@ -1,21 +1,45 @@
 <template>
-    <div  v-intersect.once="mapIntersect">
+    <div v-intersect.once="mapIntersect">
         <h2 class="page-title pt-md-5 pt-4 pr-4"> {{$t('title')}}</h2>
         <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
             <div class="text-center py-4 px-7">
                 <div class="sub-title">
-                   <animated-number :number="treeCount" :change="1"/>
+                    <animated-number ref="treeCount"
+                                     :from="0"
+                                     :to="treeCount"
+                                     :duration="3"
+                                     :delay="2"
+                                     easing="Power1.easeOut"
+                    />
                 </div>
                 <div style="color: #888;"> {{$t('term1')}}</div>
             </div>
             <div class="text-center py-4 px-7">
                 <div class="sub-title">
-                    <animated-number :number="co2" :change="0.01" :time="20"/> tonnes</div>
+                    <animated-number ref="co2"
+                                     :from="0"
+                                     :to="co2"
+                                     :format="2"
+                                     :duration="3"
+                                     :delay="2"
+                                     easing="Power1.easeOut"
+                    />
+                    tonnes
+                </div>
                 <div style="color: #888;">{{$t('term2')}}</div>
             </div>
             <div class="text-center py-4 px-7">
-                <div class="sub-title"><animated-number :number="reforest" :change="0.001"/></div>
+                <div class="sub-title">
+                    <animated-number ref="reforest"
+                                     :from="0"
+                                     :to="reforest"
+                                     :duration="3"
+                                     :delay="2"
+                                     :format="3"
+                                     easing="Power1.easeOut"
+                    />
+                </div>
                 <div style="color: #888;">{{$t('term3')}}</div>
             </div>
 
@@ -330,10 +354,10 @@
                     rootMargin: '0px 0px 0px 0px',
                     threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
                 },
-                wPointActive:true,
-                treeCount:0,
-                co2:0,
-                reforest:0
+                wPointActive: true,
+                treeCount: 0,
+                co2: 0,
+                reforest: 0
             }
         },
         mounted() {
@@ -516,11 +540,13 @@
                 document.documentElement.style.overflowY = 'auto';
                 this.$root.scrollToElement('formSection')
             },
-            mapIntersect(){
-                this.treeCount=this.$store.state.tree_count;
-                this.co2=parseFloat(this.$store.state.co2_compensated);
-                this.reforest=parseFloat(this.$store.state.reforest)
-            }
+            mapIntersect() {
+
+                this.treeCount = this.$store.state.tree_count;
+                this.co2 = parseFloat(this.$store.state.co2_compensated);
+                this.reforest = parseFloat(this.$store.state.reforest)
+            },
+
 
         },
 

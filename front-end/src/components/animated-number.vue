@@ -1,44 +1,93 @@
 <template>
-    <div>
-        {{displayNumber.toFixed((change % 1) !== 0?change.toString().split('.')[1].length:0)}}
-    </div>
+    <span v-on="$listeners" v-bind="$attrs">{{ tweenedNumber }}</span>
 </template>
 
 <script>
-    export default {
-        name: "animated-number",
-        props: {
-            number: {default: 0},
-            change: {default: 1},
-            time:{default:500}
-        },
-        data() {
-            return {
-                displayNumber: 0,
-                interval: false
-            }
-        },
-
-        ready() {
-            this.displayNumber = this.number ? this.number : 0;
-        },
-
-        watch: {
-            number: function () {
-                clearInterval(this.interval);
-                if (this.number === this.displayNumber) {
-                    return;
-                }
-                this.interval = window.setInterval(function () {
-                    if (this.displayNumber < this.number) {
-                        this.displayNumber = this.displayNumber < this.number ? this.displayNumber + this.change : this.number;
-                    }
-                }.bind(this), this.time);
-            }
-        }
+import {TweenLite} from 'gsap'
+// Returns the number of full stop in given string.
+const countFullstops = (str) => str.replace(/[^.]/g, '').length
+export default {
+  name: 'number',
+  props: {
+    from: {
+      type: [Number, String],
+      default: 0
+    },
+    to: {
+      type: [Number, String],
+      required: true,
+      default: 0
+    },
+    format: {
+      type: Number,
+      default: 0
+    },
+    duration: {
+      type: Number,
+      default: 1 // Duration of animation in seconds
+    },
+    easing: {
+      type: String,
+      default: 'Power1.easeOut'
+    },
+    delay: {
+      type: Number,
+      default: 0 // Delay the animation in seconds
+    },
+    animationPaused: Boolean // Stops animation before start
+  },
+  data() {
+    return {
+      fromProp: this.from
     }
+  },
+  computed: {
+    tweenedNumber () {
+      return this.fromProp.toFixed(this.format)
+    }
+  },
+  methods: {
+    tween (value) {
+      const vm = this;
+      const tLite = TweenLite
+        .to(vm.$data, vm.duration, {
+          fromProp: value,
+          paused: vm.animationPaused,
+          ease: vm.easeCheck(),
+          onStart: () => vm.$emit('start'),
+          onComplete: () => vm.$emit('complete'),
+          onUpdate: () => vm.$emit('update'),
+          delay: vm.delay // In seconds
+        });
+      vm.tween.tLite = tLite
+    },
+    play () {
+      this.tween.tLite.play()
+    },
+    pause () {
+      this.tween.tLite.pause()
+    },
+    restart () {
+      this.tween.tLite.restart()
+    },
+    easeCheck () {
+      const vm = this
+      if (countFullstops(vm.easing) !== 1) {
+        throw new Error('Invalid ease type. (eg. easing="Power1.easeOut")')
+      }
+      return vm.easing
+    }
+  },
+  watch: {
+    to (newValue) {
+      this.tween(newValue)
+    }
+  },
+  mounted() {
+    this.tween(this.to)
+  }
+}
 </script>
 
-<style scoped>
-
+<style>
 </style>

@@ -10,10 +10,11 @@
                     </div>
                     <div class="content-holder text-left">
                         <h4 class="name">{{profile.name}}</h4>
-                        <div class="role"> {{$t('profiles').find(pro=>profile.key===pro.key).role}}
+                        <div class="role">
+                            {{$t('profiles').find(pro=>profile.key===pro.key)?$t('profiles').find(pro=>profile.key===pro.key).role:''}}
                         </div>
                         <div class="item-details">
-                            {{$t('profiles').find(pro=>profile.key===pro.key).biography}}
+                            {{$t('profiles').find(pro=>profile.key===pro.key)?$t('profiles').find(pro=>profile.key===pro.key).biography:''}}
                         </div>
                     </div>
                 </div>
@@ -115,7 +116,7 @@
                         key: 2,
                         name: 'Alexandre marty',
                         img: require('../assets/images/profile/alex.jpg'),
-                    },{
+                    }, {
                         key: 3,
                         name: 'Julie maurence',
                         img: require('../assets/images/profile/julie.png'),
