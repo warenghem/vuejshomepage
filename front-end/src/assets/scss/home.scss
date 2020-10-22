@@ -151,3 +151,8 @@
   background-size: cover;
   background-position: center center;
 }
+.mission-accordion{
+  .v-expansion-panel {
+    background-color: transparent!important;
+  }
+}

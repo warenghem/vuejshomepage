@@ -13,6 +13,7 @@
     "@amcharts/amcharts4-geodata": "^4.1.17",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "gsap": "^3.5.1",
     "instafeed": "^1.4.0",
     "jsonp": "^0.2.1",
     "query-string": "^6.13.5",
