@@ -10,6 +10,7 @@
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
         <app-footer></app-footer>
+        <plant-form/>
     </div>
 </template>
 
@@ -24,10 +25,12 @@
     import StudioSection from '../components/studio-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
     import * as InstagramFeed from 'instafeed'
+    import PlantForm from "../components/plant-form";
 
     export default {
         name: 'Home',
         components: {
+            PlantForm,
             MissionSection,
             CalenderSection,
             ProductSection,

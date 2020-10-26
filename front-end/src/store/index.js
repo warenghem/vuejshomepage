@@ -12,6 +12,7 @@ export default new Vuex.Store({
         tree_count: 0,
         co2_compensated: 0,
         reforest: 0,
+        plantModal:false
     },
 
     mutations: {
@@ -41,7 +42,7 @@ export default new Vuex.Store({
         }
     },
     modules: {
-        link,langs
+        link, langs
 
     }
 })
