@@ -17,7 +17,7 @@ const routes = [
                 name: 'home',
                 component: Home,
                 meta: {
-                    title: 'Home Page',
+                    title: 'router.home.title',
                     metaTags: [
                         {
                             name: 'description',
@@ -52,10 +52,11 @@ router.beforeEach((to, from, next) => {
     if (i18n.locale !== lang) {
         i18n.locale = lang;
     }
+
     const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
     const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
     // const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
-    if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
+    if (nearestWithTitle) document.title = i18n.t(nearestWithTitle.meta.title);
     Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
     if (!nearestWithMeta) return next();
     nearestWithMeta.meta.metaTags.map(tagDef => {
@@ -66,7 +67,6 @@ router.beforeEach((to, from, next) => {
         tag.setAttribute('data-vue-router-controlled', '');
         return tag;
     }).forEach(tag => document.head.appendChild(tag));
-
     return next();
 });
 export default router

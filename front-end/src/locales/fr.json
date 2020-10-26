@@ -10,5 +10,10 @@
     "studio": "studio",
     "reforest": "reforestation"
   },
-  "btnTitle": "Je plante un arbre gratuitement"
+  "btnTitle": "Je plante un arbre gratuitement",
+  "router": {
+    "home": {
+      "title": "La home"
+    }
+  }
 }
