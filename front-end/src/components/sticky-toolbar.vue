@@ -3,30 +3,14 @@
         <v-navigation-drawer v-model="sidebar" dark app class="d-lg-none">
             <v-list>
                 <v-list-item
-                        :class="{'current':$root.currentId==='missionSection'}"
-                        @click="$root.scrollToElement('missionSection')"
+                        v-for="(link,l_idx) in $store.state.link.links"
+                        :class="{'current':$root.currentId===link.elId}"
+                        @click="$root.scrollToElement(link.elId)"
+                        :key="'slink_'+l_idx"
                 >
                     <v-list-item-content>
-                        {{$t('toolbar.mission')}}
+                        {{$t(link.name)}}
                     </v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='productSection'}"
-                        @click="$root.scrollToElement('productSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.product')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='mapTreeSection'}"
-                        @click="$root.scrollToElement('mapTreeSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.reforest')}}</v-list-item-content>
-                </v-list-item>
-                <v-list-item
-                        :class="{'current':$root.currentId==='studioSection'}"
-                        @click="$root.scrollToElement('studioSection')"
-                >
-                    <v-list-item-content>{{$t('toolbar.studio')}}</v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -36,30 +20,13 @@
 
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-lg-none ml-3">
             </v-app-bar-nav-icon>
-            <v-toolbar-items class="d-none d-lg-block">
+            <v-toolbar-items class="d-none d-md-block" v-for="(link,l_idx) in $store.state.link.links"
+                             :key="'slink_btn_l_'+l_idx">
                 <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='missionSection'}"
-                       @click="$root.scrollToElement('missionSection')"
+                       :class="{'current':$root.currentId===link.elId}"
+                       @click="$root.scrollToElement(link.elId)"
                 >
-                    {{$t('toolbar.mission')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='productSection'}"
-                       @click="$root.scrollToElement('productSection')"
-                >
-                    {{$t('toolbar.product')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='mapTreeSection'}"
-                       @click="$root.scrollToElement('mapTreeSection')"
-                >
-                    {{$t('toolbar.reforest')}}
-                </v-btn>
-                <v-btn text class="text-uppercase item"
-                       :class="{'current':$root.currentId==='studioSection'}"
-                       @click="$root.scrollToElement('studioSection')"
-                >
-                    {{$t('toolbar.studio')}}
+                    {{$t(link.name)}}
                 </v-btn>
             </v-toolbar-items>
             <v-spacer></v-spacer>
