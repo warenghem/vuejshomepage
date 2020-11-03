@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     tweenedNumber () {
-      return this.fromProp.toFixed(this.format)
+      return this.fromProp.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
     }
   },
   methods: {
