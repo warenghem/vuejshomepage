@@ -1,7 +1,7 @@
 <template>
         <div class="productSection finebordert">
             <div class="page-title absolute-title">{{$t('productTitle')}}</div>
-                <v-row no-gutters>
+                <v-row no-gutters class="pa-16">
                     <v-col v-for="(product,p_idx) in products"
                            :key="p_idx"
                            lg="3"
@@ -45,20 +45,6 @@
                     products: [
                         {
                             tag: 'Visuals to come',
-                            title: 'The portfolio',
-                            summary: 'Plant like its leaves. Obviously.',
-                            desc: 'Ally of your daily life, it is competed around oblique lines representing the' +
-                                'W emblematic of the brand. Each of them has space for your cards.'
-                        },
-                        {
-                            tag: 'Available soon',
-                            title: 'The card holder',
-                            summary: 'Indispensably small. Without lacking in tannin.',
-                            desc: 'More practical to carry, it complements the wallet for change and' +
-                                'some cards on the go.'
-                        },
-                        {
-                            tag: 'Visuals to come',
                             title: 'The belt',
                             summary: "She won't let you down.All in nobility.",
                             desc: 'Wide and thick, with saddle finish, it also fits well on' +
@@ -66,10 +52,10 @@
                         },
                         {
                             tag: 'Visuals to come',
-                            title: 'The Apple Watch bracelet',
-                            summary: 'A high-tech object. Supported by nature. ',
-                            desc: 'Inspired by fine watchmaking, its folding clasp and stitching' +
-                                'reinforced will ennoble the iconic Apple watch.'
+                            title: 'The portfolio',
+                            summary: 'Plant like its leaves. Obviously.',
+                            desc: 'Ally of your daily life, it is competed around oblique lines representing the' +
+                                'W emblematic of the brand. Each of them has space for your cards.'
                         },
                         {
                             tag: 'Available soon',
@@ -81,44 +67,15 @@
                         },
                         {
                             tag: 'Visuals to come',
-                            title: 'The backpack',
-                            summary: "Practical and elegant. It's not incompatible.",
-                            desc: "Composed of grapes and a French linen lining. Indispensable for " +
-                                "move around during the day. It's built to last."
-                        },
-                        {
-                            tag: 'Visuals to come',
-                            title: 'The backpack',
-                            summary: "Practical and elegant. It's not incompatible.",
-                            desc: "Composed of grapes and a French linen lining. Indispensable for " +
-                                "move around during the day. It's built to last."
-                        },
-                        {
-                            tag: 'Visuals to come',
-                            title: 'The backpack',
-                            summary: "Practical and elegant. It's not incompatible.",
-                            desc: "Composed of grapes and a French linen lining. Indispensable for " +
-                                "move around during the day. It's built to last."
+                            title: 'The shoes',
+                            summary: "",
+                            desc: ""
                         },
                     ]
                 },
                 fr: {
                     productTitle: 'Les objets en création',
                     products: [
-                        {
-                            tag: 'Visuels à venir',
-                            title: 'Le portefeuille',
-                            summary: 'Végétal comme ses feuilles. Evidemment.',
-                            desc: 'Allié de votre quotidien, il est concu autours de lignes obliques représentant le' +
-                                ' W emblématique de la marque. Chacune d’entre elles abrite un espace pour vos cartes.'
-                        },
-                        {
-                            tag: 'Disponible prochainement',
-                            title: 'Le porte-cartes',
-                            summary: 'Indispensablement petit. Sans manquer de tanin.',
-                            desc: 'Plus pratique à porter, il complémente le portefeuille pour de la monnaie et ' +
-                                'quelques cartes lors de vos déplacements.'
-                        },
                         {
                             tag: 'Visuels à venir',
                             title: 'La ceinture',
@@ -128,10 +85,10 @@
                         },
                         {
                             tag: 'Visuels à venir',
-                            title: 'Le bracelet Apple Watch',
-                            summary: 'Un objet high-tech. Soutenu par la nature.',
-                            desc: 'Inspiré par la haute horlogerie, sa boucle déployante et ses coutures ' +
-                                'renforcées anobliront la montre iconique Apple.'
+                            title: 'Le portefeuille',
+                            summary: 'Végétal comme ses feuilles. Evidemment.',
+                            desc: 'Allié de votre quotidien, il est concu autours de lignes obliques représentant le' +
+                                ' W emblématique de la marque. Chacune d’entre elles abrite un espace pour vos cartes.'
                         },
                         {
                             tag: 'Disponible prochainement',
@@ -143,24 +100,9 @@
                         },
                         {
                             tag: 'Visuels à venir',
-                            title: 'Le sac à dos',
-                            summary: 'Pratique et elegant. Ce n’est pas incompatible.',
-                            desc: 'Composé de raisins et d’une doublure en lin francais. Indispensable pour' +
-                                ' vous déplacer en journée. Il est concu pour durer.'
-                        },
-                        {
-                            tag: 'Visuels à venir',
-                            title: 'Le sac à dos',
-                            summary: 'Pratique et elegant. Ce n’est pas incompatible.',
-                            desc: 'Composé de raisins et d’une doublure en lin francais. Indispensable pour' +
-                                ' vous déplacer en journée. Il est concu pour durer.'
-                        },
-                        {
-                            tag: 'Visuels à venir',
-                            title: 'Le sac à dos',
-                            summary: 'Pratique et elegant. Ce n’est pas incompatible.',
-                            desc: 'Composé de raisins et d’une doublure en lin francais. Indispensable pour' +
-                                ' vous déplacer en journée. Il est concu pour durer.'
+                            title: 'La chaussure',
+                            summary: '',
+                            desc: ''
                         },
 
                     ]
@@ -172,11 +114,7 @@
                 backgroundImages:[
                     require('../assets/images/WA-mif-seamless-REVISION.png'),
                     require('../assets/images/WA-mif-seamless-REVISION.png'),
-                    require('../assets/images/WA-mif-seamless-REVISION.png'),
                     require('../assets/images/Sac-rendu-10-07-2020.2-min.jpg'),
-                    require('../assets/images/PC-rendu-scaled.jpg'),
-                    require('../assets/images/WA-mif-seamless-REVISION.png'),
-                    require('../assets/images/WA-mif-seamless-REVISION.png'),
                     require('../assets/images/WA-mif-seamless-REVISION.png'),
                 ],
                 products: this.$t('products')

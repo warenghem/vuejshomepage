@@ -142,7 +142,7 @@
                 backgroundImages: [
                     require('../assets/images/mission/tech.jpg'),
                     require('../assets/images/mission/studio.jpg'),
-                    require('../assets/images/mission/roche.jpg'),
+                    require('../assets/images/mission/roche.png'),
                     require('../assets/images/mission/home.jpg'),
                 ],
                 backgroundImage: ''

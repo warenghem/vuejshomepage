@@ -115,7 +115,6 @@
                     {
                         key: 2,
                         name: 'Alexandre marty',
-                        img: require('../assets/images/profile/alex.jpg'),
                     }, {
                         key: 3,
                         name: 'Julie maurence',

@@ -15,8 +15,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-app-bar class="menu-bar" flat height="50px"  
-                   :class="{'whiteBack':$root.currentId==='mapTreeSection'||$root.currentId==='studioSection'}">
+        <v-app-bar class="menu-bar" flat height="50px">
 
             <v-app-bar-nav-icon @click="sidebar = !sidebar" class="d-lg-none ml-3">
             </v-app-bar-nav-icon>
@@ -38,7 +37,7 @@
             <v-spacer style="flex-grow: 1.8!important;" class="d-none d-md-block"></v-spacer>
             <v-spacer class="d-md-none"></v-spacer>
             <v-toolbar-items class="py-1 mr-3" style="max-width: 240px;">
-                <button class="nav-btn" @click="$root.scrollToElement('jePlanetBtn')">{{$t('btnTitle')}}</button>
+                <button class="nav-btn" @click="$store.state.plantModal=true">{{$t('btnTitle')}}</button>
             </v-toolbar-items>
         </v-app-bar>
     </section>

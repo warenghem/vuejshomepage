@@ -6,7 +6,6 @@
         <VideoSection id="videoSection"></VideoSection>
         <MissionSection id="missionSection"></MissionSection>
         <ProductSection id="productSection"></ProductSection>
-        <CalenderSection id="calendarSection"></CalenderSection>
         <we-plant-tree-map id="mapTreeSection"></we-plant-tree-map>
         <StudioSection id="studioSection"></StudioSection>
         <app-footer></app-footer>
@@ -20,7 +19,6 @@
     import AppFooter from "../components/app-footer";
     import VideoSection from '../components/video-section';
     import MissionSection from '../components/mission-section';
-    import CalenderSection from '../components/calender-section';
     import ProductSection from '../components/product-section';
     import StudioSection from '../components/studio-section';
     import WePlantTreeMap from "../components/we-plant-tree-map";
@@ -32,7 +30,6 @@
         components: {
             PlantForm,
             MissionSection,
-            CalenderSection,
             ProductSection,
             WePlantTreeMap,
             VideoSection,

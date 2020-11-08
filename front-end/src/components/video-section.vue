@@ -4,7 +4,7 @@
             <div class="homepage-slider-background" ref="backgroundImg">
                 <div class="homepage-slider-background-item active activeNew gradientoverlay blackoverlay"
                      data-direction="top"
-                     :style="{'background-image': 'url(' + require('../assets/images/S048+PF.jpg') + ')'}"
+                     :style="{'background-image': 'url(' + require('../assets/images/S048+PF.png') + ')'}"
                      data-idx="1"
                 >
                 </div>
