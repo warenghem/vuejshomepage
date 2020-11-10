@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="fp-section d-none d-lg-table finebordert">
-            <div class="page-title absolute-title">{{$t('mission.title')}}</div>
+            <div class="page-title absolute-title d-none">{{$t('mission.title')}}</div>
             <div class="fp-tableCell" style="height: 900px;">
                 <div class="fp-bg" style="transform: translateX(0px) translateY(0px);">
                     <div class="homepage-item">
@@ -177,7 +177,7 @@
                                     "Intuitive, raw, without excess, our creations are designed for use.",
                                 items:
                                     [
-                                        "Passionate about objects that last. The design is thought to be timeless, escaping any ephemeral fashion."
+                                        "Passionate about objects that last. The design is thought to be timeless, escaping any ephemeral fashion.",
                                         "Inspired by architects and designers. The assertive personality of our" +
                                         "objects break the codes of classic leather goods.",
                                         "Centered on the relationship between Man and the object. Design is built for the" +
@@ -235,7 +235,7 @@
                                     "Intuitives, brutes, sans excès, nos créations sont pensées pour l’usage.",
                                 items:
                                     [
-                                        "Passionés par des objets qui durent. Le design est pensé intemporel, échappant à toute mode éphémère."
+                                        "Passionés par des objets qui durent. Le design est pensé intemporel, échappant à toute mode éphémère.",
                                         "Inspirées par les architectes et designers. La personnalité affirmée de nos " +
                                         "objets casse les codes de la maroquinerie classique.",
                                         "Centrés sur relation entre l’Homme et l’objet. Le design est construit pour la " +
