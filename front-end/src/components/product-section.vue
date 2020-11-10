@@ -1,12 +1,12 @@
 <template>
         <div class="productSection finebordert">
-            <div class="page-title absolute-title">{{$t('productTitle')}}</div>
-                <v-row no-gutters class="pa-16">
+            <div class="page-title absolute-title d-none">{{$t('productTitle')}}</div>
+                <v-row no-gutters class="pa-md-4">
                     <v-col v-for="(product,p_idx) in products"
                            :key="p_idx"
                            lg="3"
                            sm="6"
-                           cols="12"
+                           cols="6"
                            class="p-0 cross product">
                         <div class="catalogue-item h-100">
                             <div class="h-100">

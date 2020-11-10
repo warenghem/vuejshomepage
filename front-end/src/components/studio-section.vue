@@ -1,5 +1,5 @@
 <template>
-    <section class="team-section">
+    <section class="py-5" class="team-section">
         <h2 class="page-title py-md-5 py-4">{{$t('title')}}</h2>
         <v-row no-gutters class="pt-4">
             <v-col lg="4" sm="6" v-for="(profile,idx) in profiles" :key="'profile_'+idx">
@@ -29,7 +29,7 @@
         i18n: {
             messages: {
                 en: {
-                    title: "The studio",
+                    title: "Warenghem Studios",
                     profiles: [
                         {
                             key: 1,
@@ -48,7 +48,7 @@
                         },
                         {
                             key: 3,
-                            role: 'Founder & Artistic Director',
+                            role: 'Designer',
                             biography: "Former student at Esmod Paris, I started my career as a stylist in various houses, " +
                                 "and then by launching my leather goods brand. Today, I work through different worlds that " +
                                 "combine design and photography. I love taking a global look at a creation, and finding a " +
@@ -66,12 +66,12 @@
                     ],
                 },
                 fr: {
-                    title: "Le studio",
+                    title: "Warenghem Studios",
                     profiles: [
                         {
                             key: 1,
                             role: 'Fondateur & Directeur Artistique',
-                            biography: 'Convaincu par un monde ou la nature serait omniprésente autours de nous, j’ai décidé ' +
+                            biography: 'Convaincu par un monde ou la nature serait omniprésente autour de nous, j’ai décidé ' +
                                 'd’utiliser mes connaissances acquises dans le monde de l’entreprise pour des causes qui nous ' +
                                 'tiennent à cœur. Créons ensemble des objets français écologiquement parfaits et intuitifs.'
                         },
@@ -85,7 +85,7 @@
                         },
                         {
                             key: 3,
-                            role: 'Founder & Artistic Director',
+                            role: 'Designer',
                             biography: 'Ancienne étudiante à Esmod Paris, jai commencé ma carrière en tant que styliste au sein ' +
                                 'de diverses maisons, et dans un second temps en lancant ma marque de maroquinerie. ' +
                                 'Aujourd’hui, j’évolue à travers différents univers qui mêlent design et photographie. ' +
@@ -122,7 +122,7 @@
                     },
                     {
                         key: 4,
-                        name: 'Julie maurence',
+                        name: 'Quentin Brosseau',
                         img: require('../assets/images/profile/quentin.png'),
                     }
                 ]

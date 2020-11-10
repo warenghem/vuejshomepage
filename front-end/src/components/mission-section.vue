@@ -177,13 +177,13 @@
                                     "Intuitive, raw, without excess, our creations are designed for use.",
                                 items:
                                     [
+                                        "Passionate about objects that last. The design is thought to be timeless, escaping any ephemeral fashion."
                                         "Inspired by architects and designers. The assertive personality of our" +
                                         "objects break the codes of classic leather goods.",
                                         "Centered on the relationship between Man and the object. Design is built for the" +
                                         "functionality and everyday life.",
                                         "Focused on a future that we must reinvent. The style of each material is" +
                                         "studied to confuse the object in the landscape.",
-                                        "Passionate about objects that last. The design is thought to be timeless, escaping any ephemeral fashion."
                                     ]
                             }
                             , {
@@ -206,9 +206,8 @@
                                     [
                                         "Resulting from the encounter between nature and our technological innovations.",
                                         "Much more ecological and as strong as traditional leather.",
-                                        "Much more ecological and as strong as traditional leather.",
+                                        "Does not require any maintenance.",
                                         "Without animal matter. Without suffering.",
-                                        "Ditching plastic. We don't need it anymore."
                                     ]
                             }]
                     }
@@ -236,25 +235,25 @@
                                     "Intuitives, brutes, sans excès, nos créations sont pensées pour l’usage.",
                                 items:
                                     [
+                                        "Passionés par des objets qui durent. Le design est pensé intemporel, échappant à toute mode éphémère."
                                         "Inspirées par les architectes et designers. La personnalité affirmée de nos " +
                                         "objets casse les codes de la maroquinerie classique.",
                                         "Centrés sur relation entre l’Homme et l’objet. Le design est construit pour la " +
                                         "fonctionnalité et le quotidien.",
                                         "Focalisés sur un futur que nous devons réinventer. Le style de chaque matière est " +
                                         "étudié pour confondre l’objet dans le paysage.",
-                                        "Passionés par des objets qui durent. Le design est pensé intemporel, échappant à toute mode éphémère."
                                     ]
                             }
                             , {
                                 title: " Fabriqué en France. Point.",
                                 subtitle:
-                                    "Raffinés, artisanaux, locaux, nos objets développent l’industrie et le savoir-faire Français.",
+                                    "Raffinés, artisanaux, locaux, nos objets développent l’industrie et le savoir-faire français.",
                                 items:
                                     [
-                                        "Locaux : Véritable projet français de A à Z.",
-                                        "Sociaux : Développer les emplois et les traditions francaises.",
-                                        "Éthiques : Ne pas profiter de pays à bas couts (y compris en Europe).",
-                                        "Écologiques : Évitons les transports et l’opacité de pays en dehors de nos règlementations nationales."
+                                        "Local : Véritable projet français de A à Z.",
+                                        "Social : Développer les emplois et les traditions francaises.",
+                                        "Éthique : Ne pas profiter de pays à bas couts (y compris en Europe).",
+                                        "Écologique : Éviter les transports et l’opacité de pays en dehors de nos règlementations nationales."
                                     ]
                             }
                             , {
@@ -265,9 +264,8 @@
                                     [
                                         "Issues de la rencontre entre la nature et nos innovations technologiques.",
                                         "Beaucoup plus écologiques et aussi solides que le cuir traditionnel.",
-                                        "Beaucoup plus écologiques et aussi solides que le cuir traditionnel.",
+                                        "Ne demande aucun entretien",
                                         "Sans matière animale. Sans souffrance.",
-                                        "Délaissant le plastique. Nous n’en avons plus besoin."
                                     ]
                             }]
                     }
