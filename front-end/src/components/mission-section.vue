@@ -199,7 +199,7 @@
                                     ]
                             }
                             , {
-                                title: "The nobility of wine. Completely vegetal.",
+                                title: "Dionysos® wine leather. Vegetally noble.",
                                 subtitle:
                                     "Efficient, natural, solid, our materials come from the soil and the harvest.",
                                 items:
@@ -257,7 +257,7 @@
                                     ]
                             }
                             , {
-                                title: "La noblesse du vin. Complètement végétal.",
+                                title: "Cuir de vin Dionysos®. Végétalement noble.",
                                 subtitle:
                                     "Performantes, naturelles, solides, nos matières sont issues de la terre et des vendanges.",
                                 items:
