@@ -1,5 +1,5 @@
 <template>
-    <section class="team-section py-5">
+    <section class="team-section py-10c">
         <h2 class="page-title py-md-5 py-4">{{$t('title')}}</h2>
         <v-row no-gutters class="pt-4">
             <v-col lg="4" sm="6" v-for="(profile,idx) in profiles" :key="'profile_'+idx">

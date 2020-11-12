@@ -1,5 +1,5 @@
 <template>
-    <div class="py-5" v-intersect.once="mapIntersect">
+    <div class="py-10 border-bottom-2" v-intersect.once="mapIntersect">
         <h2 class="page-title pt-md-5 pt-4 pr-4"> {{$t('title')}}</h2>
         <h3 class="page-details pb-md-5 py-2 teradeli-light pr-4"> {{$t('subtitle')}}</h3>
         <div class="d-flex justify-center py-3 py-md-0 flex-column flex-sm-row">
